@@ -1,0 +1,66 @@
+# Caddy configuration for Taboo Store
+# Automatic HTTPS with Let's Encrypt
+
+itaboo.store {
+    # Reverse proxy to backend API
+    reverse_proxy localhost:5555
+
+    # Security headers
+    header {
+        # Prevent MIME type sniffing
+        X-Content-Type-Options nosniff
+
+        # Clickjacking protection
+        X-Frame-Options DENY
+
+        # XSS protection
+        X-XSS-Protection "1; mode=block"
+
+        # Referrer policy
+        Referrer-Policy no-referrer-when-downgrade
+
+        # Content Security Policy
+        Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.itaboo.store; frame-ancestors 'none';"
+
+        # HSTS (uncomment after testing HTTPS)
+        # Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+        # Remove server header
+        -Server
+    }
+
+    # Enable compression
+    encode {
+        gzip 6
+        zstd
+    }
+
+    # Logging
+    log {
+        output file /var/log/caddy/itaboo.store.log {
+            roll_size 100mb
+            roll_keep 5
+            roll_keep_for 720h
+        }
+        format console
+        level INFO
+    }
+
+    # Handle errors gracefully
+    handle_errors {
+        @5xx expression `{http.error.status_code} >= 500 && {http.error.status_code} < 600`
+        handle @5xx {
+            respond "Service temporarily unavailable" 503
+        }
+
+        @4xx expression `{http.error.status_code} >= 400 && {http.error.status_code} < 500`
+        handle @4xx {
+            respond "Not found" 404
+        }
+    }
+}
+
+# Redirect www to non-www
+www.itaboo.store {
+    redir https://itaboo.store{uri} permanent
+}
