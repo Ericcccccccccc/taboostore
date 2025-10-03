@@ -14,8 +14,12 @@ services:
         max-file: "3"
 
   frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=https://itaboo.store
     environment:
-      - VITE_API_URL=https://itaboo.store/api
       - NODE_ENV=production
     restart: always
     logging:

@@ -114,7 +114,7 @@ The deployment script handles everything automatically:
 
 ```bash
 cd /opt/taboostore
-./deploy.sh
+./deploy-local.sh
 ```
 
 The script will:
@@ -236,7 +236,7 @@ cd /opt/taboostore
 git pull origin main
 
 # Deploy
-./deploy.sh
+./deploy-local.sh
 ```
 
 ### Manual Container Management
@@ -318,7 +318,7 @@ sudo apt upgrade -y
 # Update Docker images
 cd /opt/taboostore
 docker-compose pull
-./deploy.sh
+./deploy-local.sh
 ```
 
 ## Troubleshooting
@@ -423,7 +423,7 @@ git log --oneline -n 10
 git checkout PREVIOUS_COMMIT_HASH
 
 # Redeploy
-./deploy.sh
+./deploy-local.sh
 
 # Or return to latest
 git checkout main

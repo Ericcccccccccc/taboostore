@@ -67,7 +67,7 @@ taboostore/
 ├── claude.md                    # This file
 ├── .gitignore                   # Git ignore patterns
 ├── docker-compose.yml           # Container orchestration
-├── deploy.sh                    # Deployment automation
+├── deploy-local.sh                    # Deployment automation
 ├── task/                        # PR task management
 │   ├── incomplete/             # Pending tasks
 │   └── complete/               # Completed tasks
@@ -277,8 +277,8 @@ cd taboostore
 
 2. **Run Deployment Script**
 ```bash
-chmod +x deploy.sh
-./deploy.sh
+chmod +x deploy-local.sh
+./deploy-local.sh
 ```
 
 The script will:

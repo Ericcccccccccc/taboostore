@@ -22,7 +22,7 @@ cp .env.production.example .env.production
 nano .env.production  # Edit domain and settings
 
 # 3. Deploy
-./deploy.sh
+./deploy-local.sh
 ```
 
 ---
@@ -33,7 +33,7 @@ nano .env.production  # Edit domain and settings
 ```bash
 cd /opt/taboostore
 git pull origin main
-./deploy.sh
+./deploy-local.sh
 ```
 
 ### Check Application Health
@@ -333,11 +333,11 @@ git log --oneline -n 10
 
 # Rollback
 git checkout COMMIT_HASH
-./deploy.sh
+./deploy-local.sh
 
 # Return to latest
 git checkout main
-./deploy.sh
+./deploy-local.sh
 ```
 
 ### Nuclear Option (Reset Everything)
@@ -345,7 +345,7 @@ git checkout main
 # WARNING: This removes all containers and volumes
 docker-compose down -v
 docker system prune -a --volumes
-./deploy.sh
+./deploy-local.sh
 ```
 
 ---

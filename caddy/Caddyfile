@@ -2,8 +2,15 @@
 # Automatic HTTPS with Let's Encrypt
 
 itaboo.store {
-    # Reverse proxy to backend API
-    reverse_proxy localhost:5555
+    # Handle API routes
+    handle /api/* {
+        reverse_proxy localhost:5555
+    }
+
+    # Handle frontend (everything else)
+    handle {
+        reverse_proxy localhost:8080
+    }
 
     # Security headers
     header {
