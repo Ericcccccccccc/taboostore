@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { getUILanguage, t } from '../utils/localization';
 import './styles.css';
 
 /**
@@ -13,6 +14,9 @@ function StartScreen({ onStartGame }) {
     language: 'both'
   });
 
+  // Get the UI language based on selected language mode
+  const uiLang = getUILanguage(settings.language);
+
   const timerOptions = [60, 75, 90, 105, 120];
   const passOptions = [
     { value: 0, label: '0' },
@@ -23,9 +27,9 @@ function StartScreen({ onStartGame }) {
     { value: -1, label: '∞' }
   ];
   const languageOptions = [
-    { value: 'en', label: 'English' },
-    { value: 'pt', label: 'Portuguese' },
-    { value: 'both', label: '50/50' }
+    { value: 'en', label: t('english', uiLang) },
+    { value: 'pt', label: t('portuguese', uiLang) },
+    { value: 'both', label: t('both', uiLang) }
   ];
 
   const handleChange = (field, value) => {
@@ -45,12 +49,12 @@ function StartScreen({ onStartGame }) {
 
   return (
     <div className="start-screen">
-      <h1 className="game-title">Taboo Store</h1>
-      <p className="game-subtitle">Guess the word without saying the forbidden words!</p>
+      <h1 className="game-title">{t('gameTitle', uiLang)}</h1>
+      <p className="game-subtitle">{t('gameSubtitle', uiLang)}</p>
 
       <form className="settings-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="timer">Timer Duration</label>
+          <label htmlFor="timer">{t('timerDuration', uiLang)}</label>
           <div className="option-buttons">
             {timerOptions.map(option => (
               <button
@@ -59,14 +63,14 @@ function StartScreen({ onStartGame }) {
                 className={`option-button ${settings.timerDuration === option ? 'active' : ''}`}
                 onClick={() => handleChange('timerDuration', option)}
               >
-                {option}s
+                {option}{t('seconds', uiLang)}
               </button>
             ))}
           </div>
         </div>
 
         <div className="form-group">
-          <label htmlFor="passes">Pass Limit</label>
+          <label htmlFor="passes">{t('passLimit', uiLang)}</label>
           <div className="option-buttons">
             {passOptions.map(option => (
               <button
@@ -82,7 +86,7 @@ function StartScreen({ onStartGame }) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="language">Language Mode</label>
+          <label htmlFor="language">{t('languageMode', uiLang)}</label>
           <div className="option-buttons">
             {languageOptions.map(option => (
               <button
@@ -98,7 +102,7 @@ function StartScreen({ onStartGame }) {
         </div>
 
         <button type="submit" className="start-button">
-          Start Game
+          {t('startGame', uiLang)}
         </button>
       </form>
     </div>

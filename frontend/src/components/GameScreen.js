@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useTimer } from '../hooks/useTimer';
 import { useCards } from '../hooks/useCards';
 import { canUsePass, formatTime } from '../utils/gameLogic';
+import { getUILanguage, t } from '../utils/localization';
 import './styles.css';
 
 /**
@@ -17,6 +18,9 @@ function GameScreen({ settings, onEndGame }) {
   });
   const [passesUsed, setPassesUsed] = useState(0);
   const [cardHistory, setCardHistory] = useState([]);
+
+  // Get the UI language based on selected language mode
+  const uiLang = getUILanguage(settings.language);
 
   // Timer hook
   const { timeRemaining, isRunning, start: startTimer } = useTimer(
@@ -50,8 +54,11 @@ function GameScreen({ settings, onEndGame }) {
       // Update score
       setScore(prev => ({ ...prev, correct: prev.correct + 1 }));
 
-      // Add to history
-      setCardHistory(prev => [...prev, { ...currentCard, status: 'correct' }]);
+      // Add to history with wordToGuess property
+      setCardHistory(prev => [...prev, {
+        wordToGuess: currentCard.wordToGuess,
+        status: 'correct'
+      }]);
 
       // Load next card
       nextCard();
@@ -63,8 +70,11 @@ function GameScreen({ settings, onEndGame }) {
       // Update score
       setScore(prev => ({ ...prev, missed: prev.missed + 1 }));
 
-      // Add to history
-      setCardHistory(prev => [...prev, { ...currentCard, status: 'missed' }]);
+      // Add to history with wordToGuess property
+      setCardHistory(prev => [...prev, {
+        wordToGuess: currentCard.wordToGuess,
+        status: 'missed'
+      }]);
 
       // Load next card
       nextCard();
@@ -77,8 +87,11 @@ function GameScreen({ settings, onEndGame }) {
       setScore(prev => ({ ...prev, passed: prev.passed + 1 }));
       setPassesUsed(prev => prev + 1);
 
-      // Add to history
-      setCardHistory(prev => [...prev, { ...currentCard, status: 'passed' }]);
+      // Add to history with wordToGuess property
+      setCardHistory(prev => [...prev, {
+        wordToGuess: currentCard.wordToGuess,
+        status: 'passed'
+      }]);
 
       // Load next card
       nextCard();
@@ -87,14 +100,14 @@ function GameScreen({ settings, onEndGame }) {
 
   const passAllowed = canUsePass(settings, passesUsed);
   const passButtonText = settings.passLimit === -1
-    ? `Pass (${passesUsed})`
-    : `Pass (${passesUsed}/${settings.passLimit})`;
+    ? `${t('pass', uiLang)} (${passesUsed})`
+    : `${t('pass', uiLang)} (${passesUsed}/${settings.passLimit})`;
 
   // Show loading state
   if (loading) {
     return (
       <div className="game-screen">
-        <div className="loading-message">Loading cards...</div>
+        <div className="loading-message">{t('loadingCards', uiLang)}</div>
       </div>
     );
   }
@@ -105,7 +118,7 @@ function GameScreen({ settings, onEndGame }) {
       <div className="game-screen">
         <div className="error-message">{error}</div>
         <button onClick={() => onEndGame({ score, cards: cardHistory, settings })}>
-          Exit Game
+          {t('exitGame', uiLang)}
         </button>
       </div>
     );
@@ -115,7 +128,7 @@ function GameScreen({ settings, onEndGame }) {
   if (!currentCard) {
     return (
       <div className="game-screen">
-        <div className="loading-message">Preparing game...</div>
+        <div className="loading-message">{t('preparingGame', uiLang)}</div>
       </div>
     );
   }
@@ -123,7 +136,7 @@ function GameScreen({ settings, onEndGame }) {
   return (
     <div className="game-screen">
       <div className="timer-display">
-        <span className="timer-label">Time:</span>
+        <span className="timer-label">{t('time', uiLang)}</span>
         <span className="timer-value">{formatTime(timeRemaining)}</span>
       </div>
 
@@ -142,13 +155,13 @@ function GameScreen({ settings, onEndGame }) {
           className="action-button correct-button"
           onClick={handleCorrect}
         >
-          ✓ Correct
+          ✓ {t('correct', uiLang)}
         </button>
         <button
           className="action-button missed-button"
           onClick={handleMissed}
         >
-          ✗ Missed
+          ✗ {t('missed', uiLang)}
         </button>
       </div>
 
