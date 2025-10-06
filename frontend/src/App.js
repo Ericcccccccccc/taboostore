@@ -37,9 +37,9 @@ function App() {
   };
 
   const handleRestartGame = () => {
-    setGameSettings(null);
+    // Keep the same settings, just restart the game
     setGameResults(null);
-    setCurrentScreen('start');
+    setCurrentScreen('game');
   };
 
   const handleReturnToMenu = () => {
