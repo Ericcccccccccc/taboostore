@@ -20,6 +20,8 @@ function GameScreen({ settings, onEndGame }) {
   const [cardHistory, setCardHistory] = useState([]);
   const [isPaused, setIsPaused] = useState(false);
   const [showEndConfirm, setShowEndConfirm] = useState(false);
+  const [undoCard, setUndoCard] = useState(null);
+  const [displayCard, setDisplayCard] = useState(null);
 
   // Get the UI language based on selected language mode
   const uiLang = getUILanguage(settings.language);
@@ -50,6 +52,13 @@ function GameScreen({ settings, onEndGame }) {
       startTimer();
     }
   }, [loading, error, nextCard, startTimer]);
+
+  // Update display card when current card changes
+  useEffect(() => {
+    if (currentCard) {
+      setDisplayCard(currentCard);
+    }
+  }, [currentCard]);
 
   const handlePause = () => {
     if (isPaused) {
@@ -83,14 +92,16 @@ function GameScreen({ settings, onEndGame }) {
   };
 
   const handleCorrect = () => {
-    if (currentCard && !isPaused && !showEndConfirm) {
+    if (displayCard && !isPaused && !showEndConfirm) {
+      // Save current card for undo
+      setUndoCard(displayCard);
+
       // Update score
       setScore(prev => ({ ...prev, correct: prev.correct + 1 }));
 
       // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
-        wordToGuess: currentCard.wordToGuess,
-        forbiddenWords: currentCard.forbiddenWords,
+        ...displayCard,
         status: 'correct'
       }]);
 
@@ -100,14 +111,16 @@ function GameScreen({ settings, onEndGame }) {
   };
 
   const handleMissed = () => {
-    if (currentCard && !isPaused && !showEndConfirm) {
+    if (displayCard && !isPaused && !showEndConfirm) {
+      // Save current card for undo
+      setUndoCard(displayCard);
+
       // Update score
       setScore(prev => ({ ...prev, missed: prev.missed + 1 }));
 
       // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
-        wordToGuess: currentCard.wordToGuess,
-        forbiddenWords: currentCard.forbiddenWords,
+        ...displayCard,
         status: 'missed'
       }]);
 
@@ -117,15 +130,17 @@ function GameScreen({ settings, onEndGame }) {
   };
 
   const handlePass = () => {
-    if (currentCard && canUsePass(settings, passesUsed) && !isPaused && !showEndConfirm) {
+    if (displayCard && canUsePass(settings, passesUsed) && !isPaused && !showEndConfirm) {
+      // Save current card for undo
+      setUndoCard(displayCard);
+
       // Update score
       setScore(prev => ({ ...prev, passed: prev.passed + 1 }));
       setPassesUsed(prev => prev + 1);
 
       // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
-        wordToGuess: currentCard.wordToGuess,
-        forbiddenWords: currentCard.forbiddenWords,
+        ...displayCard,
         status: 'passed'
       }]);
 
@@ -135,12 +150,13 @@ function GameScreen({ settings, onEndGame }) {
   };
 
   const handleUndo = () => {
-    if (cardHistory.length > 0 && !isPaused && !showEndConfirm) {
+    if (cardHistory.length > 0 && undoCard && !isPaused && !showEndConfirm) {
       // Get the last card from history
       const lastCard = cardHistory[cardHistory.length - 1];
 
-      // Restore the last card as current
-      setCurrentCard(lastCard);
+      // Restore the previous card
+      setDisplayCard(undoCard);
+      setUndoCard(null);
 
       // Remove it from history
       setCardHistory(prev => prev.slice(0, -1));
@@ -184,7 +200,7 @@ function GameScreen({ settings, onEndGame }) {
   }
 
   // Show waiting state if no card loaded yet
-  if (!currentCard) {
+  if (!displayCard) {
     return (
       <div className="game-screen">
         <div className="loading-message">{t('preparingGame', uiLang)}</div>
@@ -219,10 +235,10 @@ function GameScreen({ settings, onEndGame }) {
 
       <div className="game-content">
         <div className="card-display">
-          <h2 className="card-word">{currentCard.wordToGuess}</h2>
+          <h2 className="card-word">{displayCard.wordToGuess}</h2>
           <div className="card-divider"></div>
           <ul className="forbidden-words">
-            {currentCard.forbiddenWords && currentCard.forbiddenWords.map((word, index) => (
+            {displayCard.forbiddenWords && displayCard.forbiddenWords.map((word, index) => (
               <li key={index}>{word}</li>
             ))}
           </ul>
