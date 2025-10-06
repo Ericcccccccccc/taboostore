@@ -129,6 +129,12 @@
   gap: var(--spacing-lg);
 }
 
+.game-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
 /* Loading and Error Messages */
 .loading-message {
   text-align: center;
@@ -136,6 +142,14 @@
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
   font-weight: 500;
+}
+
+/* Game Controls - Timer and Control Buttons */
+.game-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
 }
 
 /* Timer - Large, Bold, Top-Center per PR-006 */
@@ -148,6 +162,44 @@
   font-size: var(--font-size-lg);
   font-weight: 700;
   box-shadow: var(--shadow-md);
+  flex: 1;
+}
+
+/* Control Buttons (Pause, End Game) */
+.control-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.control-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  min-height: 44px;
+  border: 2px solid var(--color-neutral);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.control-button:hover {
+  border-color: var(--color-primary);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.control-button.pause-button.active {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: var(--color-text-light);
+}
+
+.control-button.end-button:hover {
+  border-color: var(--color-danger);
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--color-danger);
 }
 
 .timer-label {
@@ -328,6 +380,94 @@
   margin-top: var(--spacing-sm);
 }
 
+/* Pause Effect - Black and white filter */
+.game-paused .game-content {
+  filter: grayscale(100%) brightness(0.7);
+  transition: filter var(--transition-base);
+}
+
+.game-paused .control-button.pause-button {
+  filter: none !important;
+}
+
+/* Confirmation Dialog */
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirm-dialog {
+  background: var(--color-bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: slideUp var(--transition-base);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confirm-message {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 500;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.confirm-button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  min-width: 100px;
+}
+
+.cancel-button {
+  background: var(--color-neutral);
+  color: var(--color-text-light);
+}
+
+.cancel-button:hover {
+  background: #4b5563;
+}
+
+.confirm-end-button {
+  background: var(--color-danger);
+  color: var(--color-text-light);
+}
+
+.confirm-end-button:hover {
+  background: #b91c1c;
+}
+
 /* ===================================
    END SCREEN STYLES
    =================================== */
@@ -337,6 +477,10 @@
   margin: 0 auto;
   padding: var(--spacing-lg);
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .game-over-title {
@@ -406,6 +550,10 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   margin-bottom: var(--spacing-xl);
+  flex: 1;
+  min-height: 0; /* Allow it to shrink */
+  display: flex;
+  flex-direction: column;
 }
 
 .cards-list-container h3 {
@@ -419,8 +567,28 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 300px;
   overflow-y: auto;
+  flex: 1;
+  padding-right: var(--spacing-sm); /* Space for scrollbar */
+}
+
+/* Custom scrollbar styling */
+.cards-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cards-list::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.cards-list::-webkit-scrollbar-thumb {
+  background: var(--color-neutral);
+  border-radius: var(--radius-sm);
+}
+
+.cards-list::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }
 
 /* Color-coded result list per PR-006 */
@@ -476,7 +644,9 @@
   display: flex;
   gap: var(--spacing-md);
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  padding-top: var(--spacing-lg);
+  flex-shrink: 0; /* Never shrink, always visible */
 }
 
 .play-again-button,

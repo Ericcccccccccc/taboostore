@@ -99,11 +99,20 @@ export function useTimer(duration, onTimeUp) {
     };
   }, []);
 
+  // Resume the timer (alias for start)
+  const resume = useCallback(() => {
+    if (!isRunning && timeRemaining > 0) {
+      setIsRunning(true);
+      startTimeRef.current = Date.now();
+    }
+  }, [isRunning, timeRemaining]);
+
   return {
     timeRemaining,
     isRunning,
     start,
     pause,
+    resume,
     reset
   };
 }

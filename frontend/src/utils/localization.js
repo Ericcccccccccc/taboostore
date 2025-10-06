@@ -24,6 +24,12 @@ const translations = {
     loadingCards: 'Loading cards...',
     preparingGame: 'Preparing game...',
     exitGame: 'Exit Game',
+    pause: 'Pause',
+    resume: 'Resume',
+    endGame: 'End Game',
+    endGameConfirm: 'Are you sure you want to end the game?',
+    cancel: 'Cancel',
+    confirm: 'Confirm',
 
     // End Screen
     gameOver: 'Game Over!',
@@ -54,6 +60,12 @@ const translations = {
     loadingCards: 'Carregando cartas...',
     preparingGame: 'Preparando jogo...',
     exitGame: 'Sair do Jogo',
+    pause: 'Pausar',
+    resume: 'Continuar',
+    endGame: 'Terminar Jogo',
+    endGameConfirm: 'Tem certeza que deseja terminar o jogo?',
+    cancel: 'Cancelar',
+    confirm: 'Confirmar',
 
     // End Screen
     gameOver: 'Fim de Jogo!',

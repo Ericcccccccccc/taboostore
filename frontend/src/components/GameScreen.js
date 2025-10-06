@@ -18,12 +18,14 @@ function GameScreen({ settings, onEndGame }) {
   });
   const [passesUsed, setPassesUsed] = useState(0);
   const [cardHistory, setCardHistory] = useState([]);
+  const [isPaused, setIsPaused] = useState(false);
+  const [showEndConfirm, setShowEndConfirm] = useState(false);
 
   // Get the UI language based on selected language mode
   const uiLang = getUILanguage(settings.language);
 
   // Timer hook
-  const { timeRemaining, isRunning, start: startTimer } = useTimer(
+  const { timeRemaining, isRunning, start: startTimer, pause: pauseTimer, resume: resumeTimer } = useTimer(
     settings.timerDuration,
     handleTimeUp
   );
@@ -49,8 +51,39 @@ function GameScreen({ settings, onEndGame }) {
     }
   }, [loading, error, nextCard, startTimer]);
 
+  const handlePause = () => {
+    if (isPaused) {
+      setIsPaused(false);
+      resumeTimer();
+    } else {
+      setIsPaused(true);
+      pauseTimer();
+    }
+  };
+
+  const handleEndGame = () => {
+    setShowEndConfirm(true);
+    pauseTimer();
+  };
+
+  const confirmEndGame = () => {
+    const results = {
+      score,
+      cards: cardHistory,
+      settings
+    };
+    onEndGame(results);
+  };
+
+  const cancelEndGame = () => {
+    setShowEndConfirm(false);
+    if (!isPaused) {
+      resumeTimer();
+    }
+  };
+
   const handleCorrect = () => {
-    if (currentCard) {
+    if (currentCard && !isPaused && !showEndConfirm) {
       // Update score
       setScore(prev => ({ ...prev, correct: prev.correct + 1 }));
 
@@ -66,7 +99,7 @@ function GameScreen({ settings, onEndGame }) {
   };
 
   const handleMissed = () => {
-    if (currentCard) {
+    if (currentCard && !isPaused && !showEndConfirm) {
       // Update score
       setScore(prev => ({ ...prev, missed: prev.missed + 1 }));
 
@@ -82,7 +115,7 @@ function GameScreen({ settings, onEndGame }) {
   };
 
   const handlePass = () => {
-    if (currentCard && canUsePass(settings, passesUsed)) {
+    if (currentCard && canUsePass(settings, passesUsed) && !isPaused && !showEndConfirm) {
       // Update score
       setScore(prev => ({ ...prev, passed: prev.passed + 1 }));
       setPassesUsed(prev => prev + 1);
@@ -134,52 +167,96 @@ function GameScreen({ settings, onEndGame }) {
   }
 
   return (
-    <div className="game-screen">
-      <div className="timer-display">
-        <span className="timer-label">{t('time', uiLang)}</span>
-        <span className="timer-value">{formatTime(timeRemaining)}</span>
+    <div className={`game-screen ${isPaused || showEndConfirm ? 'game-paused' : ''}`}>
+      <div className="game-controls">
+        <div className="timer-display">
+          <span className="timer-label">{t('time', uiLang)}</span>
+          <span className="timer-value">{formatTime(timeRemaining)}</span>
+        </div>
+        <div className="control-buttons">
+          <button
+            className={`control-button pause-button ${isPaused ? 'active' : ''}`}
+            onClick={handlePause}
+            disabled={showEndConfirm}
+          >
+            {isPaused ? '▶ ' + t('resume', uiLang) : '⏸ ' + t('pause', uiLang)}
+          </button>
+          <button
+            className="control-button end-button"
+            onClick={handleEndGame}
+            disabled={showEndConfirm}
+          >
+            ⏹ {t('endGame', uiLang)}
+          </button>
+        </div>
       </div>
 
-      <div className="card-display">
-        <h2 className="card-word">{currentCard.wordToGuess}</h2>
-        <div className="card-divider"></div>
-        <ul className="forbidden-words">
-          {currentCard.forbiddenWords && currentCard.forbiddenWords.map((word, index) => (
-            <li key={index}>{word}</li>
-          ))}
-        </ul>
+      <div className="game-content">
+        <div className="card-display">
+          <h2 className="card-word">{currentCard.wordToGuess}</h2>
+          <div className="card-divider"></div>
+          <ul className="forbidden-words">
+            {currentCard.forbiddenWords && currentCard.forbiddenWords.map((word, index) => (
+              <li key={index}>{word}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="action-buttons">
+          <button
+            className="action-button correct-button"
+            onClick={handleCorrect}
+            disabled={isPaused || showEndConfirm}
+          >
+            ✓ {t('correct', uiLang)}
+          </button>
+          <button
+            className="action-button missed-button"
+            onClick={handleMissed}
+            disabled={isPaused || showEndConfirm}
+          >
+            ✗ {t('missed', uiLang)}
+          </button>
+        </div>
+
+        <div className="pass-button-container">
+          <button
+            className="action-button pass-button"
+            onClick={handlePass}
+            disabled={!passAllowed || isPaused || showEndConfirm}
+          >
+            ↻ {passButtonText}
+          </button>
+        </div>
+
+        <div className="score-display">
+          <span className="score-item correct-score">{score.correct} ✓</span>
+          <span className="score-item missed-score">{score.missed} ✗</span>
+          <span className="score-item passed-score">{score.passed} ↻</span>
+        </div>
       </div>
 
-      <div className="action-buttons">
-        <button
-          className="action-button correct-button"
-          onClick={handleCorrect}
-        >
-          ✓ {t('correct', uiLang)}
-        </button>
-        <button
-          className="action-button missed-button"
-          onClick={handleMissed}
-        >
-          ✗ {t('missed', uiLang)}
-        </button>
-      </div>
-
-      <div className="pass-button-container">
-        <button
-          className="action-button pass-button"
-          onClick={handlePass}
-          disabled={!passAllowed}
-        >
-          ↻ {passButtonText}
-        </button>
-      </div>
-
-      <div className="score-display">
-        <span className="score-item correct-score">{score.correct} ✓</span>
-        <span className="score-item missed-score">{score.missed} ✗</span>
-        <span className="score-item passed-score">{score.passed} ↻</span>
-      </div>
+      {showEndConfirm && (
+        <div className="confirm-dialog-overlay">
+          <div className="confirm-dialog">
+            <p className="confirm-message">{t('endGameConfirm', uiLang)}</p>
+            <div className="confirm-buttons">
+              <button
+                className="confirm-button cancel-button"
+                onClick={cancelEndGame}
+              >
+                {t('cancel', uiLang)}
+              </button>
+              <button
+                className="confirm-button confirm-end-button"
+                onClick={confirmEndGame}
+              >
+                {t('confirm', uiLang)}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
