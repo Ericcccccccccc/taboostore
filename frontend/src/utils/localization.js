@@ -34,9 +34,13 @@ const translations = {
     // End Screen
     gameOver: 'Game Over!',
     finalScore: 'Final Score',
+    totalScore: 'Total Score',
     cardsPlayed: 'Cards Played',
     playAgain: 'Play Again',
     returnToMenu: 'Return to Menu',
+    reportProblem: 'Report Problem',
+    undo: 'Undo',
+    problemReported: 'Problem reported for this card',
   },
 
   pt: {
@@ -70,9 +74,13 @@ const translations = {
     // End Screen
     gameOver: 'Fim de Jogo!',
     finalScore: 'Pontuação Final',
+    totalScore: 'Pontuação Total',
     cardsPlayed: 'Cartas Jogadas',
     playAgain: 'Jogar Novamente',
     returnToMenu: 'Voltar ao Menu',
+    reportProblem: 'Reportar Problema',
+    undo: 'Desfazer',
+    problemReported: 'Problema reportado para esta carta',
   }
 };
 

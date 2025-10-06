@@ -87,9 +87,10 @@ function GameScreen({ settings, onEndGame }) {
       // Update score
       setScore(prev => ({ ...prev, correct: prev.correct + 1 }));
 
-      // Add to history with wordToGuess property
+      // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         wordToGuess: currentCard.wordToGuess,
+        forbiddenWords: currentCard.forbiddenWords,
         status: 'correct'
       }]);
 
@@ -103,9 +104,10 @@ function GameScreen({ settings, onEndGame }) {
       // Update score
       setScore(prev => ({ ...prev, missed: prev.missed + 1 }));
 
-      // Add to history with wordToGuess property
+      // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         wordToGuess: currentCard.wordToGuess,
+        forbiddenWords: currentCard.forbiddenWords,
         status: 'missed'
       }]);
 
@@ -120,14 +122,38 @@ function GameScreen({ settings, onEndGame }) {
       setScore(prev => ({ ...prev, passed: prev.passed + 1 }));
       setPassesUsed(prev => prev + 1);
 
-      // Add to history with wordToGuess property
+      // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         wordToGuess: currentCard.wordToGuess,
+        forbiddenWords: currentCard.forbiddenWords,
         status: 'passed'
       }]);
 
       // Load next card
       nextCard();
+    }
+  };
+
+  const handleUndo = () => {
+    if (cardHistory.length > 0 && !isPaused && !showEndConfirm) {
+      // Get the last card from history
+      const lastCard = cardHistory[cardHistory.length - 1];
+
+      // Restore the last card as current
+      setCurrentCard(lastCard);
+
+      // Remove it from history
+      setCardHistory(prev => prev.slice(0, -1));
+
+      // Undo score changes based on the status
+      if (lastCard.status === 'correct') {
+        setScore(prev => ({ ...prev, correct: prev.correct - 1 }));
+      } else if (lastCard.status === 'missed') {
+        setScore(prev => ({ ...prev, missed: prev.missed - 1 }));
+      } else if (lastCard.status === 'passed') {
+        setScore(prev => ({ ...prev, passed: prev.passed - 1 }));
+        setPassesUsed(prev => prev - 1);
+      }
     }
   };
 
@@ -219,13 +245,20 @@ function GameScreen({ settings, onEndGame }) {
           </button>
         </div>
 
-        <div className="pass-button-container">
+        <div className="secondary-buttons">
           <button
             className="action-button pass-button"
             onClick={handlePass}
             disabled={!passAllowed || isPaused || showEndConfirm}
           >
             ↻ {passButtonText}
+          </button>
+          <button
+            className="action-button undo-button"
+            onClick={handleUndo}
+            disabled={cardHistory.length === 0 || isPaused || showEndConfirm}
+          >
+            ⟲ {t('undo', uiLang)}
           </button>
         </div>
 

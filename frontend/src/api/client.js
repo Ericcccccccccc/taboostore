@@ -61,6 +61,18 @@ export const api = {
   getLanguages: async () => {
     return fetchAPI('/api/languages');
   },
+
+  /**
+   * Report a problematic card
+   * @param {string} word - The word to report as problematic
+   * @returns {Promise<Object>} Response status
+   */
+  reportProblemCard: async (word) => {
+    return fetchAPI('/api/report-problem', {
+      method: 'POST',
+      body: JSON.stringify({ word }),
+    });
+  },
 };
 
 export default api;

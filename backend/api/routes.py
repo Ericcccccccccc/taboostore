@@ -1,8 +1,9 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Body
 from typing import List, Literal
 import json
 import random
 from pathlib import Path
+from datetime import datetime
 from .models import Card, CardsResponse
 
 router = APIRouter()
@@ -46,6 +47,35 @@ def load_cards_from_file(language: str) -> List[Card]:
 async def health_check() -> dict[str, str]:
     """Health check endpoint to verify server status."""
     return {"status": "healthy"}
+
+
+@router.post("/report-problem")
+async def report_problem_card(
+    word: str = Body(..., embed=True, description="The problematic card word")
+) -> dict[str, str]:
+    """
+    Report a problematic card.
+
+    Appends the word to a problems.txt file with timestamp.
+    The file is stored in a data directory that persists across rebuilds.
+    """
+    try:
+        # Create problems directory if it doesn't exist
+        problems_dir = Path(__file__).parent.parent / "data" / "problems"
+        problems_dir.mkdir(parents=True, exist_ok=True)
+
+        # Problems file path
+        problems_file = problems_dir / "reported_cards.txt"
+
+        # Append the problematic word with timestamp
+        timestamp = datetime.now().isoformat()
+        with open(problems_file, "a", encoding="utf-8") as f:
+            f.write(f"{timestamp}\t{word}\n")
+
+        return {"status": "success", "message": f"Problem reported for card: {word}"}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to report problem: {e}")
 
 
 @router.get("/cards", response_model=CardsResponse)

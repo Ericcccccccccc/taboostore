@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { getUILanguage, t } from '../utils/localization';
+import { api } from '../api/client';
 import './styles.css';
 
 /**
@@ -9,10 +10,13 @@ import './styles.css';
  */
 function EndScreen({ results, onPlayAgain, onReturnToMenu }) {
   const { score, cards, settings } = results;
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [reportedCards, setReportedCards] = useState(new Set());
 
   // Get the UI language based on selected language mode
   const uiLang = getUILanguage(settings?.language || 'en');
   const totalCards = score.correct + score.missed + score.passed;
+  const totalScore = score.correct - score.missed; // +1 for correct, -1 for missed
 
   const getStatusIcon = (status) => {
     switch (status) {
@@ -40,12 +44,32 @@ function EndScreen({ results, onPlayAgain, onReturnToMenu }) {
     }
   };
 
+  const handleCardClick = (card) => {
+    setSelectedCard(selectedCard === card ? null : card);
+  };
+
+  const handleReportProblem = async (card) => {
+    try {
+      // Call API to report the problem
+      await api.reportProblemCard(card.wordToGuess);
+      setReportedCards(new Set([...reportedCards, card.wordToGuess]));
+    } catch (error) {
+      console.error('Failed to report problem:', error);
+    }
+  };
+
   return (
     <div className="end-screen">
       <h1 className="game-over-title">{t('gameOver', uiLang)}</h1>
 
       <div className="final-score">
         <h2>{t('finalScore', uiLang)}</h2>
+        <div className="total-score">
+          <span className="total-score-label">{t('totalScore', uiLang)}:</span>
+          <span className={`total-score-value ${totalScore > 0 ? 'positive' : totalScore < 0 ? 'negative' : 'neutral'}`}>
+            {totalScore > 0 ? '+' : ''}{totalScore}
+          </span>
+        </div>
         <div className="score-summary">
           <div className="score-stat correct-stat">
             <span className="score-number">{score.correct}</span>
@@ -68,10 +92,35 @@ function EndScreen({ results, onPlayAgain, onReturnToMenu }) {
           {cards.map((card, index) => (
             <li
               key={index}
-              className={`card-item ${getStatusClass(card.status)}`}
+              className={`card-item ${getStatusClass(card.status)} ${selectedCard === card ? 'selected' : ''}`}
+              onClick={() => handleCardClick(card)}
             >
-              <span className="card-status-icon">{getStatusIcon(card.status)}</span>
-              <span className="card-word-text">{card.wordToGuess || card.word}</span>
+              <div className="card-item-header">
+                <span className="card-status-icon">{getStatusIcon(card.status)}</span>
+                <span className="card-word-text">{card.wordToGuess || card.word}</span>
+              </div>
+              {selectedCard === card && card.forbiddenWords && (
+                <div className="card-details">
+                  <div className="forbidden-words-list">
+                    {card.forbiddenWords.map((word, idx) => (
+                      <span key={idx} className="forbidden-word-item">{word}</span>
+                    ))}
+                  </div>
+                  {!reportedCards.has(card.wordToGuess) ? (
+                    <button
+                      className="report-problem-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleReportProblem(card);
+                      }}
+                    >
+                      🚩 {t('reportProblem', uiLang)}
+                    </button>
+                  ) : (
+                    <span className="problem-reported">✓ {t('problemReported', uiLang)}</span>
+                  )}
+                </div>
+              )}
             </li>
           ))}
         </ul>

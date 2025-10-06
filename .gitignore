@@ -70,3 +70,6 @@ caddy_config/
 # Logs
 logs/
 *.log
+
+# Problem reports (keep locally)
+backend/data/problems/
