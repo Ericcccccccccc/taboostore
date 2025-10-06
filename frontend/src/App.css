@@ -67,11 +67,12 @@ body {
 /* App Container */
 .app {
   min-height: 100vh;
+  min-height: 100dvh; /* Use dynamic viewport height for mobile */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm); /* Reduced padding on mobile */
 }
 
 /* Screen Base Styles */
@@ -80,7 +81,7 @@ body {
   max-width: 640px;
   background-color: var(--color-bg-primary);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-md); /* Reduced for mobile */
   box-shadow: var(--shadow-lg);
   text-align: center;
 }

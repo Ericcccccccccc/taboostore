@@ -3,9 +3,10 @@
    =================================== */
 
 .start-screen {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   text-align: center;
 }
 
@@ -121,12 +122,15 @@
    =================================== */
 
 .game-screen {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .game-content {
@@ -215,11 +219,11 @@
 
 .card-display {
   background: var(--color-bg-primary);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-md);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   text-align: center;
-  min-height: 300px;
+  min-height: 200px; /* Reduced from 300px */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,19 +231,19 @@
 
 /* Word extra large per PR-006 */
 .card-word {
-  font-size: var(--font-size-xl);
+  font-size: 1.75rem; /* Slightly smaller on mobile */
   font-weight: 700;
   color: var(--color-text-primary);
-  margin: 0 0 var(--spacing-lg) 0;
+  margin: 0 0 var(--spacing-md) 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 /* Divider thick per PR-006 */
 .card-divider {
-  height: 4px;
+  height: 3px;
   background: linear-gradient(to right, var(--color-danger), var(--color-warning), var(--color-warning));
-  margin: var(--spacing-lg) auto;
+  margin: var(--spacing-md) auto;
   width: 80%;
   border-radius: var(--radius-sm);
 }
@@ -248,13 +252,13 @@
 .forbidden-words {
   list-style: none;
   padding: 0;
-  margin: var(--spacing-lg) 0 0 0;
+  margin: var(--spacing-md) 0 0 0;
 }
 
 .forbidden-words li {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   color: var(--color-danger);
-  margin: var(--spacing-sm) 0;
+  margin: var(--spacing-xs) 0;
   font-weight: 600;
 }
 
@@ -486,14 +490,16 @@
    =================================== */
 
 .end-screen {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto; /* Allow scrolling instead of hidden */
 }
 
 .game-over-title {
@@ -506,10 +512,10 @@
 /* Score summary card per PR-006 */
 .final-score {
   background: var(--color-bg-primary);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-md);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .final-score h2 {
@@ -569,7 +575,7 @@
 }
 
 .score-number {
-  font-size: 3rem;
+  font-size: 2rem; /* Reduced for mobile */
   font-weight: 700;
 }
 
@@ -594,12 +600,13 @@
 
 .cards-list-container {
   background: var(--color-bg-primary);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  margin-bottom: var(--spacing-xl);
-  flex: 1;
-  min-height: 0; /* Allow it to shrink */
+  margin-bottom: var(--spacing-md);
+  flex: 1 1 auto;
+  min-height: 200px; /* Minimum visible height */
+  max-height: 40vh; /* Limit height on mobile */
   display: flex;
   flex-direction: column;
 }
@@ -744,10 +751,11 @@
 /* Clear action buttons per PR-006 */
 .end-buttons {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   justify-content: center;
-  flex-direction: row;
-  padding-top: var(--spacing-lg);
+  flex-direction: column; /* Stack on mobile */
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
   flex-shrink: 0; /* Never shrink, always visible */
 }
 
@@ -826,6 +834,28 @@
     font-size: 2.5rem;
   }
 
+  .card-display {
+    padding: var(--spacing-xl);
+    min-height: 300px;
+  }
+
+  .forbidden-words li {
+    font-size: var(--font-size-lg);
+  }
+
+  .score-number {
+    font-size: 3rem;
+  }
+
+  .cards-list-container {
+    max-height: 50vh;
+    padding: var(--spacing-lg);
+  }
+
+  .final-score {
+    padding: var(--spacing-xl);
+  }
+
   /* Buttons side-by-side on tablet/desktop per PR-006 */
   .action-buttons {
     flex-direction: row;
@@ -867,33 +897,58 @@
   }
 }
 
+/* Mobile landscape adjustments */
+@media (max-height: 700px) and (orientation: landscape) {
+  .cards-list-container {
+    max-height: 30vh;
+  }
+
+  .card-display {
+    min-height: 150px;
+  }
+
+  .game-screen,
+  .end-screen {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+}
+
 /* Extra small mobile (< 375px) */
 @media (max-width: 374px) {
   .game-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .card-word {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .forbidden-words li {
-    font-size: var(--font-size-md);
+    font-size: 0.9rem;
   }
 
   .score-number {
+    font-size: 1.5rem;
+  }
+
+  .total-score-value {
     font-size: 2rem;
   }
 
   .option-button {
-    min-width: 50px;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    min-width: 45px;
+    padding: var(--spacing-xs) var(--spacing-xs);
     font-size: var(--font-size-sm);
   }
 
   .settings-form,
   .final-score,
   .cards-list-container {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
+  }
+
+  .cards-list-container {
+    max-height: 35vh;
   }
 }
