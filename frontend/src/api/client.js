@@ -1,5 +1,6 @@
 // API Client for Taboo Store Backend
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// Use relative path so it works with any domain (production or localhost)
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 /**
  * Base fetch wrapper with error handling
