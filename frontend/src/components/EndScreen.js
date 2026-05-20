@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getUILanguage, t } from '../utils/localization';
 import { api } from '../api/client';
@@ -15,12 +15,51 @@ function EndScreen({
   settings,
   onPlayAgain,
   onReturnToMenu,
-  onChangeCardStatus
+  onChangeCardStatus,
+  onSwitchRoundTeam,
+  onUpdateSettings,
+  handoffCode,
+  handoffClaimed,
+  onCreateHandoff,
+  onHandoffClaimed,
+  onCloseHandoffModal
 }) {
   const uiLang = getUILanguage(settings?.language || 'en');
   const [selectedKey, setSelectedKey] = useState(null);     // `${roundIdx}:${cardIdx}` of expanded row
   const [changingKey, setChangingKey] = useState(null);     // same key, but with picker visible
   const [reportedCards, setReportedCards] = useState(new Set());
+  const [showSettings, setShowSettings] = useState(false);
+  const [showReturnDialog, setShowReturnDialog] = useState(false);
+
+  // Poll handoff status while modal is open
+  useEffect(() => {
+    if (!handoffCode || handoffClaimed) return undefined;
+    let cancelled = false;
+    const interval = setInterval(async () => {
+      try {
+        const status = await api.handoffStatus(handoffCode);
+        if (!cancelled && status.claimed) {
+          onHandoffClaimed();
+        }
+      } catch (err) {
+        // swallow; transient
+      }
+    }, 3000);
+    return () => { cancelled = true; clearInterval(interval); };
+  }, [handoffCode, handoffClaimed, onHandoffClaimed]);
+
+  const timerOptions = [60, 75, 90, 120];
+  const passOptions = [
+    { value: 1, label: '1' },
+    { value: 3, label: '3' },
+    { value: 5, label: '5' },
+    { value: -1, label: t('unlimited', uiLang) }
+  ];
+  const languageOptions = [
+    { value: 'en', label: t('english', uiLang) },
+    { value: 'pt', label: t('portuguese', uiLang) },
+    { value: 'both', label: t('both', uiLang) }
+  ];
 
   if (!rounds || rounds.length === 0) {
     return (
@@ -167,6 +206,14 @@ function EndScreen({
                   <span className={`round-row-net ${netClass}`}>
                     {roundNet > 0 ? '+' : ''}{roundNet}
                   </span>
+                  <button
+                    className="switch-round-team-btn"
+                    onClick={() => onSwitchRoundTeam(idx)}
+                    title={t('switchTeamForRound', uiLang)}
+                    aria-label={t('switchTeamForRound', uiLang)}
+                  >
+                    ⇄
+                  </button>
                 </div>
               );
             })
@@ -185,14 +232,144 @@ function EndScreen({
         </div>
       ))}
 
+      <div className="end-secondary-buttons">
+        <button
+          className="change-settings-toggle"
+          onClick={() => setShowSettings(s => !s)}
+          disabled={handoffClaimed}
+        >
+          ⚙ {t('changeSettings', uiLang)}
+        </button>
+        <button
+          className="handoff-toggle"
+          onClick={onCreateHandoff}
+          disabled={handoffClaimed}
+        >
+          📲 {t('handoff', uiLang)}
+        </button>
+      </div>
+
+      {showSettings && settings && (
+        <div className="settings-panel">
+          <div className="form-group">
+            <label>{t('timerDuration', uiLang)}</label>
+            <div className="option-buttons no-wrap">
+              {timerOptions.map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  className={`option-button ${settings.timerDuration === opt ? 'active' : ''}`}
+                  onClick={() => onUpdateSettings({ timerDuration: opt })}
+                >
+                  {opt}{t('seconds', uiLang)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="form-group">
+            <label>{t('passLimit', uiLang)}</label>
+            <div className="option-buttons no-wrap">
+              {passOptions.map(opt => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  className={`option-button ${settings.passLimit === opt.value ? 'active' : ''}`}
+                  onClick={() => onUpdateSettings({ passLimit: opt.value })}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="form-group">
+            <label>{t('languageMode', uiLang)}</label>
+            <div className="option-buttons">
+              {languageOptions.map(opt => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  className={`option-button ${settings.language === opt.value ? 'active' : ''}`}
+                  onClick={() => onUpdateSettings({ language: opt.value })}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="end-buttons">
-        <button className="play-again-button" onClick={onPlayAgain}>
+        <button className="play-again-button" onClick={onPlayAgain} disabled={handoffClaimed}>
           {t('playAgain', uiLang)}
         </button>
-        <button className="return-menu-button" onClick={onReturnToMenu}>
+        <button
+          className="return-menu-button"
+          onClick={() => handoffClaimed ? onReturnToMenu(false) : setShowReturnDialog(true)}
+        >
           {t('returnToMenu', uiLang)}
         </button>
       </div>
+
+      {showReturnDialog && (
+        <div className="confirm-dialog-overlay" onClick={() => setShowReturnDialog(false)}>
+          <div className="confirm-dialog" onClick={(e) => e.stopPropagation()}>
+            <p className="confirm-message">{t('saveScoresPrompt', uiLang)}</p>
+            <div className="confirm-buttons confirm-buttons-stack">
+              <button
+                className="confirm-button play-again-button"
+                onClick={() => { setShowReturnDialog(false); onReturnToMenu(true); }}
+              >
+                {t('saveScores', uiLang)}
+              </button>
+              <button
+                className="confirm-button confirm-end-button"
+                onClick={() => { setShowReturnDialog(false); onReturnToMenu(false); }}
+              >
+                {t('discardScores', uiLang)}
+              </button>
+              <button
+                className="confirm-button cancel-button"
+                onClick={() => setShowReturnDialog(false)}
+              >
+                {t('cancel', uiLang)}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {handoffCode && (
+        <div className="confirm-dialog-overlay">
+          <div className="confirm-dialog handoff-dialog">
+            {!handoffClaimed ? (
+              <>
+                <p className="handoff-prompt">{t('handoffCodePrompt', uiLang)}</p>
+                <div className="handoff-code">{handoffCode}</div>
+                <p className="handoff-expires">{t('handoffExpires', uiLang)}</p>
+                <p className="handoff-waiting">{t('handoffWaiting', uiLang)}</p>
+                <button
+                  className="confirm-button cancel-button"
+                  onClick={onCloseHandoffModal}
+                >
+                  {t('cancel', uiLang)}
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="handoff-claimed-icon">✅</p>
+                <p className="handoff-prompt">{t('handoffClaimed', uiLang)}</p>
+                <button
+                  className="confirm-button return-menu-button"
+                  onClick={() => { onCloseHandoffModal(); onReturnToMenu(false); }}
+                >
+                  {t('returnToMenu', uiLang)}
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
 
       <div className="cards-list-container">
         <h3>{t('cardsPlayed', uiLang)} ({lastTotalCards})</h3>
@@ -224,7 +401,7 @@ function EndScreen({
                     )}
 
                     {!isChanging ? (
-                      <div>
+                      <div className="card-actions-row">
                         {!reportedCards.has(card.wordToGuess) ? (
                           <button
                             className="report-problem-btn"
@@ -314,7 +491,14 @@ EndScreen.propTypes = {
   settings: PropTypes.object,
   onPlayAgain: PropTypes.func.isRequired,
   onReturnToMenu: PropTypes.func.isRequired,
-  onChangeCardStatus: PropTypes.func.isRequired
+  onChangeCardStatus: PropTypes.func.isRequired,
+  onSwitchRoundTeam: PropTypes.func.isRequired,
+  onUpdateSettings: PropTypes.func.isRequired,
+  handoffCode: PropTypes.string,
+  handoffClaimed: PropTypes.bool,
+  onCreateHandoff: PropTypes.func.isRequired,
+  onHandoffClaimed: PropTypes.func.isRequired,
+  onCloseHandoffModal: PropTypes.func.isRequired
 };
 
 export default EndScreen;

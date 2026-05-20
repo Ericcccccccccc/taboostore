@@ -2,9 +2,17 @@ from fastapi import APIRouter, HTTPException, Query, Body
 from typing import List, Literal
 import json
 import random
+import string
+import time
 from pathlib import Path
 from datetime import datetime
-from .models import Card, CardsResponse
+from .models import (
+    Card,
+    CardsResponse,
+    HandoffState,
+    HandoffCreateResponse,
+    HandoffStatusResponse,
+)
 
 router = APIRouter()
 
@@ -120,3 +128,59 @@ async def get_cards(
         raise HTTPException(status_code=500, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Unexpected error: {e}")
+
+
+# --- Game handoff (pass-the-phone) -----------------------------------------
+# Ephemeral in-memory store. Single-worker only (TODO.md flags multi-worker).
+_handoffs: dict[str, dict] = {}
+HANDOFF_TTL_SECONDS = 30 * 60
+HANDOFF_ALPHABET = string.ascii_uppercase
+
+
+def _purge_expired_handoffs() -> None:
+    now = time.time()
+    expired = [k for k, v in _handoffs.items() if now - v["created_at"] > HANDOFF_TTL_SECONDS]
+    for k in expired:
+        del _handoffs[k]
+
+
+def _generate_handoff_code() -> str:
+    for _ in range(20):
+        code = "".join(random.choices(HANDOFF_ALPHABET, k=4))
+        if code not in _handoffs:
+            return code
+    raise HTTPException(status_code=503, detail="Too many active handoffs, try again")
+
+
+@router.post("/handoff", response_model=HandoffCreateResponse)
+async def create_handoff(state: HandoffState) -> HandoffCreateResponse:
+    """Stash game state, return a 4-letter code."""
+    _purge_expired_handoffs()
+    code = _generate_handoff_code()
+    _handoffs[code] = {
+        "state": state.model_dump(),
+        "created_at": time.time(),
+        "claimed": False,
+    }
+    return HandoffCreateResponse(code=code, expires_in=HANDOFF_TTL_SECONDS)
+
+
+@router.get("/handoff/{code}/status", response_model=HandoffStatusResponse)
+async def handoff_status(code: str) -> HandoffStatusResponse:
+    """Poll whether a handoff has been claimed. Does not consume."""
+    _purge_expired_handoffs()
+    entry = _handoffs.get(code.upper())
+    if not entry:
+        return HandoffStatusResponse(exists=False, claimed=False)
+    return HandoffStatusResponse(exists=True, claimed=entry["claimed"])
+
+
+@router.get("/handoff/{code}", response_model=HandoffState)
+async def claim_handoff(code: str) -> HandoffState:
+    """Return the game state and mark the handoff as claimed (one-time use)."""
+    _purge_expired_handoffs()
+    entry = _handoffs.get(code.upper())
+    if not entry or entry["claimed"]:
+        raise HTTPException(status_code=404, detail="Code not found, expired, or already claimed")
+    entry["claimed"] = True
+    return HandoffState(**entry["state"])

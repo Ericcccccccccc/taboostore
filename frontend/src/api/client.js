@@ -74,6 +74,30 @@ export const api = {
       body: JSON.stringify({ word }),
     });
   },
+
+  /**
+   * Stash a game state on the server, return a 4-letter handoff code.
+   */
+  createHandoff: async (state) => {
+    return fetchAPI('/api/handoff', {
+      method: 'POST',
+      body: JSON.stringify(state),
+    });
+  },
+
+  /**
+   * Poll whether a handoff code has been claimed (does not consume).
+   */
+  handoffStatus: async (code) => {
+    return fetchAPI(`/api/handoff/${encodeURIComponent(code)}/status`);
+  },
+
+  /**
+   * Claim a handoff. Returns the game state and marks the code as consumed.
+   */
+  claimHandoff: async (code) => {
+    return fetchAPI(`/api/handoff/${encodeURIComponent(code)}`);
+  },
 };
 
 export default api;

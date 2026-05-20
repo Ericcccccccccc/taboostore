@@ -7,7 +7,8 @@ import './styles.css';
  * StartScreen - Game configuration screen
  * Allows players to set timer duration, pass limit, language mode, and team names
  */
-function StartScreen({ onStartGame, initialTeamNames }) {
+function StartScreen({ onStartGame, initialTeamNames, preservedRounds, onContinueGame, onDiscardScores, onClaim }) {
+  const hasPreservedScores = preservedRounds && preservedRounds.length > 0;
   const [settings, setSettings] = useState({
     timerDuration: 60,
     passLimit: 1,
@@ -16,6 +17,27 @@ function StartScreen({ onStartGame, initialTeamNames }) {
 
   const uiLang = getUILanguage(settings.language);
   const defaultTeamLabel = t('teamDefaultName', uiLang);
+
+  const [claimCode, setClaimCode] = useState('');
+  const [claimError, setClaimError] = useState('');
+  const [claimBusy, setClaimBusy] = useState(false);
+
+  const handleClaimSubmit = async (e) => {
+    e.preventDefault();
+    const code = claimCode.trim().toUpperCase();
+    if (code.length !== 4) {
+      setClaimError(t('claimError', uiLang));
+      return;
+    }
+    setClaimBusy(true);
+    setClaimError('');
+    try {
+      await onClaim(code);
+    } catch (err) {
+      setClaimError(t('claimError', uiLang));
+      setClaimBusy(false);
+    }
+  };
 
   // Team names with per-input dirty flags so UI-language changes don't overwrite custom names
   const [teamNames, setTeamNames] = useState(() => {
@@ -75,6 +97,22 @@ function StartScreen({ onStartGame, initialTeamNames }) {
     <div className="start-screen">
       <h1 className="game-title">{t('gameTitle', uiLang)}</h1>
       <p className="game-subtitle">{t('gameSubtitle', uiLang)}</p>
+
+      {hasPreservedScores && (
+        <div className="continue-game-banner">
+          <p className="continue-game-text">
+            {t('continueGameBanner', uiLang).replace('{n}', preservedRounds.length)}
+          </p>
+          <div className="continue-game-actions">
+            <button type="button" className="continue-game-button" onClick={onContinueGame}>
+              ▶ {t('continueGame', uiLang)}
+            </button>
+            <button type="button" className="discard-scores-link" onClick={onDiscardScores}>
+              {t('discardScores', uiLang)}
+            </button>
+          </div>
+        </div>
+      )}
 
       <form className="settings-form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -139,19 +177,51 @@ function StartScreen({ onStartGame, initialTeamNames }) {
               />
             ))}
           </div>
+          <span className="team-name-hint">{t('teamNameHint', uiLang)}</span>
         </div>
 
         <button type="submit" className="start-button">
           {t('startGame', uiLang)}
         </button>
       </form>
+
+      {onClaim && (
+        <form className="claim-form" onSubmit={handleClaimSubmit}>
+          <label className="claim-label">{t('enterGameCode', uiLang)}</label>
+          <div className="claim-row">
+            <input
+              type="text"
+              className="claim-code-input"
+              maxLength={4}
+              value={claimCode}
+              onChange={(e) => { setClaimCode(e.target.value.toUpperCase()); setClaimError(''); }}
+              placeholder="ABCD"
+              autoCapitalize="characters"
+              autoCorrect="off"
+              spellCheck={false}
+            />
+            <button
+              type="submit"
+              className="claim-button"
+              disabled={claimBusy || claimCode.trim().length !== 4}
+            >
+              {t('claim', uiLang)}
+            </button>
+          </div>
+          {claimError && <p className="claim-error">{claimError}</p>}
+        </form>
+      )}
     </div>
   );
 }
 
 StartScreen.propTypes = {
   onStartGame: PropTypes.func.isRequired,
-  initialTeamNames: PropTypes.arrayOf(PropTypes.string)
+  initialTeamNames: PropTypes.arrayOf(PropTypes.string),
+  preservedRounds: PropTypes.array,
+  onContinueGame: PropTypes.func,
+  onDiscardScores: PropTypes.func,
+  onClaim: PropTypes.func
 };
 
 export default StartScreen;

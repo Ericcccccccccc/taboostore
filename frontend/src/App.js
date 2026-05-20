@@ -13,6 +13,8 @@ function App() {
   const [rounds, setRounds] = useState([]);
   const [currentTeamIdx, setCurrentTeamIdx] = useState(0);
   const [error, setError] = useState(null);
+  const [handoffCode, setHandoffCode] = useState(null);     // string when modal visible
+  const [handoffClaimed, setHandoffClaimed] = useState(false);
 
   // Check API health on mount
   useEffect(() => {
@@ -70,12 +72,69 @@ function App() {
     setCurrentScreen('ready');
   };
 
-  const handleReturnToMenu = () => {
+  const handleReturnToMenu = (preserveScores = false) => {
+    if (!preserveScores) {
+      setRounds([]);
+      setGameSettings(null);
+      setTeamNames(['Team 1', 'Team 2']);
+      setCurrentTeamIdx(0);
+    }
+    setCurrentScreen('start');
+  };
+
+  const handleDiscardPreservedScores = () => {
     setRounds([]);
     setGameSettings(null);
     setTeamNames(['Team 1', 'Team 2']);
     setCurrentTeamIdx(0);
-    setCurrentScreen('start');
+  };
+
+  const handleContinueGame = () => {
+    setCurrentScreen('ready');
+  };
+
+  const handleCreateHandoff = async () => {
+    try {
+      const resp = await api.createHandoff({
+        teamNames,
+        rounds,
+        currentTeamIdx,
+        gameSettings,
+      });
+      setHandoffCode(resp.code);
+      setHandoffClaimed(false);
+    } catch (err) {
+      console.error('Failed to create handoff:', err);
+      setError('Could not create handoff. Try again.');
+    }
+  };
+
+  const handleHandoffClaimed = () => {
+    setHandoffClaimed(true);
+  };
+
+  const handleCloseHandoffModal = () => {
+    setHandoffCode(null);
+    setHandoffClaimed(false);
+  };
+
+  const handleClaim = async (code) => {
+    const resp = await api.claimHandoff(code);
+    setTeamNames(resp.teamNames);
+    setRounds(resp.rounds);
+    setCurrentTeamIdx(resp.currentTeamIdx);
+    setGameSettings(resp.gameSettings);
+    setCurrentScreen('ready');
+  };
+
+  const handleUpdateSettings = (patch) => {
+    setGameSettings(prev => ({ ...prev, ...patch }));
+  };
+
+  const handleSwitchRoundTeam = (roundIdx) => {
+    setRounds(prev => prev.map((r, i) =>
+      i === roundIdx ? { ...r, team: 1 - r.team } : r
+    ));
   };
 
   const handleCardStatusChange = (roundIdx, cardIdx, newStatus) => {
@@ -101,6 +160,10 @@ function App() {
           <StartScreen
             onStartGame={handleStartGame}
             initialTeamNames={teamNames}
+            preservedRounds={rounds}
+            onContinueGame={handleContinueGame}
+            onDiscardScores={handleDiscardPreservedScores}
+            onClaim={handleClaim}
           />
         );
 
@@ -132,6 +195,13 @@ function App() {
             onPlayAgain={handlePlayAgain}
             onReturnToMenu={handleReturnToMenu}
             onChangeCardStatus={handleCardStatusChange}
+            onSwitchRoundTeam={handleSwitchRoundTeam}
+            onUpdateSettings={handleUpdateSettings}
+            handoffCode={handoffCode}
+            handoffClaimed={handoffClaimed}
+            onCreateHandoff={handleCreateHandoff}
+            onHandoffClaimed={handleHandoffClaimed}
+            onCloseHandoffModal={handleCloseHandoffModal}
           />
         );
 
