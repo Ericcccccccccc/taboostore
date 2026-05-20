@@ -1,0 +1,4683 @@
+{
+  "1a2b3c4d-5e6f-7890-abcd-ef1234567890": {
+    "verdict": "ok"
+  },
+  "2b3c4d5e-6f78-90ab-cdef-123456789012": {
+    "verdict": "ok"
+  },
+  "3c4d5e6f-7890-abcd-ef12-345678901234": {
+    "verdict": "ok"
+  },
+  "4d5e6f78-90ab-cdef-1234-567890123456": {
+    "verdict": "ok"
+  },
+  "5e6f7890-abcd-ef12-3456-789012345678": {
+    "verdict": "ok"
+  },
+  "6f7890ab-cdef-1234-5678-90123456789a": {
+    "verdict": "ok"
+  },
+  "7890abcd-ef12-3456-7890-123456789abc": {
+    "verdict": "ok"
+  },
+  "890abcde-f123-4567-890a-bcdef1234567": {
+    "verdict": "ok"
+  },
+  "90abcdef-1234-5678-90ab-cdef12345678": {
+    "verdict": "ok"
+  },
+  "0abcdef1-2345-6789-0abc-def123456789": {
+    "verdict": "ok"
+  },
+  "abcdef12-3456-7890-abcd-ef1234567890": {
+    "verdict": "ok"
+  },
+  "bcdef123-4567-890a-bcde-f12345678901": {
+    "verdict": "ok"
+  },
+  "cdef1234-5678-90ab-cdef-123456789012": {
+    "verdict": "ok"
+  },
+  "def12345-6789-0abc-def1-234567890123": {
+    "verdict": "ok"
+  },
+  "ef123456-7890-abcd-ef12-345678901234": {
+    "verdict": "ok"
+  },
+  "f1234567-890a-bcde-f123-456789012345": {
+    "verdict": "ok"
+  },
+  "12345678-90ab-cdef-1234-567890123456": {
+    "verdict": "ok"
+  },
+  "23456789-0abc-def1-2345-678901234567": {
+    "verdict": "ok"
+  },
+  "34567890-abcd-ef12-3456-789012345678": {
+    "verdict": "ok"
+  },
+  "4567890a-bcde-f123-4567-890123456789": {
+    "verdict": "ok"
+  },
+  "5678901b-cdef-2345-6789-012345678901": {
+    "verdict": "ok"
+  },
+  "6789012c-def3-4567-890a-123456789012": {
+    "verdict": "ok"
+  },
+  "789012de-f345-6789-0abc-234567890123": {
+    "verdict": "ok"
+  },
+  "89012def-3456-7890-abcd-345678901234": {
+    "verdict": "ok"
+  },
+  "9012def3-4567-890a-bcde-456789012345": {
+    "verdict": "ok"
+  },
+  "012def34-5678-90ab-cdef-567890123456": {
+    "verdict": "ok"
+  },
+  "12def345-6789-0abc-def1-678901234567": {
+    "verdict": "ok"
+  },
+  "2def3456-7890-abcd-ef12-789012345678": {
+    "verdict": "ok"
+  },
+  "def34567-890a-bcde-f123-890123456789": {
+    "verdict": "ok"
+  },
+  "ef345678-90ab-cdef-1234-901234567890": {
+    "verdict": "ok"
+  },
+  "f3456789-0abc-def1-2345-012345678901": {
+    "verdict": "ok"
+  },
+  "3456789a-bcde-f123-4567-123456789012": {
+    "verdict": "ok"
+  },
+  "456789ab-cdef-2345-6789-234567890123": {
+    "verdict": "ok"
+  },
+  "56789abc-def3-4567-890a-345678901234": {
+    "verdict": "ok"
+  },
+  "6789abcd-ef34-5678-90ab-456789012345": {
+    "verdict": "ok"
+  },
+  "789abcde-f345-6789-0abc-567890123456": {
+    "verdict": "ok"
+  },
+  "89abcdef-3456-7890-abcd-678901234567": {
+    "verdict": "ok"
+  },
+  "9abcdef0-4567-890a-bcde-789012345678": {
+    "verdict": "ok"
+  },
+  "abcdef01-5678-90ab-cdef-890123456789": {
+    "verdict": "ok"
+  },
+  "bcdef012-6789-0abc-def1-901234567890": {
+    "verdict": "ok"
+  },
+  "cdef0123-7890-abcd-ef12-012345678901": {
+    "verdict": "ok"
+  },
+  "def01234-890a-bcde-f123-123456789012": {
+    "verdict": "ok"
+  },
+  "ef012345-90ab-cdef-1234-234567890123": {
+    "verdict": "ok"
+  },
+  "f0123456-0abc-def1-2345-345678901234": {
+    "verdict": "ok"
+  },
+  "01234567-bcde-f123-4567-456789012345": {
+    "verdict": "ok"
+  },
+  "1234567a-cdef-2345-6789-567890123456": {
+    "verdict": "ok"
+  },
+  "234567ab-def3-4567-890a-678901234567": {
+    "verdict": "ok"
+  },
+  "34567abc-ef34-5678-90ab-789012345678": {
+    "verdict": "ok"
+  },
+  "4567abcd-f345-6789-0abc-890123456789": {
+    "verdict": "flagged",
+    "reason": "politically charged"
+  },
+  "567abcde-3456-7890-abcd-901234567890": {
+    "verdict": "ok"
+  },
+  "67abcdef-4567-890a-bcde-012345678901": {
+    "verdict": "ok"
+  },
+  "7abcdef0-5678-90ab-cdef-123456789012": {
+    "verdict": "ok"
+  },
+  "8bcdef01-6789-0abc-def1-234567890123": {
+    "verdict": "ok"
+  },
+  "9cdef012-7890-abcd-ef12-345678901234": {
+    "verdict": "ok"
+  },
+  "adef0123-890a-bcde-f123-456789012345": {
+    "verdict": "ok"
+  },
+  "bef01234-90ab-cdef-1234-567890123456": {
+    "verdict": "ok"
+  },
+  "cf012345-0abc-def1-2345-678901234567": {
+    "verdict": "ok"
+  },
+  "d0123456-bcde-f123-4567-789012345678": {
+    "verdict": "ok"
+  },
+  "e1234567-cdef-2345-6789-890123456789": {
+    "verdict": "ok"
+  },
+  "f234567a-def3-4567-890a-901234567890": {
+    "verdict": "ok"
+  },
+  "034567ab-ef34-5678-90ab-012345678901": {
+    "verdict": "ok"
+  },
+  "14567abc-f345-6789-0abc-123456789012": {
+    "verdict": "ok"
+  },
+  "2567abcd-3456-7890-abcd-234567890123": {
+    "verdict": "ok"
+  },
+  "367abcde-4567-890a-bcde-345678901234": {
+    "verdict": "ok"
+  },
+  "47abcdef-5678-90ab-cdef-456789012345": {
+    "verdict": "ok"
+  },
+  "58bcdef0-6789-0abc-def1-567890123456": {
+    "verdict": "ok"
+  },
+  "69cdef01-7890-abcd-ef12-678901234567": {
+    "verdict": "ok"
+  },
+  "7adef012-890a-bcde-f123-789012345678": {
+    "verdict": "ok"
+  },
+  "8bef0123-90ab-cdef-1234-890123456789": {
+    "verdict": "ok"
+  },
+  "9cf01234-0abc-def1-2345-901234567890": {
+    "verdict": "ok"
+  },
+  "ad012345-bcde-f123-4567-012345678901": {
+    "verdict": "ok"
+  },
+  "be123456-cdef-2345-6789-123456789012": {
+    "verdict": "ok"
+  },
+  "cf234567-def3-4567-890a-234567890123": {
+    "verdict": "ok"
+  },
+  "d034567a-ef34-5678-90ab-345678901234": {
+    "verdict": "ok"
+  },
+  "e14567ab-f345-6789-0abc-456789012345": {
+    "verdict": "ok"
+  },
+  "f2567abc-3456-7890-abcd-567890123456": {
+    "verdict": "ok"
+  },
+  "0367abcd-4567-890a-bcde-678901234567": {
+    "verdict": "ok"
+  },
+  "147abcde-5678-90ab-cdef-789012345678": {
+    "verdict": "ok"
+  },
+  "258bcdef-6789-0abc-def1-890123456789": {
+    "verdict": "ok"
+  },
+  "369cdef0-7890-abcd-ef12-901234567890": {
+    "verdict": "ok"
+  },
+  "47adef01-890a-bcde-f123-012345678901": {
+    "verdict": "ok"
+  },
+  "58bef012-90ab-cdef-1234-123456789012": {
+    "verdict": "ok"
+  },
+  "69cf0123-0abc-def1-2345-234567890123": {
+    "verdict": "ok"
+  },
+  "7ad01234-bcde-f123-4567-345678901234": {
+    "verdict": "ok"
+  },
+  "8be12345-cdef-2345-6789-456789012345": {
+    "verdict": "ok"
+  },
+  "9cf23456-def3-4567-890a-567890123456": {
+    "verdict": "ok"
+  },
+  "ad034567-ef34-5678-90ab-678901234567": {
+    "verdict": "ok"
+  },
+  "be14567a-f345-6789-0abc-789012345678": {
+    "verdict": "ok"
+  },
+  "cf2567ab-3456-7890-abcd-890123456789": {
+    "verdict": "ok"
+  },
+  "d0367abc-4567-890a-bcde-901234567890": {
+    "verdict": "ok"
+  },
+  "e147abcd-5678-90ab-cdef-012345678901": {
+    "verdict": "ok"
+  },
+  "f258bcde-6789-0abc-def1-123456789012": {
+    "verdict": "ok"
+  },
+  "0369cdef-7890-abcd-ef12-234567890123": {
+    "verdict": "ok"
+  },
+  "147adef0-890a-bcde-f123-345678901234": {
+    "verdict": "ok"
+  },
+  "258bef01-90ab-cdef-1234-456789012345": {
+    "verdict": "ok"
+  },
+  "369cf012-0abc-def1-2345-567890123456": {
+    "verdict": "ok"
+  },
+  "47ad0123-bcde-f123-4567-678901234567": {
+    "verdict": "ok"
+  },
+  "58be1234-cdef-2345-6789-789012345678": {
+    "verdict": "ok"
+  },
+  "69cf2345-def3-4567-890a-890123456789": {
+    "verdict": "ok"
+  },
+  "7ad03456-ef34-5678-90ab-901234567890": {
+    "verdict": "ok"
+  },
+  "8be14567-f345-6789-0abc-012345678901": {
+    "verdict": "ok"
+  },
+  "9cf25678-3456-7890-abcd-123456789012": {
+    "verdict": "ok"
+  },
+  "ad036789-4567-890a-bcde-234567890123": {
+    "verdict": "ok"
+  },
+  "be147890-5678-90ab-cdef-345678901234": {
+    "verdict": "ok"
+  },
+  "cf258901-6789-0abc-def1-456789012345": {
+    "verdict": "ok"
+  },
+  "d0369012-7890-abcd-ef12-567890123456": {
+    "verdict": "ok"
+  },
+  "e147a012-890a-bcde-f123-678901234567": {
+    "verdict": "ok"
+  },
+  "f258b123-90ab-cdef-1234-789012345678": {
+    "verdict": "ok"
+  },
+  "0369c234-0abc-def1-2345-890123456789": {
+    "verdict": "ok"
+  },
+  "147ad345-bcde-f123-4567-901234567890": {
+    "verdict": "ok"
+  },
+  "258be456-cdef-2345-6789-012345678901": {
+    "verdict": "ok"
+  },
+  "369cf567-def3-4567-890a-123456789012": {
+    "verdict": "ok"
+  },
+  "47ad0678-ef34-5678-90ab-234567890123": {
+    "verdict": "ok"
+  },
+  "58be1789-f345-6789-0abc-345678901234": {
+    "verdict": "ok"
+  },
+  "69cf2890-3456-7890-abcd-456789012345": {
+    "verdict": "ok"
+  },
+  "7ad03901-4567-890a-bcde-567890123456": {
+    "verdict": "ok"
+  },
+  "8be14012-5678-90ab-cdef-678901234567": {
+    "verdict": "ok"
+  },
+  "9cf25123-6789-0abc-def1-789012345678": {
+    "verdict": "ok"
+  },
+  "ad036234-7890-abcd-ef12-890123456789": {
+    "verdict": "ok"
+  },
+  "be147345-890a-bcde-f123-901234567890": {
+    "verdict": "ok"
+  },
+  "cf258456-90ab-cdef-1234-012345678901": {
+    "verdict": "ok"
+  },
+  "d0369567-0abc-def1-2345-123456789012": {
+    "verdict": "ok"
+  },
+  "e147a678-bcde-f123-4567-234567890123": {
+    "verdict": "ok"
+  },
+  "f258b789-cdef-2345-6789-345678901234": {
+    "verdict": "ok"
+  },
+  "0369c890-def3-4567-890a-456789012345": {
+    "verdict": "ok"
+  },
+  "147ad901-ef34-5678-90ab-567890123456": {
+    "verdict": "ok"
+  },
+  "258be012-f345-6789-0abc-678901234567": {
+    "verdict": "ok"
+  },
+  "369cf123-3456-7890-abcd-789012345678": {
+    "verdict": "ok"
+  },
+  "47ad0234-4567-890a-bcde-890123456789": {
+    "verdict": "flagged",
+    "reason": "inappropriate: forbidden word is slur-adjacent"
+  },
+  "58be1345-5678-90ab-cdef-901234567890": {
+    "verdict": "ok"
+  },
+  "69cf2456-6789-0abc-def1-012345678901": {
+    "verdict": "ok"
+  },
+  "7ad03567-7890-abcd-ef12-123456789012": {
+    "verdict": "ok"
+  },
+  "8be14678-890a-bcde-f123-234567890123": {
+    "verdict": "ok"
+  },
+  "9cf25789-90ab-cdef-1234-345678901234": {
+    "verdict": "ok"
+  },
+  "ad036890-0abc-def1-2345-456789012345": {
+    "verdict": "ok"
+  },
+  "be147901-bcde-f123-4567-567890123456": {
+    "verdict": "ok"
+  },
+  "cf258012-cdef-2345-6789-678901234567": {
+    "verdict": "ok"
+  },
+  "d0369123-def3-4567-890a-789012345678": {
+    "verdict": "ok"
+  },
+  "e147a234-ef34-5678-90ab-890123456789": {
+    "verdict": "ok"
+  },
+  "f258b345-f345-6789-0abc-901234567890": {
+    "verdict": "ok"
+  },
+  "0369c456-3456-7890-abcd-012345678901": {
+    "verdict": "ok"
+  },
+  "147ad567-4567-890a-bcde-123456789012": {
+    "verdict": "ok"
+  },
+  "258be678-5678-90ab-cdef-234567890123": {
+    "verdict": "ok"
+  },
+  "369cf789-6789-0abc-def1-345678901234": {
+    "verdict": "ok"
+  },
+  "47ad0890-7890-abcd-ef12-456789012345": {
+    "verdict": "ok"
+  },
+  "58be1901-890a-bcde-f123-567890123456": {
+    "verdict": "ok"
+  },
+  "69cf2012-90ab-cdef-1234-678901234567": {
+    "verdict": "ok"
+  },
+  "7ad03123-0abc-def1-2345-789012345678": {
+    "verdict": "ok"
+  },
+  "8be14234-bcde-f123-4567-890123456789": {
+    "verdict": "ok"
+  },
+  "9cf25345-cdef-2345-6789-901234567890": {
+    "verdict": "ok"
+  },
+  "ad036456-def3-4567-890a-012345678901": {
+    "verdict": "ok"
+  },
+  "be147567-ef34-5678-90ab-123456789012": {
+    "verdict": "ok"
+  },
+  "cf258678-f345-6789-0abc-234567890123": {
+    "verdict": "ok"
+  },
+  "d0369789-3456-7890-abcd-345678901234": {
+    "verdict": "ok"
+  },
+  "e147a890-4567-890a-bcde-456789012345": {
+    "verdict": "ok"
+  },
+  "f258b901-5678-90ab-cdef-567890123456": {
+    "verdict": "ok"
+  },
+  "0369c012-6789-0abc-def1-678901234567": {
+    "verdict": "ok"
+  },
+  "147ad123-7890-abcd-ef12-789012345678": {
+    "verdict": "ok"
+  },
+  "258be234-890a-bcde-f123-890123456789": {
+    "verdict": "ok"
+  },
+  "369cf345-90ab-cdef-1234-901234567890": {
+    "verdict": "ok"
+  },
+  "47ad0456-0abc-def1-2345-012345678901": {
+    "verdict": "ok"
+  },
+  "58be1567-bcde-f123-4567-123456789012": {
+    "verdict": "ok"
+  },
+  "69cf2678-cdef-2345-6789-234567890123": {
+    "verdict": "ok"
+  },
+  "7ad03789-def3-4567-890a-345678901234": {
+    "verdict": "ok"
+  },
+  "8be14890-ef34-5678-90ab-456789012345": {
+    "verdict": "ok"
+  },
+  "9cf25901-f345-6789-0abc-567890123456": {
+    "verdict": "ok"
+  },
+  "ad036012-3456-7890-abcd-678901234567": {
+    "verdict": "ok"
+  },
+  "be147123-4567-890a-bcde-789012345678": {
+    "verdict": "ok"
+  },
+  "cf258234-5678-90ab-cdef-890123456789": {
+    "verdict": "ok"
+  },
+  "d0369345-6789-0abc-def1-901234567890": {
+    "verdict": "ok"
+  },
+  "e147a456-7890-abcd-ef12-012345678901": {
+    "verdict": "ok"
+  },
+  "f258b567-890a-bcde-f123-123456789012": {
+    "verdict": "ok"
+  },
+  "0369c678-90ab-cdef-1234-234567890123": {
+    "verdict": "ok"
+  },
+  "147ad789-0abc-def1-2345-345678901234": {
+    "verdict": "ok"
+  },
+  "258be890-bcde-f123-4567-456789012345": {
+    "verdict": "ok"
+  },
+  "369cf901-cdef-2345-6789-567890123456": {
+    "verdict": "ok"
+  },
+  "47ad0012-def3-4567-890a-678901234567": {
+    "verdict": "ok"
+  },
+  "58be1123-ef34-5678-90ab-789012345678": {
+    "verdict": "ok"
+  },
+  "69cf2234-f345-6789-0abc-890123456789": {
+    "verdict": "ok"
+  },
+  "7ad03345-3456-7890-abcd-901234567890": {
+    "verdict": "ok"
+  },
+  "8be14456-4567-890a-bcde-012345678901": {
+    "verdict": "ok"
+  },
+  "9cf25567-5678-90ab-cdef-123456789012": {
+    "verdict": "ok"
+  },
+  "ad036678-6789-0abc-def1-234567890123": {
+    "verdict": "ok"
+  },
+  "be147789-7890-abcd-ef12-345678901234": {
+    "verdict": "ok"
+  },
+  "cf258890-890a-bcde-f123-456789012345": {
+    "verdict": "ok"
+  },
+  "d0369901-90ab-cdef-1234-567890123456": {
+    "verdict": "ok"
+  },
+  "e147a012-0abc-def1-2345-678901234567": {
+    "verdict": "ok"
+  },
+  "f258b123-bcde-f123-4567-789012345678": {
+    "verdict": "flagged",
+    "reason": "politically charged"
+  },
+  "0369c234-cdef-2345-6789-890123456789": {
+    "verdict": "ok"
+  },
+  "147ad345-def3-4567-890a-901234567890": {
+    "verdict": "ok"
+  },
+  "258be456-ef34-5678-90ab-012345678901": {
+    "verdict": "ok"
+  },
+  "369cf567-f345-6789-0abc-123456789012": {
+    "verdict": "ok"
+  },
+  "47ad0678-3456-7890-abcd-234567890123": {
+    "verdict": "ok"
+  },
+  "58be1789-4567-890a-bcde-345678901234": {
+    "verdict": "ok"
+  },
+  "69cf2890-5678-90ab-cdef-456789012345": {
+    "verdict": "flagged",
+    "reason": "politically charged"
+  },
+  "7ad03901-6789-0abc-def1-567890123456": {
+    "verdict": "ok"
+  },
+  "8be14012-7890-abcd-ef12-678901234567": {
+    "verdict": "ok"
+  },
+  "9cf25123-890a-bcde-f123-789012345678": {
+    "verdict": "ok"
+  },
+  "ad036234-90ab-cdef-1234-890123456789": {
+    "verdict": "ok"
+  },
+  "be147345-0abc-def1-2345-901234567890": {
+    "verdict": "ok"
+  },
+  "cf258456-bcde-f123-4567-012345678901": {
+    "verdict": "ok"
+  },
+  "d0369567-cdef-2345-6789-123456789012": {
+    "verdict": "ok"
+  },
+  "e147a678-def3-4567-890a-234567890123": {
+    "verdict": "ok"
+  },
+  "f258b789-ef34-5678-90ab-345678901234": {
+    "verdict": "ok"
+  },
+  "0369c890-f345-6789-0abc-456789012345": {
+    "verdict": "ok"
+  },
+  "147ad901-3456-7890-abcd-567890123456": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "258be012-4567-890a-bcde-678901234567": {
+    "verdict": "ok"
+  },
+  "369cf123-5678-90ab-cdef-789012345678": {
+    "verdict": "ok"
+  },
+  "47ad0234-6789-0abc-def1-890123456789": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "58be1345-7890-abcd-ef12-901234567890": {
+    "verdict": "ok"
+  },
+  "69cf2456-890a-bcde-f123-012345678901": {
+    "verdict": "ok"
+  },
+  "7ad03567-90ab-cdef-1234-123456789012": {
+    "verdict": "ok"
+  },
+  "8be14678-0abc-def1-2345-234567890123": {
+    "verdict": "ok"
+  },
+  "9cf25789-bcde-f123-4567-345678901234": {
+    "verdict": "ok"
+  },
+  "ad036890-cdef-2345-6789-456789012345": {
+    "verdict": "ok"
+  },
+  "be147901-def3-4567-890a-567890123456": {
+    "verdict": "ok"
+  },
+  "cf258012-ef34-5678-90ab-678901234567": {
+    "verdict": "ok"
+  },
+  "d0369123-f345-6789-0abc-789012345678": {
+    "verdict": "ok"
+  },
+  "e147a234-3456-7890-abcd-890123456789": {
+    "verdict": "ok"
+  },
+  "f258b345-4567-890a-bcde-901234567890": {
+    "verdict": "ok"
+  },
+  "0369c456-5678-90ab-cdef-012345678901": {
+    "verdict": "ok"
+  },
+  "147ad567-6789-0abc-def1-123456789012": {
+    "verdict": "ok"
+  },
+  "258be678-7890-abcd-ef12-234567890123": {
+    "verdict": "ok"
+  },
+  "369cf789-890a-bcde-f123-345678901234": {
+    "verdict": "ok"
+  },
+  "47ad0890-90ab-cdef-1234-456789012345": {
+    "verdict": "ok"
+  },
+  "58be1901-0abc-def1-2345-567890123456": {
+    "verdict": "ok"
+  },
+  "69cf2012-bcde-f123-4567-678901234567": {
+    "verdict": "ok"
+  },
+  "7ad03123-cdef-2345-6789-789012345678": {
+    "verdict": "ok"
+  },
+  "8be14234-def3-4567-890a-890123456789": {
+    "verdict": "ok"
+  },
+  "9cf25345-ef34-5678-90ab-901234567890": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "ad036456-f345-6789-0abc-012345678901": {
+    "verdict": "ok"
+  },
+  "be147567-3456-7890-abcd-123456789012": {
+    "verdict": "ok"
+  },
+  "cf258678-4567-890a-bcde-234567890123": {
+    "verdict": "ok"
+  },
+  "d0369789-5678-90ab-cdef-345678901234": {
+    "verdict": "ok"
+  },
+  "e147a890-6789-0abc-def1-456789012345": {
+    "verdict": "ok"
+  },
+  "f258b901-7890-abcd-ef12-567890123456": {
+    "verdict": "ok"
+  },
+  "0369c012-890a-bcde-f123-678901234567": {
+    "verdict": "ok"
+  },
+  "147ad123-90ab-cdef-1234-789012345678": {
+    "verdict": "ok"
+  },
+  "258be234-0abc-def1-2345-890123456789": {
+    "verdict": "ok"
+  },
+  "369cf345-bcde-f123-4567-901234567890": {
+    "verdict": "ok"
+  },
+  "47ad0456-cdef-2345-6789-012345678901": {
+    "verdict": "ok"
+  },
+  "58be1567-def3-4567-890a-123456789012": {
+    "verdict": "ok"
+  },
+  "69cf2678-ef34-5678-90ab-234567890123": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "7ad03789-f345-6789-0abc-345678901234": {
+    "verdict": "ok"
+  },
+  "8be14890-3456-7890-abcd-456789012345": {
+    "verdict": "ok"
+  },
+  "9cf25901-4567-890a-bcde-567890123456": {
+    "verdict": "ok"
+  },
+  "ad036012-5678-90ab-cdef-678901234567": {
+    "verdict": "ok"
+  },
+  "be147123-6789-0abc-def1-789012345678": {
+    "verdict": "ok"
+  },
+  "cf258234-7890-abcd-ef12-890123456789": {
+    "verdict": "ok"
+  },
+  "d0369345-890a-bcde-f123-901234567890": {
+    "verdict": "ok"
+  },
+  "e147a456-90ab-cdef-1234-012345678901": {
+    "verdict": "ok"
+  },
+  "f258b567-0abc-def1-2345-123456789012": {
+    "verdict": "ok"
+  },
+  "0369c678-bcde-f123-4567-234567890123": {
+    "verdict": "ok"
+  },
+  "147ad789-cdef-2345-6789-345678901234": {
+    "verdict": "ok"
+  },
+  "258be890-def3-4567-890a-456789012345": {
+    "verdict": "ok"
+  },
+  "369cf901-ef34-5678-90ab-567890123456": {
+    "verdict": "ok"
+  },
+  "47ad0012-f345-6789-0abc-678901234567": {
+    "verdict": "ok"
+  },
+  "58be1123-3456-7890-abcd-789012345678": {
+    "verdict": "ok"
+  },
+  "69cf2234-4567-890a-bcde-890123456789": {
+    "verdict": "ok"
+  },
+  "7ad03345-5678-90ab-cdef-901234567890": {
+    "verdict": "ok"
+  },
+  "8be14456-6789-0abc-def1-012345678901": {
+    "verdict": "ok"
+  },
+  "9cf25567-7890-abcd-ef12-123456789012": {
+    "verdict": "ok"
+  },
+  "ad036678-890a-bcde-f123-234567890123": {
+    "verdict": "ok"
+  },
+  "be147789-90ab-cdef-1234-345678901234": {
+    "verdict": "ok"
+  },
+  "cf258890-0abc-def1-2345-456789012345": {
+    "verdict": "ok"
+  },
+  "d0369901-bcde-f123-4567-567890123456": {
+    "verdict": "ok"
+  },
+  "e147a012-cdef-2345-6789-678901234567": {
+    "verdict": "ok"
+  },
+  "f258b123-def3-4567-890a-789012345678": {
+    "verdict": "ok"
+  },
+  "0369c234-ef34-5678-90ab-890123456789": {
+    "verdict": "ok"
+  },
+  "147ad345-f345-6789-0abc-901234567890": {
+    "verdict": "ok"
+  },
+  "258be456-3456-7890-abcd-012345678901": {
+    "verdict": "ok"
+  },
+  "369cf567-4567-890a-bcde-123456789012": {
+    "verdict": "ok"
+  },
+  "47ad0678-5678-90ab-cdef-234567890123": {
+    "verdict": "ok"
+  },
+  "58be1789-6789-0abc-def1-345678901234": {
+    "verdict": "ok"
+  },
+  "69cf2890-7890-abcd-ef12-456789012345": {
+    "verdict": "ok"
+  },
+  "7ad03901-890a-bcde-f123-567890123456": {
+    "verdict": "ok"
+  },
+  "8be14012-90ab-cdef-1234-678901234567": {
+    "verdict": "ok"
+  },
+  "9cf25123-0abc-def1-2345-789012345678": {
+    "verdict": "ok"
+  },
+  "ad036234-bcde-f123-4567-890123456789": {
+    "verdict": "ok"
+  },
+  "be147345-cdef-2345-6789-901234567890": {
+    "verdict": "ok"
+  },
+  "cf258456-def3-4567-890a-012345678901": {
+    "verdict": "ok"
+  },
+  "d0369567-ef34-5678-90ab-123456789012": {
+    "verdict": "ok"
+  },
+  "e147a678-f345-6789-0abc-234567890123": {
+    "verdict": "ok"
+  },
+  "f258b789-3456-7890-abcd-345678901234": {
+    "verdict": "ok"
+  },
+  "a1b2c3d4-4567-890a-bcde-456789012346": {
+    "verdict": "ok"
+  },
+  "b2c3d4e5-5678-90ab-cdef-567890123457": {
+    "verdict": "ok"
+  },
+  "c3d4e5f6-6789-0abc-def1-678901234568": {
+    "verdict": "ok"
+  },
+  "f6f1b9a0-918d-488c-a3ad-3e7ac7d0387c": {
+    "verdict": "ok"
+  },
+  "f619de91-6a17-4d15-a854-7aafad11da81": {
+    "verdict": "ok"
+  },
+  "1bca5b68-1504-40c1-bb33-6181fb5ba1bf": {
+    "verdict": "ok"
+  },
+  "68182c64-1dbc-44f1-92dc-3f7338cbd247": {
+    "verdict": "ok"
+  },
+  "db71ebf5-3e60-420b-9542-cfd78c7c3609": {
+    "verdict": "ok"
+  },
+  "6090d5fc-26bf-44a0-aa63-ea1b94f36152": {
+    "verdict": "ok"
+  },
+  "fba37673-e29a-458c-9ec2-8991ee5c07fb": {
+    "verdict": "ok"
+  },
+  "ea610c4a-5759-44cd-b9dd-88d171650d63": {
+    "verdict": "ok"
+  },
+  "d351c014-b59b-4212-b782-ebfbde93999f": {
+    "verdict": "ok"
+  },
+  "d3a1c533-d06d-434f-9eb0-5839e47e2798": {
+    "verdict": "ok"
+  },
+  "8a32c59e-eb89-485e-b5ef-4db592ac777b": {
+    "verdict": "ok"
+  },
+  "673bcbbb-6d0d-4ee9-a00b-3259e267cc0c": {
+    "verdict": "ok"
+  },
+  "82e1205d-9c7e-42df-901c-a07fb575f854": {
+    "verdict": "ok"
+  },
+  "05381aba-434e-4253-8d01-7b1b863c9e08": {
+    "verdict": "ok"
+  },
+  "9a051951-5c14-4ce0-9973-e6fa1e229143": {
+    "verdict": "ok"
+  },
+  "12b6d9a9-f24b-447d-b55d-3607f1dc726b": {
+    "verdict": "ok"
+  },
+  "a6b63fc6-f040-4500-90c2-02536156bc6a": {
+    "verdict": "ok"
+  },
+  "da54563d-df9c-419c-a65f-05aa15e91148": {
+    "verdict": "ok"
+  },
+  "d5ba1cfe-9d51-4a17-ae7a-a818f40cc9c0": {
+    "verdict": "ok"
+  },
+  "ffed61bf-9981-418f-9504-6a0e52efa44f": {
+    "verdict": "ok"
+  },
+  "2ca5a8f2-5c72-40e8-abd9-52e7a38869b3": {
+    "verdict": "ok"
+  },
+  "4d4a055b-2fd5-4fbd-9b1b-03cda8fe3a53": {
+    "verdict": "ok"
+  },
+  "bc9517f6-e959-43a0-91f5-d64ff9d601f3": {
+    "verdict": "ok"
+  },
+  "a7b8c9d0-4567-890a-bcde-012345678902": {
+    "verdict": "ok"
+  },
+  "b8c9d0e1-5678-90ab-cdef-123456789013": {
+    "verdict": "ok"
+  },
+  "c9d0e1f2-6789-0abc-def1-234567890124": {
+    "verdict": "ok"
+  },
+  "1cea7495-05f1-41cd-8b31-9c1acd676018": {
+    "verdict": "ok"
+  },
+  "384ac96e-8932-4ca4-a249-59a0c200bb9d": {
+    "verdict": "ok"
+  },
+  "965cc206-2f10-4008-954a-373c3c50757d": {
+    "verdict": "ok"
+  },
+  "ab475b38-b113-4053-b56f-7569f0254d5c": {
+    "verdict": "ok"
+  },
+  "d8c1ea21-d01c-49b5-b186-54b440cbdd45": {
+    "verdict": "ok"
+  },
+  "4643b3c5-510c-466b-9435-214252d90005": {
+    "verdict": "ok"
+  },
+  "cab15f6d-e782-49c5-b6b1-8882a00d29bc": {
+    "verdict": "ok"
+  },
+  "ded8922c-e6d2-448e-b639-21454cbfc40a": {
+    "verdict": "ok"
+  },
+  "9a49d55a-0322-4c14-a5ce-358027c22e70": {
+    "verdict": "ok"
+  },
+  "c7a1b3b9-b905-4cf0-aac0-1fc7af3213fc": {
+    "verdict": "ok"
+  },
+  "0677e136-313e-40ff-a093-a2a4ecf94646": {
+    "verdict": "ok"
+  },
+  "2d56c921-8df9-414e-82ed-2d98aae67328": {
+    "verdict": "ok"
+  },
+  "c3c70981-e4fd-4e42-bd41-19a1d01ac677": {
+    "verdict": "ok"
+  },
+  "e318c714-dba7-4ee3-acea-6eaee2f3b47b": {
+    "verdict": "ok"
+  },
+  "409d8069-5584-41d2-89ed-67cfbc81ceed": {
+    "verdict": "ok"
+  },
+  "2e299d00-ba16-4d24-8dc3-ab4d4056cc4e": {
+    "verdict": "ok"
+  },
+  "2e3cfb39-a621-4d05-81b3-a1b1b1c9564f": {
+    "verdict": "ok"
+  },
+  "e8199f10-f29b-4a6b-8dbe-308ae98e167b": {
+    "verdict": "ok"
+  },
+  "23144aca-86cf-4ba3-941c-874cd3cfde30": {
+    "verdict": "ok"
+  },
+  "300c7e6b-7842-4ee9-9aed-bf98fe2cee98": {
+    "verdict": "ok"
+  },
+  "3f027b6c-5500-4e20-ae01-8ccb826d018a": {
+    "verdict": "ok"
+  },
+  "4275bd5d-7dc2-45df-8821-587832fd09aa": {
+    "verdict": "ok"
+  },
+  "d1f87a98-6283-4d9c-8520-71b84d12879f": {
+    "verdict": "ok"
+  },
+  "a3b4c5d6-4567-890a-bcde-678901234568": {
+    "verdict": "ok"
+  },
+  "b4c5d6e7-5678-90ab-cdef-789012345679": {
+    "verdict": "ok"
+  },
+  "c5d6e7f8-6789-0abc-def1-890123456780": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "2efc9118-42e5-4b82-a9ae-59b232508b3b": {
+    "verdict": "ok"
+  },
+  "bae7c810-685c-4d15-8c4b-d4d3a5360f9d": {
+    "verdict": "ok"
+  },
+  "263880d3-a19e-4938-a74c-29261fc085fd": {
+    "verdict": "ok"
+  },
+  "4372d90b-0334-4979-8989-4e9b06e589f8": {
+    "verdict": "ok"
+  },
+  "53ffe9e1-236f-436d-a6c6-73375a29d9b0": {
+    "verdict": "ok"
+  },
+  "87b2ab12-94a1-49b6-b937-77dfa216a626": {
+    "verdict": "ok"
+  },
+  "47dbcc8e-37b2-4a6f-b607-c825867944a7": {
+    "verdict": "ok"
+  },
+  "878bd341-1c4e-47a2-a194-ca3ad7114aee": {
+    "verdict": "ok"
+  },
+  "e2dc4b4a-f5d2-4112-9a17-01348e8194f3": {
+    "verdict": "ok"
+  },
+  "5597e814-f338-489b-9ce5-6c91eef3ea9a": {
+    "verdict": "ok"
+  },
+  "663200e7-83c9-45ce-a33a-6161f59a087b": {
+    "verdict": "ok"
+  },
+  "944725b2-2c79-48e9-b93b-447097b9b84a": {
+    "verdict": "ok"
+  },
+  "2cd324dc-2574-49f1-b154-a7b7b01fbb0e": {
+    "verdict": "ok"
+  },
+  "88db0955-1b40-485c-8076-9c074b54be3b": {
+    "verdict": "ok"
+  },
+  "c2fd9e0c-e556-4e4a-af32-54a8b91b2c85": {
+    "verdict": "ok"
+  },
+  "45978711-b3c1-469c-be9b-bc58daeab41b": {
+    "verdict": "ok"
+  },
+  "ca359fca-e7b1-4312-a6b3-0453fd86b2c0": {
+    "verdict": "ok"
+  },
+  "f09ae52d-0183-42bd-9d01-dffc4831f2a0": {
+    "verdict": "ok"
+  },
+  "0c418f1e-cfdf-42e1-9a80-89402cd536b8": {
+    "verdict": "ok"
+  },
+  "2e76e48a-a672-42ef-847d-d2b84aa316e2": {
+    "verdict": "ok"
+  },
+  "f6efc557-541d-4f1a-ac56-412928d72a7c": {
+    "verdict": "ok"
+  },
+  "2cabb768-30c3-41e1-b4f4-4c4ff3cbf330": {
+    "verdict": "ok"
+  },
+  "6e49caac-534a-4214-8898-d35706f67cfb": {
+    "verdict": "ok"
+  },
+  "a9b0c1d2-4567-890a-bcde-234567890124": {
+    "verdict": "ok"
+  },
+  "b0c1d2e3-5678-90ab-cdef-345678901235": {
+    "verdict": "ok"
+  },
+  "c1d2e3f4-6789-0abc-def1-456789012346": {
+    "verdict": "ok"
+  },
+  "c3c7d171-3c60-48de-86e3-4acd3675038e": {
+    "verdict": "ok"
+  },
+  "b8758535-dc66-4860-a734-a4f6f5be2c75": {
+    "verdict": "ok"
+  },
+  "082c1991-09ae-4702-9cbd-924bb1abaa6c": {
+    "verdict": "ok"
+  },
+  "956e4092-166f-4db1-9454-309ac43decd2": {
+    "verdict": "ok"
+  },
+  "6b959ffa-2d6d-4135-b243-f56407b71fd1": {
+    "verdict": "ok"
+  },
+  "8636fa66-fd7f-44b2-b6cf-42e0335ca6a6": {
+    "verdict": "ok"
+  },
+  "5a5b6d9c-4bef-450c-b279-45a730cd4c2f": {
+    "verdict": "ok"
+  },
+  "ba5da897-1bfc-4ad2-a5d6-06d359b23948": {
+    "verdict": "ok"
+  },
+  "c4e8b8f7-c912-4785-8e0a-e7b31ec0a38c": {
+    "verdict": "ok"
+  },
+  "fb5941b8-01ce-4611-99b8-4b3fda0356f3": {
+    "verdict": "ok"
+  },
+  "d3837a78-6030-4849-9bdd-4ace79bbe7d1": {
+    "verdict": "ok"
+  },
+  "3878eb6c-ed6f-4218-88ce-d5eac78d6b46": {
+    "verdict": "ok"
+  },
+  "b999db2d-39a2-4fb3-90b9-fde8376d56f4": {
+    "verdict": "ok"
+  },
+  "39d953a5-6c62-4a6d-bc25-eebb35de47b5": {
+    "verdict": "ok"
+  },
+  "85d1b195-6bd6-4909-88ce-6564ab33c470": {
+    "verdict": "ok"
+  },
+  "a1ce6aa0-8298-4b53-be15-7b9ea602f501": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "3e4b8704-27cf-4747-8e85-38e1b991ecce": {
+    "verdict": "ok"
+  },
+  "d27af121-fd08-4642-90c8-7e6de3940194": {
+    "verdict": "ok"
+  },
+  "9e970f7b-4b19-49b3-947f-50234d76d3b8": {
+    "verdict": "ok"
+  },
+  "a41ad6a2-ca38-4428-8427-a8872a6635f8": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "a44fb4cc-c2ad-40c0-906f-526dd014a522": {
+    "verdict": "ok"
+  },
+  "0ce2e274-72c3-4e05-9d5b-cdd10bc726c3": {
+    "verdict": "ok"
+  },
+  "f1eeea80-00a8-44d4-90af-ebf1b3caef2e": {
+    "verdict": "ok"
+  },
+  "a5b6c7d8-4567-890a-bcde-890123456780": {
+    "verdict": "ok"
+  },
+  "b6c7d8e9-5678-90ab-cdef-901234567891": {
+    "verdict": "ok"
+  },
+  "c7d8e9f0-6789-0abc-def1-012345678902": {
+    "verdict": "ok"
+  },
+  "fa9ca5c4-003f-4dde-9aa8-6c4b3753e27a": {
+    "verdict": "ok"
+  },
+  "bb530116-9474-40ca-a81f-d9c512ec8978": {
+    "verdict": "ok"
+  },
+  "c37f1191-db79-4c79-924a-fbf8f5f10c8f": {
+    "verdict": "ok"
+  },
+  "e83cb69e-292a-4faf-bac8-36bd0f37d18d": {
+    "verdict": "ok"
+  },
+  "c6b3af29-832c-42a3-be5a-4ce1ea6e1d52": {
+    "verdict": "ok"
+  },
+  "ae02ed46-8eca-4934-b6c2-c7e104f086f7": {
+    "verdict": "ok"
+  },
+  "67dd23c1-234b-4140-93c5-dead2d708a92": {
+    "verdict": "ok"
+  },
+  "77a41970-c835-459f-a6da-234e9bd7290d": {
+    "verdict": "ok"
+  },
+  "1c953b6f-3ce5-440d-9ae4-e3042f2eb01c": {
+    "verdict": "ok"
+  },
+  "6492ae79-3b43-4582-8cf6-0c18308d975a": {
+    "verdict": "ok"
+  },
+  "0ea418e1-a549-482b-a12b-1f813683a9fb": {
+    "verdict": "ok"
+  },
+  "764268cf-4b0a-4975-a78d-4b743a2cee98": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "8374fa7e-0746-42de-a0e2-9ea179a3cb01": {
+    "verdict": "ok"
+  },
+  "b882e124-a846-462e-9323-e2c40324c808": {
+    "verdict": "ok"
+  },
+  "2355436d-d76d-4a20-b0bd-542d7ed2714f": {
+    "verdict": "ok"
+  },
+  "ce66ddf4-dfbc-4535-90e8-fdfead2c6c42": {
+    "verdict": "ok"
+  },
+  "7a7c4af3-3850-405e-b217-af38c7713b19": {
+    "verdict": "ok"
+  },
+  "d1074049-ae58-4226-8196-3a717c7371b9": {
+    "verdict": "ok"
+  },
+  "14eedee0-a876-4ec8-bb1d-c20229c20bb8": {
+    "verdict": "ok"
+  },
+  "16398eba-4883-4a63-b701-b0257a492f50": {
+    "verdict": "ok"
+  },
+  "e9270996-bb83-4ba1-8aba-8f3ae952c25e": {
+    "verdict": "ok"
+  },
+  "7b450522-80fd-4be1-a548-3d6d4b2f7a39": {
+    "verdict": "ok"
+  },
+  "9289c70c-276f-40a3-806e-ba49027618c4": {
+    "verdict": "ok"
+  },
+  "5c463784-ba84-4667-bbfc-8836236f3d2f": {
+    "verdict": "ok"
+  },
+  "64d0a261-0671-474c-b4de-aaf29a528a4e": {
+    "verdict": "ok"
+  },
+  "31e9fe74-ac79-4882-b9f8-9f0260281b93": {
+    "verdict": "ok"
+  },
+  "b0ad892d-9bff-4cb5-b121-f21e192b36a7": {
+    "verdict": "ok"
+  },
+  "e48a7f35-df1c-4c4c-b2a1-155a239f7eb5": {
+    "verdict": "ok"
+  },
+  "a59ac532-0986-40f9-a6ee-56e794144cd7": {
+    "verdict": "ok"
+  },
+  "d345b48e-d334-4e14-9250-46a9fa722173": {
+    "verdict": "ok"
+  },
+  "57a9a954-c007-445f-b731-8a7d5566a449": {
+    "verdict": "ok"
+  },
+  "c635104d-247d-4026-9b53-10f9486a9eec": {
+    "verdict": "ok"
+  },
+  "a1fec4b6-2adf-4ae5-9e0b-2ead06c46040": {
+    "verdict": "ok"
+  },
+  "86e5511e-5996-42cd-851b-14a77b18011b": {
+    "verdict": "ok"
+  },
+  "222763e8-cd89-4b03-8abf-b0d271a872b1": {
+    "verdict": "ok"
+  },
+  "d48298e3-671c-420c-a1bd-38f5c29b2944": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "d16f2634-8761-4ea7-a7f9-33ef583b8625": {
+    "verdict": "ok"
+  },
+  "b239c07e-1678-4c2e-9466-26ca8bd40084": {
+    "verdict": "ok"
+  },
+  "3cdd5126-5dbd-487d-8d18-f727ebdb9611": {
+    "verdict": "ok"
+  },
+  "261009a5-35c1-4e0a-997e-e8c48f572332": {
+    "verdict": "ok"
+  },
+  "52e12449-6801-478c-a150-58cce3c50b2f": {
+    "verdict": "ok"
+  },
+  "1463e3d0-21a0-45cf-9c69-124b3f5af310": {
+    "verdict": "ok"
+  },
+  "690d056d-e0fe-4604-8546-cc9b96853ffb": {
+    "verdict": "ok"
+  },
+  "28d97f85-6af3-46e4-85bd-191d3375b6f5": {
+    "verdict": "ok"
+  },
+  "3ec042ee-f9e3-4a74-a2b0-283034400f8e": {
+    "verdict": "ok"
+  },
+  "9defc251-1345-4c38-997f-d1214d554e4f": {
+    "verdict": "ok"
+  },
+  "713416f7-f90f-485c-a5cb-24b3d0e78061": {
+    "verdict": "ok"
+  },
+  "ff652076-db4c-4cd3-8961-0ae96175a9aa": {
+    "verdict": "ok"
+  },
+  "0c5b4eb5-7a47-4067-bc06-461141cc8b2c": {
+    "verdict": "ok"
+  },
+  "31963b12-9ed4-4ecb-bf2d-32ca14fb0963": {
+    "verdict": "ok"
+  },
+  "e17907e1-4174-405b-98b3-3142c85b9fd5": {
+    "verdict": "ok"
+  },
+  "c156eace-0122-43c6-923c-92519cc16dc7": {
+    "verdict": "ok"
+  },
+  "b6974e87-f787-4581-8169-4644b020487b": {
+    "verdict": "ok"
+  },
+  "beffe912-d801-4a93-a3e1-a4014166002c": {
+    "verdict": "ok"
+  },
+  "ce28a35c-2740-4308-b8ea-5f14d9c8626d": {
+    "verdict": "ok"
+  },
+  "269b148c-24db-41da-8563-f147eb0f6e2d": {
+    "verdict": "ok"
+  },
+  "1e4d09d8-23d4-4f28-8fe2-3c15e6665d72": {
+    "verdict": "ok"
+  },
+  "c3275a21-a49d-4d6a-a3cd-c19ac5d68195": {
+    "verdict": "ok"
+  },
+  "d093a83c-3c1d-44e5-8137-5c6cb7bfad28": {
+    "verdict": "ok"
+  },
+  "a5ca12ff-4c4c-4462-ab87-8015f647512d": {
+    "verdict": "ok"
+  },
+  "14f47856-287a-4cd6-87ae-604377791e50": {
+    "verdict": "ok"
+  },
+  "ed4ff6f4-5d58-4c62-881d-d42a907c5933": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "36441428-4cb6-4b66-a600-1a7f99bb2849": {
+    "verdict": "ok"
+  },
+  "ea8409f2-3780-4a0d-9ccc-0217c632c507": {
+    "verdict": "ok"
+  },
+  "a1f70cd6-5181-495b-9143-371838b4c9bd": {
+    "verdict": "ok"
+  },
+  "e3083305-ab97-47dc-ae03-28134ec67810": {
+    "verdict": "ok"
+  },
+  "1e6b7906-c8be-4e13-8c44-bffb8b53f62f": {
+    "verdict": "ok"
+  },
+  "b62b9ec9-3b1b-4b41-ab9d-c7a226b016ec": {
+    "verdict": "flagged",
+    "reason": "inappropriate"
+  },
+  "b74cba14-eb8f-4e51-9ff8-7bd23130fa3e": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "a475a530-ed09-4cbc-8260-3babe2812c12": {
+    "verdict": "ok"
+  },
+  "fbc75025-5dcb-4ffb-ad94-b57ad5aad703": {
+    "verdict": "ok"
+  },
+  "394fe4f5-b7e2-49dc-aa48-381196f02221": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "f3f2d400-233c-4901-834c-e2244f0534fa": {
+    "verdict": "ok"
+  },
+  "48f0bab0-2dcd-44e2-b1c1-bfd3b92188c6": {
+    "verdict": "ok"
+  },
+  "72b12d66-ed5f-40e2-adf3-8cd67a9ce64c": {
+    "verdict": "ok"
+  },
+  "15cdcb46-2d64-4253-b438-23547de0c132": {
+    "verdict": "ok"
+  },
+  "a867a927-af49-46c1-8eb4-373f4c785fcb": {
+    "verdict": "ok"
+  },
+  "04ad2374-df8e-428c-95bf-92d70113ce66": {
+    "verdict": "ok"
+  },
+  "2454ec98-b4e3-4db5-b8d6-f61698fbd9ad": {
+    "verdict": "ok"
+  },
+  "ca282293-fb68-45e4-b250-6997337d8878": {
+    "verdict": "ok"
+  },
+  "9f2525bf-d769-4c2a-bd4b-5036a7ca2e4b": {
+    "verdict": "ok"
+  },
+  "d6078373-049b-4b3a-8ecf-31f2d7031167": {
+    "verdict": "ok"
+  },
+  "32cefaf8-fd42-4d1c-9b05-666031e451b8": {
+    "verdict": "ok"
+  },
+  "2e905425-245a-48ed-bc0c-e528f0be036b": {
+    "verdict": "ok"
+  },
+  "7b12de81-6b5a-4c62-a63d-6532309ed89d": {
+    "verdict": "ok"
+  },
+  "a6955201-a0bc-47c8-9618-2ec9384bd318": {
+    "verdict": "ok"
+  },
+  "78d86023-a25d-434b-b99c-0bdd7788cd68": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "0ff892a3-d795-45e0-95ad-ff34977a34b0": {
+    "verdict": "ok"
+  },
+  "3464d3be-1717-4e27-9152-6a1d0ffa689b": {
+    "verdict": "ok"
+  },
+  "05a4443e-b028-46de-9480-58b9deb21d37": {
+    "verdict": "ok"
+  },
+  "86c4a0e1-177a-49f8-a814-a89fa37293e4": {
+    "verdict": "ok"
+  },
+  "4f58e8ea-caf4-4584-94e6-9972bf19041b": {
+    "verdict": "ok"
+  },
+  "150950dd-6687-4411-bf9c-952c381021dd": {
+    "verdict": "ok"
+  },
+  "19f33590-b7cb-4c95-a11c-ab373e32dc37": {
+    "verdict": "ok"
+  },
+  "a9637075-6427-4d46-9675-76661a7522c9": {
+    "verdict": "ok"
+  },
+  "5f6b14f6-2dd9-4f3a-8ad3-37492acc52e5": {
+    "verdict": "ok"
+  },
+  "46c54fbb-7cf5-4fd2-ade7-fca664285540": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess: contains stray “2”"
+  },
+  "d7684131-4edd-4f25-83f7-06c8e8071ff7": {
+    "verdict": "ok"
+  },
+  "968afc2c-24ff-4b67-937e-a6ff55073b57": {
+    "verdict": "ok"
+  },
+  "3885bc98-c77b-4deb-b6a3-29e8204e4586": {
+    "verdict": "ok"
+  },
+  "b0d6936f-95f8-423d-9d59-4d285e074cd4": {
+    "verdict": "ok"
+  },
+  "ad1a9edf-6544-438c-b61d-cbab9e880d4d": {
+    "verdict": "ok"
+  },
+  "22298dc0-911a-47d6-a6d0-b28635f91315": {
+    "verdict": "ok"
+  },
+  "9f52649c-2b8e-4eaf-a3b2-725eb1ab5c35": {
+    "verdict": "ok"
+  },
+  "ff451b5b-efd3-4c56-a9c7-ce7221414a38": {
+    "verdict": "ok"
+  },
+  "f07fe591-f061-43fa-bf0c-dfaa0a2e2ea3": {
+    "verdict": "ok"
+  },
+  "ae4374d8-2102-477b-8822-62d009d75248": {
+    "verdict": "ok"
+  },
+  "41c6db0b-8e8c-43ba-985c-caec31c8ab96": {
+    "verdict": "ok"
+  },
+  "16df62a7-5c4b-4547-b0ab-44b80359c0db": {
+    "verdict": "ok"
+  },
+  "cb92c08c-2fa1-49fa-b105-659a29f4c4de": {
+    "verdict": "ok"
+  },
+  "9dc2c84e-3fb8-4b17-9711-ed97ed5fd421": {
+    "verdict": "ok"
+  },
+  "caf54ab9-9361-4cf1-8043-33f911fe610c": {
+    "verdict": "ok"
+  },
+  "dab317b6-17b3-41e0-af71-69524ebbddde": {
+    "verdict": "ok"
+  },
+  "fa807205-3848-4e4c-94dc-b4305e46c1f1": {
+    "verdict": "ok"
+  },
+  "08d3724f-ad06-47c6-8a52-dd39e76cbd83": {
+    "verdict": "ok"
+  },
+  "8daf4250-1188-4021-b935-18f8f6c38ee1": {
+    "verdict": "ok"
+  },
+  "f95b078a-78d5-4840-a0d4-214fdb653b50": {
+    "verdict": "ok"
+  },
+  "ae5d4b21-3f6b-48e9-a856-63ecba35068e": {
+    "verdict": "ok"
+  },
+  "32dd2bd6-d31f-4779-afcf-be185181e579": {
+    "verdict": "ok"
+  },
+  "f6a143bf-8e2a-42dc-88ad-a0934871b34e": {
+    "verdict": "ok"
+  },
+  "70fec947-0f14-4cd0-a276-a0ecc79d0c45": {
+    "verdict": "ok"
+  },
+  "a1588250-33ff-4cc0-a98c-16668e92fa87": {
+    "verdict": "ok"
+  },
+  "43525459-1367-4950-b5c2-bbeba7fd37bc": {
+    "verdict": "ok"
+  },
+  "448e1373-dedb-4655-8bed-ad87f479b1eb": {
+    "verdict": "ok"
+  },
+  "3639d0f5-6f91-4689-976c-ee71f645de21": {
+    "verdict": "ok"
+  },
+  "d6479874-6d4a-41cb-8fa3-8f4089aa7bf4": {
+    "verdict": "ok"
+  },
+  "6c30f638-5bad-4fce-a509-85030fd81fd3": {
+    "verdict": "ok"
+  },
+  "544424c2-c76e-4652-ac81-aca7d13d0f1f": {
+    "verdict": "ok"
+  },
+  "31e2e190-556f-4f6b-bcd4-6fd74cdb0d96": {
+    "verdict": "ok"
+  },
+  "b47f854b-95ce-4f2e-8491-36d7d12b3a1f": {
+    "verdict": "ok"
+  },
+  "23346ce0-3031-49c6-8c50-e3b6521c4c77": {
+    "verdict": "ok"
+  },
+  "3849d989-c3ee-40df-bb6c-aaeb99ba9324": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "4e2349be-d3f6-4027-8483-552561dc8c76": {
+    "verdict": "ok"
+  },
+  "e0f8a63b-0c2b-4aa4-bea3-5dd3442d535b": {
+    "verdict": "ok"
+  },
+  "12955833-8fd9-4fbb-8e23-9f4e4cf9d386": {
+    "verdict": "ok"
+  },
+  "5d6fc0b0-b99d-4cbb-ae25-a41216e9ab93": {
+    "verdict": "ok"
+  },
+  "8d0219a2-e5de-4e9a-80cc-d25378a7ae1e": {
+    "verdict": "ok"
+  },
+  "780377e9-b097-4e51-bf48-a16cbf18213a": {
+    "verdict": "ok"
+  },
+  "272c4d67-a991-45cc-8db0-5d5ff2a82620": {
+    "verdict": "ok"
+  },
+  "69d9b4fc-9dfa-46ff-8556-85afd4d36ade": {
+    "verdict": "ok"
+  },
+  "52b757e9-b8a2-4b32-bcee-f6f75523d4a6": {
+    "verdict": "ok"
+  },
+  "e2607a60-6ea6-48b2-844a-952c163e8781": {
+    "verdict": "ok"
+  },
+  "6909560a-6645-49f9-a4d9-2dae153803c6": {
+    "verdict": "ok"
+  },
+  "ebe960ee-431c-4ec6-babc-8c4308f9d7bb": {
+    "verdict": "ok"
+  },
+  "de5c8e95-ca65-4d8f-8c97-13ef508719ec": {
+    "verdict": "ok"
+  },
+  "f49ef951-75fd-487d-8f1b-c49356a03c2f": {
+    "verdict": "ok"
+  },
+  "003c1109-0d24-4088-b498-d72aa77c113d": {
+    "verdict": "ok"
+  },
+  "cd61ed98-20c4-4a9b-b78b-263ed6fc6566": {
+    "verdict": "ok"
+  },
+  "8610b389-abe6-4fed-b9bf-f158428690d9": {
+    "verdict": "ok"
+  },
+  "cde81bd7-5199-48ca-84d7-36e288d972cb": {
+    "verdict": "ok"
+  },
+  "6298f6b7-3366-482c-9f9f-009799efdeb4": {
+    "verdict": "ok"
+  },
+  "051fd441-2cec-4d8b-ba1d-8577ac92405d": {
+    "verdict": "ok"
+  },
+  "5d9e5acb-5696-4cda-bd14-fbdaa150bba0": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "b9385c23-677e-4e36-83b9-5db740a0bb14": {
+    "verdict": "ok"
+  },
+  "16185ad4-752a-42a0-b191-aa9a6e5dbaee": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "8eaa05d2-f9bb-4dfa-932c-1e30904df341": {
+    "verdict": "ok"
+  },
+  "21c48487-066d-4e10-8700-53a0d820f45b": {
+    "verdict": "ok"
+  },
+  "04a11dd5-11ba-4f52-b9b2-873e064a5763": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "33976cf8-ea79-48ab-a3f9-65a99ff92128": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "c74189b3-7f2a-449d-aa6d-3d984fbbceba": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "2d0d1c56-fd42-4983-bbee-7f9ca64bae13": {
+    "verdict": "ok"
+  },
+  "70bd11d8-adf8-468a-8836-0fd650bccad6": {
+    "verdict": "ok"
+  },
+  "60b6c2dd-cc62-43ac-b610-21998474a653": {
+    "verdict": "ok"
+  },
+  "22709423-968f-4424-a990-e3d93865b2e7": {
+    "verdict": "ok"
+  },
+  "347bdc01-26af-467c-b1ea-b601a01dc528": {
+    "verdict": "ok"
+  },
+  "df5ec9f8-24b2-46e7-a22c-51e1e59e49aa": {
+    "verdict": "ok"
+  },
+  "4b9dca96-4155-415b-b0d3-f2984927cb67": {
+    "verdict": "ok"
+  },
+  "ec671f4c-66e6-4261-8b8b-aa5b5d7e614f": {
+    "verdict": "ok"
+  },
+  "a423df2f-cf82-4c5b-b166-9bac67bd6cb1": {
+    "verdict": "ok"
+  },
+  "bfb0bb8d-178e-4ff6-9b98-7ed864b07537": {
+    "verdict": "ok"
+  },
+  "ea1e2b3d-eac1-4867-8dea-8d84aee4e9b2": {
+    "verdict": "ok"
+  },
+  "154ec2ba-ecbd-463a-a09e-2e32a7780c22": {
+    "verdict": "ok"
+  },
+  "0ce59ae1-bae8-4117-ba21-dd7395973300": {
+    "verdict": "ok"
+  },
+  "d64643c2-958d-4f26-9dd2-3a3ed22e3bad": {
+    "verdict": "ok"
+  },
+  "f83eb3ff-4426-4c1b-9795-0cecf91e0c99": {
+    "verdict": "ok"
+  },
+  "cedc4206-df3f-4bc9-bfcd-57576ba430c1": {
+    "verdict": "ok"
+  },
+  "585b9994-8eee-456b-95de-a1fe93ce9f5f": {
+    "verdict": "ok"
+  },
+  "2cdde8c2-3a5e-418c-b57b-363b0cad679f": {
+    "verdict": "ok"
+  },
+  "7c0ed24b-1682-4be3-a61b-1c7f9bd4ce39": {
+    "verdict": "ok"
+  },
+  "cea981cf-50a1-4c97-9a22-42a233399344": {
+    "verdict": "ok"
+  },
+  "851e2a96-1c58-462d-863c-13f4ebc11ac2": {
+    "verdict": "ok"
+  },
+  "ff3bb6fc-8a87-4db7-a739-0eef381eb8b6": {
+    "verdict": "ok"
+  },
+  "db50cdc8-e710-43f0-b0e8-369580a1735d": {
+    "verdict": "ok"
+  },
+  "151a84bb-a773-4021-a8b8-c53e4a31fb83": {
+    "verdict": "ok"
+  },
+  "585bd268-9f24-4059-a38f-5927b82fd8f2": {
+    "verdict": "ok"
+  },
+  "9d53836a-5ea0-468d-a170-131845c10509": {
+    "verdict": "ok"
+  },
+  "4188a3cf-ef20-4755-b375-9d9a5f05e14e": {
+    "verdict": "ok"
+  },
+  "ef7e3c92-c55c-4724-9c72-ac647f33a330": {
+    "verdict": "ok"
+  },
+  "312c6b7b-be81-4385-b648-d5dd443e8b03": {
+    "verdict": "ok"
+  },
+  "85f01a6d-5f52-4107-bfc4-d72e12a2d4ff": {
+    "verdict": "ok"
+  },
+  "704c496e-6c3f-4b77-82ea-5bf53ac974f7": {
+    "verdict": "ok"
+  },
+  "dadd23a0-7fed-4c65-babe-2a6b23c717c9": {
+    "verdict": "ok"
+  },
+  "8f122c9c-a3ca-4741-888d-f5deaacd9966": {
+    "verdict": "ok"
+  },
+  "00a636f4-ba94-4337-a26c-934d4b3f8215": {
+    "verdict": "ok"
+  },
+  "0a704676-518f-4d93-b313-798602aa65ce": {
+    "verdict": "ok"
+  },
+  "e026e0f1-ed50-4207-b61b-6e91518d83c0": {
+    "verdict": "ok"
+  },
+  "153618e8-8229-4e0d-9283-ef8d0535759d": {
+    "verdict": "ok"
+  },
+  "83b12d11-b7d0-4ba0-b28b-40f7bcc08977": {
+    "verdict": "ok"
+  },
+  "7816ac10-500e-48e5-8cb9-86930e463de8": {
+    "verdict": "ok"
+  },
+  "5791b3e7-0ab4-4d11-96f7-c96edfeb1e08": {
+    "verdict": "ok"
+  },
+  "0e9348cc-ef3d-403a-8ab9-0df697f167b4": {
+    "verdict": "ok"
+  },
+  "fee85e23-d8e4-4496-b601-ee1da06f7780": {
+    "verdict": "ok"
+  },
+  "f58797ee-d021-445e-905d-0ef6fe58f063": {
+    "verdict": "ok"
+  },
+  "1b8f0a98-822a-4790-9cdc-e1add440cc9e": {
+    "verdict": "ok"
+  },
+  "8647df79-39f0-4b13-bd8f-5019e95df776": {
+    "verdict": "ok"
+  },
+  "78bf7074-f1d0-4cbc-b95c-cf82f51ec225": {
+    "verdict": "ok"
+  },
+  "6d7860dc-ced7-452d-8214-d9ea727ffea6": {
+    "verdict": "ok"
+  },
+  "ca856399-068a-44d9-a915-0e060d37658e": {
+    "verdict": "ok"
+  },
+  "f7326ab3-4005-4bc1-a088-885818e995c2": {
+    "verdict": "ok"
+  },
+  "f521cfb9-ccf8-4e5e-a6a4-12826db85efa": {
+    "verdict": "ok"
+  },
+  "c63df792-9e4d-4d69-a20b-5751e6909db8": {
+    "verdict": "ok"
+  },
+  "74d9c285-3623-4216-8cc0-5dc9ce3cc163": {
+    "verdict": "ok"
+  },
+  "752eacc9-46ab-4bfe-99a3-6fa701907980": {
+    "verdict": "ok"
+  },
+  "0c5e0e12-2a2d-45a2-8612-8c0392dbf7f1": {
+    "verdict": "ok"
+  },
+  "c0615acb-ff53-476d-b6fc-f730b7c064c3": {
+    "verdict": "ok"
+  },
+  "a7f18276-3e5a-4ef6-a2de-ae0887f97684": {
+    "verdict": "ok"
+  },
+  "5731c8df-54f6-43a6-a3bd-affe962ca744": {
+    "verdict": "ok"
+  },
+  "005d3121-87ca-4833-b014-f6c249d04458": {
+    "verdict": "ok"
+  },
+  "ae4e5850-e54d-4cdc-8eb6-eb63f7297825": {
+    "verdict": "ok"
+  },
+  "59d08277-020b-4d98-acfc-29b1fadb88af": {
+    "verdict": "ok"
+  },
+  "2de39845-6ec1-4404-8979-7f15b89893dd": {
+    "verdict": "ok"
+  },
+  "19d5fb0a-22b6-42c0-94bd-810ce58c049d": {
+    "verdict": "ok"
+  },
+  "d420d664-915d-4233-9df3-13938af3be40": {
+    "verdict": "ok"
+  },
+  "ceb6b0e5-96d0-41f4-8a35-3279e22e452a": {
+    "verdict": "ok"
+  },
+  "3e81eed5-f834-46ac-8d3a-c47da0fd2fb6": {
+    "verdict": "ok"
+  },
+  "7b724b2b-8c36-4bb9-8c38-a363278cb0ff": {
+    "verdict": "ok"
+  },
+  "02b70185-1aa9-4807-97dd-a6925916568a": {
+    "verdict": "ok"
+  },
+  "e5028239-ccc6-4661-b5f8-cb2985987be9": {
+    "verdict": "ok"
+  },
+  "523b748b-b088-4f5b-9b19-c33539c62253": {
+    "verdict": "ok"
+  },
+  "dba1611b-0b8c-47fb-914e-55bb6cdf31e3": {
+    "verdict": "ok"
+  },
+  "157d7afd-8221-4f50-a5c0-7f0352027fad": {
+    "verdict": "ok"
+  },
+  "f0217738-f7ce-4c1f-9b5b-5fd4ca1e80a0": {
+    "verdict": "ok"
+  },
+  "79102d08-6f79-44e1-bdb4-62fe9c5ba2f8": {
+    "verdict": "ok"
+  },
+  "83dda450-d054-4b80-a9cc-013223c286f6": {
+    "verdict": "ok"
+  },
+  "9da21edd-efd9-4c97-922f-8dff27ca9be0": {
+    "verdict": "ok"
+  },
+  "b976f6af-149c-4169-81ab-3c334b055a6b": {
+    "verdict": "ok"
+  },
+  "c229874b-f7ff-49a2-8ba7-131fcc210315": {
+    "verdict": "ok"
+  },
+  "907d03c2-e81d-4e51-abf8-9a3e75334abc": {
+    "verdict": "ok"
+  },
+  "49534865-eace-4db9-afdc-95812f06ffe5": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess: common food and dance meanings"
+  },
+  "3edc3ef7-a3f5-43c3-b80f-24c5d0dc28b9": {
+    "verdict": "ok"
+  },
+  "9f16d927-3d8f-4bf8-9922-c7cea9735715": {
+    "verdict": "ok"
+  },
+  "ff57e65d-dbc9-4774-9ce1-620564ca684a": {
+    "verdict": "ok"
+  },
+  "85cb7392-6597-43f0-a6c5-b4d720f28ca6": {
+    "verdict": "ok"
+  },
+  "197d1ce7-f664-4470-9884-ab456077501b": {
+    "verdict": "ok"
+  },
+  "c15fa354-8b2b-443c-8acb-624731fb34e8": {
+    "verdict": "ok"
+  },
+  "240c5d56-b9c9-4ec9-8f47-83249dc1a6a0": {
+    "verdict": "ok"
+  },
+  "95390ad9-84fc-4d04-9919-0398fe5b6134": {
+    "verdict": "ok"
+  },
+  "d24524e1-8d64-4871-8737-71d0e2aa6783": {
+    "verdict": "ok"
+  },
+  "a6c25dee-7a82-486d-9903-c68bee484554": {
+    "verdict": "ok"
+  },
+  "1c9ba1c4-159b-40d9-82a8-df8457d4faa1": {
+    "verdict": "ok"
+  },
+  "dd5f49e1-3a53-40cb-82f8-c6c0e186cb96": {
+    "verdict": "ok"
+  },
+  "c63cc511-4a8c-4062-967e-b774acfe2478": {
+    "verdict": "ok"
+  },
+  "e23446d8-0767-4c28-af7f-36713221ce26": {
+    "verdict": "ok"
+  },
+  "a56831ee-e843-46ab-baf9-b4522a4eedf5": {
+    "verdict": "ok"
+  },
+  "64965083-52ca-4708-87e3-04d9398e4316": {
+    "verdict": "ok"
+  },
+  "b2f607cb-3661-40f1-b653-1e88ba5fa0d8": {
+    "verdict": "ok"
+  },
+  "537bfc78-85a8-4968-81e2-cb8512776717": {
+    "verdict": "ok"
+  },
+  "fb548605-e76d-4806-a95d-64a2e2bd88b4": {
+    "verdict": "ok"
+  },
+  "3acc516e-c196-46ce-a8d4-15b1aa027a5e": {
+    "verdict": "ok"
+  },
+  "1b1beac5-8d55-4db5-8db5-091c3e05e073": {
+    "verdict": "ok"
+  },
+  "e1482af1-63e4-44c7-9916-64e9f743c189": {
+    "verdict": "ok"
+  },
+  "059698a3-2154-4a03-93d6-449e160ab129": {
+    "verdict": "ok"
+  },
+  "f721b095-d456-478b-b5c2-b9601ead68a8": {
+    "verdict": "ok"
+  },
+  "baf3214f-b50f-4d62-ade6-e1e12b38b38c": {
+    "verdict": "ok"
+  },
+  "f0b44548-664b-4c18-9300-a594c51a62d2": {
+    "verdict": "ok"
+  },
+  "8ecb4d91-04af-425c-8a0f-0c3163f6d08c": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "f800a144-3c2d-497d-a0f9-6096c3d7cc5a": {
+    "verdict": "ok"
+  },
+  "c22f2593-f12e-4c2d-9bb1-43ab695fb8d6": {
+    "verdict": "ok"
+  },
+  "737b9463-774b-49a8-b512-ea1baa9dbe9e": {
+    "verdict": "ok"
+  },
+  "d2bd2c55-9626-47b2-83fa-23a46bb21cd7": {
+    "verdict": "ok"
+  },
+  "9d9a9ba1-d51a-4999-88f8-bd1974abc82c": {
+    "verdict": "ok"
+  },
+  "b071ef89-3e35-4262-9828-e17e6a46f1ea": {
+    "verdict": "ok"
+  },
+  "d9a0c731-8205-406d-bd48-d8bc70bf36d1": {
+    "verdict": "ok"
+  },
+  "8fa21af5-b50e-46c6-aa9e-1116daaa69a1": {
+    "verdict": "ok"
+  },
+  "3a59c489-7c3e-4877-a012-5a25d0e4039d": {
+    "verdict": "ok"
+  },
+  "935b4c88-a6a6-4928-a6f3-f0ede5ed730f": {
+    "verdict": "ok"
+  },
+  "9e2a81e9-2c70-482b-ba00-823ddb6687d2": {
+    "verdict": "ok"
+  },
+  "d20eb265-a5e4-43ab-abd6-9abff7a1f90d": {
+    "verdict": "ok"
+  },
+  "e07ef0c1-a179-41c5-bf7f-16fe33bb462c": {
+    "verdict": "ok"
+  },
+  "ba644bb6-a984-406f-8f25-8dd4a0bd48df": {
+    "verdict": "ok"
+  },
+  "eca9734c-6d20-4367-b3da-02af6cf32808": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "df983284-8433-41d4-a574-f595ba5e73c8": {
+    "verdict": "ok"
+  },
+  "4110857c-d64a-4754-8a36-33da284ee059": {
+    "verdict": "ok"
+  },
+  "619a2ea0-fa23-478c-8568-6d93ab38ce15": {
+    "verdict": "ok"
+  },
+  "d0e2e687-7127-4b50-b922-0bea50c25d55": {
+    "verdict": "ok"
+  },
+  "17b507bd-0bb0-42f4-b51b-acc7b5c52d7b": {
+    "verdict": "ok"
+  },
+  "284675dc-5fb7-4da4-b48b-20bc2ce84b42": {
+    "verdict": "ok"
+  },
+  "cf17a01e-c460-4177-aaa1-8c3925535c44": {
+    "verdict": "ok"
+  },
+  "7bf33e0b-c7af-417c-a22d-699b8d7f570c": {
+    "verdict": "ok"
+  },
+  "c2c29bfb-a99c-4c91-96ac-feb967fe1439": {
+    "verdict": "ok"
+  },
+  "c0ad4fa5-7d11-4797-b5f4-c434f596a008": {
+    "verdict": "ok"
+  },
+  "97049f12-51aa-4281-97f2-939c767910a2": {
+    "verdict": "ok"
+  },
+  "5bf476a1-831f-4824-9b89-6de8c7cbdf2d": {
+    "verdict": "ok"
+  },
+  "0a104891-fb6a-498f-ad9e-9bc7d924c482": {
+    "verdict": "ok"
+  },
+  "a6ce1e66-0525-4b79-bda5-f213fc0227de": {
+    "verdict": "ok"
+  },
+  "7d5f1e94-910a-423a-aabb-5a77586a43e4": {
+    "verdict": "ok"
+  },
+  "0f61fd99-6328-4c0a-92ae-e2613a2528e7": {
+    "verdict": "ok"
+  },
+  "1d8a39fe-a394-49b5-82a3-0b02a5eb09ac": {
+    "verdict": "ok"
+  },
+  "a0a89672-53e7-482b-ac1d-970ff19b5e8a": {
+    "verdict": "ok"
+  },
+  "4a54e3bb-f13b-44e0-ae08-4698c2fe2085": {
+    "verdict": "ok"
+  },
+  "0e9b817c-64d4-4118-875f-2ca4da0e6174": {
+    "verdict": "ok"
+  },
+  "6258863f-7077-4c99-a995-b1afa3e12e97": {
+    "verdict": "ok"
+  },
+  "579ee215-32e0-44e1-b808-50ec956affaa": {
+    "verdict": "ok"
+  },
+  "73f58d6f-4765-45b9-9329-705b1068782e": {
+    "verdict": "ok"
+  },
+  "77aa74aa-ba57-4dfc-b352-d72f56c133ec": {
+    "verdict": "ok"
+  },
+  "57a12dbe-977e-4a6f-af0c-eca074524d9e": {
+    "verdict": "ok"
+  },
+  "48409df6-ddff-4d89-9a84-3c20d3d41a09": {
+    "verdict": "ok"
+  },
+  "e6f95f29-6012-448f-9f90-50c5cd04e8c8": {
+    "verdict": "ok"
+  },
+  "74df691c-e1b7-491a-8b92-366e87167837": {
+    "verdict": "ok"
+  },
+  "50292626-5f26-4878-9af3-19f79ac47b05": {
+    "verdict": "ok"
+  },
+  "9cbc4f50-6e90-41f0-b696-67ddb779e677": {
+    "verdict": "ok"
+  },
+  "15b04d86-4b61-4448-b89e-d8b899e98a0a": {
+    "verdict": "ok"
+  },
+  "319e1c74-7968-4973-b74b-1210ff2f9168": {
+    "verdict": "ok"
+  },
+  "6d5d789e-922d-4b86-a243-37223c3ec0f1": {
+    "verdict": "ok"
+  },
+  "e5f35363-f22b-40bd-b064-2555fd6d6904": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "557265f6-81cf-49be-b5d8-c51c5fd98baf": {
+    "verdict": "ok"
+  },
+  "5d2ffd26-38d2-4ab6-bdce-ea7bf64c5505": {
+    "verdict": "ok"
+  },
+  "dbf076ba-ddca-4cf9-bfa1-414905e90169": {
+    "verdict": "ok"
+  },
+  "221f66a7-1668-4999-bf86-74cf10eb219b": {
+    "verdict": "ok"
+  },
+  "aed0d987-1f6d-4244-a997-31dd163716da": {
+    "verdict": "ok"
+  },
+  "caff3b80-e50c-485f-9d59-b45f1f20cedb": {
+    "verdict": "ok"
+  },
+  "12853aad-ea4b-4282-be4c-f513a718eee1": {
+    "verdict": "ok"
+  },
+  "9a8ca328-5523-4f47-93ff-a69a4e53fd3e": {
+    "verdict": "ok"
+  },
+  "79494fd2-2ff7-4207-85bf-7944bc8afc02": {
+    "verdict": "ok"
+  },
+  "e46bc4d4-c4cd-40e2-b794-5ea46ec89cf2": {
+    "verdict": "ok"
+  },
+  "c8e2d864-60e4-49ed-8059-482d97e8d602": {
+    "verdict": "ok"
+  },
+  "c307c804-446d-439c-8d5b-fe42e03fffe7": {
+    "verdict": "ok"
+  },
+  "7769579f-d595-4ec7-9018-81b04119cfb5": {
+    "verdict": "ok"
+  },
+  "b3499833-baa5-4eca-b50b-24f6bd8228f2": {
+    "verdict": "ok"
+  },
+  "847939b7-6d6c-4664-a074-157f59fe95a3": {
+    "verdict": "ok"
+  },
+  "a808d0a2-d11b-463f-83fb-76f3a6237368": {
+    "verdict": "ok"
+  },
+  "6b691fa2-3dff-4556-b343-835f9d74c067": {
+    "verdict": "ok"
+  },
+  "ee566563-2403-40de-a0c5-16d5353f8155": {
+    "verdict": "ok"
+  },
+  "ecb63393-aa18-4e1d-9b17-51f78e9e62ab": {
+    "verdict": "ok"
+  },
+  "906caba4-72c8-44c2-ba12-78d335cfcb64": {
+    "verdict": "ok"
+  },
+  "61796487-b141-4b43-86f4-98b99891fdb0": {
+    "verdict": "ok"
+  },
+  "88d5226d-74d3-4945-b521-6de13afe303c": {
+    "verdict": "ok"
+  },
+  "e65cf9eb-0162-46b0-af85-e105461daa6f": {
+    "verdict": "ok"
+  },
+  "98c8a3ce-9165-4b9a-871a-342da6e1149b": {
+    "verdict": "ok"
+  },
+  "3e5fd12a-d373-49d5-b731-484f8d4fb14f": {
+    "verdict": "ok"
+  },
+  "41f2c210-9773-4e54-a843-1c2cdf6d0fa0": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "29738faa-b38f-404a-8ab2-c22533c5c104": {
+    "verdict": "ok"
+  },
+  "78599405-7cf1-427f-a159-ecba0214e0a2": {
+    "verdict": "ok"
+  },
+  "cbfc40c8-a4cb-4b7c-ba02-c2943ed0d88f": {
+    "verdict": "ok"
+  },
+  "028bf5a1-53cc-4d0c-b991-a82c0c84b877": {
+    "verdict": "ok"
+  },
+  "01a216c4-b314-4039-9dcf-56fd0c7462f9": {
+    "verdict": "ok"
+  },
+  "01e6387d-244d-4893-950c-83345471492b": {
+    "verdict": "ok"
+  },
+  "3e1b64f7-8df2-46c5-b126-fcd7bd3432b1": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "fc0f7108-3aa4-44e9-ad32-773d4f26bdbc": {
+    "verdict": "ok"
+  },
+  "8803ee4d-8bcb-42bd-835f-ea0a5d56ccc4": {
+    "verdict": "ok"
+  },
+  "dcdf0c47-4bcc-465c-8e0d-d31922c8e0e7": {
+    "verdict": "ok"
+  },
+  "944c6383-a159-43f1-9316-99767d53b4b1": {
+    "verdict": "ok"
+  },
+  "6ee5eac2-ae25-4f08-9d27-2142029a2d8a": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "d2294b8a-956a-4801-ab44-75d8ff812fe0": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "78543f3e-cbbf-4a2e-bf38-b1e2b58ef533": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "65095ff8-973f-45e5-ad52-715e1a60cb02": {
+    "verdict": "ok"
+  },
+  "a7b9480b-e42c-48d3-b71b-dbd4dd4c3557": {
+    "verdict": "ok"
+  },
+  "09085ad5-69dd-4893-9141-2d1ff63894e5": {
+    "verdict": "ok"
+  },
+  "68acc1f5-019c-4674-9925-c72192faae7f": {
+    "verdict": "ok"
+  },
+  "e28e999d-d0e2-4dc8-ac95-fc0a5628e82f": {
+    "verdict": "ok"
+  },
+  "a5e69a55-d18c-4189-801d-87f1cd025f61": {
+    "verdict": "ok"
+  },
+  "25ec421f-1e8f-4cba-bf1b-e89a01813292": {
+    "verdict": "ok"
+  },
+  "20d78f42-fe6f-4e20-a4f4-ccbb848000b4": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "286139f3-45f1-4424-b60a-83f109d76f5f": {
+    "verdict": "ok"
+  },
+  "6e363b46-3e24-4eeb-8c70-2c732de0ec86": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "0796305c-38ae-4bad-86f2-c64a394425a8": {
+    "verdict": "ok"
+  },
+  "c2758648-35ca-4156-84a2-aef3aaae5e38": {
+    "verdict": "ok"
+  },
+  "ae821025-b2df-4bf2-817e-e01a95ce9f9e": {
+    "verdict": "ok"
+  },
+  "0d81ab9e-6b9c-49aa-91a9-b47bf36ad013": {
+    "verdict": "ok"
+  },
+  "60414b20-5794-4d82-8e38-d58ec3c0767f": {
+    "verdict": "ok"
+  },
+  "8ccf2dea-9ba1-4865-8f72-c84fbcc88cf3": {
+    "verdict": "ok"
+  },
+  "c2bc7e02-beef-4068-9718-64af8e2dc935": {
+    "verdict": "ok"
+  },
+  "6542e741-7ff3-4615-996c-e34cbf4abfb8": {
+    "verdict": "ok"
+  },
+  "8095b1ff-40b0-447d-bfbe-9b38e310f820": {
+    "verdict": "ok"
+  },
+  "aeae1e5d-cf6d-4267-82b7-91646db7a76d": {
+    "verdict": "ok"
+  },
+  "8e2c2965-edf1-429f-b466-723f926fe7f9": {
+    "verdict": "ok"
+  },
+  "497af573-7f5c-4dc4-b1b6-bfcfb433c73a": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "112097a7-2bc6-4369-b068-b8dd45f5dd12": {
+    "verdict": "ok"
+  },
+  "5f64eb17-d45b-4bf4-a8f7-759605d1a78a": {
+    "verdict": "ok"
+  },
+  "318114f7-c2d6-4686-9332-d9a57854828e": {
+    "verdict": "ok"
+  },
+  "db6532f2-df5f-4017-8a3e-d53d914b61c0": {
+    "verdict": "ok"
+  },
+  "1e8161e5-6558-4dbc-b6ce-68af0d2ebcfb": {
+    "verdict": "ok"
+  },
+  "8045d1dc-6def-4789-b8db-090fd882f464": {
+    "verdict": "ok"
+  },
+  "1e8c24b9-07ec-4364-a916-667029d7a11d": {
+    "verdict": "ok"
+  },
+  "8da99a74-0832-44e6-a03f-f4bd169a0f27": {
+    "verdict": "ok"
+  },
+  "420c17b7-4467-42a9-9448-4aa283dba787": {
+    "verdict": "ok"
+  },
+  "b7c23cb7-7e56-490d-8fe9-3e7604fb54a6": {
+    "verdict": "ok"
+  },
+  "9ee217a7-7e82-4474-b40e-9bc3cc1af284": {
+    "verdict": "ok"
+  },
+  "557a0e11-706f-4566-8127-edf74ed62822": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "9a16c350-37f9-4be0-9993-70c4dd761b97": {
+    "verdict": "ok"
+  },
+  "e73ec805-0248-4f45-bef5-4271e2c925e1": {
+    "verdict": "ok"
+  },
+  "7ca10703-e8ba-47d2-9ef3-a214b96f0866": {
+    "verdict": "ok"
+  },
+  "70e48b8e-3d1c-42fb-be84-31fb807eeb03": {
+    "verdict": "ok"
+  },
+  "d3dde4a9-dd62-4fdd-941f-5fea02686e94": {
+    "verdict": "ok"
+  },
+  "aab949b1-e7b7-45bf-b2a9-da1fa18e1d08": {
+    "verdict": "ok"
+  },
+  "94186f4f-58de-421b-a94d-fe2dbd6e03f7": {
+    "verdict": "ok"
+  },
+  "f913f966-a2d8-4c00-acbb-b2e3b778ac06": {
+    "verdict": "ok"
+  },
+  "a9663ba6-c889-4d84-921a-f845ad3aa56e": {
+    "verdict": "ok"
+  },
+  "72c3c28f-7b94-4664-a8cd-871a74e19795": {
+    "verdict": "ok"
+  },
+  "fd22536d-f94c-42ba-81b2-768c77e02534": {
+    "verdict": "ok"
+  },
+  "eedcca37-bb2b-4e67-9aef-286f2d7179ee": {
+    "verdict": "ok"
+  },
+  "90f22db1-b253-4162-b31c-44d8e303b4f3": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "9e23b901-7524-499c-a63f-727e454134dc": {
+    "verdict": "ok"
+  },
+  "420684e7-5f5b-482a-a7ed-ff44a2882675": {
+    "verdict": "ok"
+  },
+  "8f000d53-7483-4b79-b0d8-fc39d5f3b2ae": {
+    "verdict": "ok"
+  },
+  "c3517565-e93d-470d-835c-96a9afcda008": {
+    "verdict": "ok"
+  },
+  "512d6dbe-cc91-4228-b989-5e65d0c3ac3a": {
+    "verdict": "ok"
+  },
+  "63483dbf-0f4e-4f22-9750-99551d21f7ef": {
+    "verdict": "ok"
+  },
+  "0b44b8ab-0fa7-46d7-a3a1-9736ee4fcb69": {
+    "verdict": "ok"
+  },
+  "8258929d-6a20-4ba0-b611-d3c57688f7dd": {
+    "verdict": "ok"
+  },
+  "0b98af01-3776-4d0e-a556-b97c899f67e6": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "898476a4-a63d-4b23-a09f-2a9cdebbd08a": {
+    "verdict": "ok"
+  },
+  "9b09b0be-efaf-47dc-9baa-e4022a2edf14": {
+    "verdict": "ok"
+  },
+  "3576b6f3-369b-4f79-84f7-b3c1b7380132": {
+    "verdict": "ok"
+  },
+  "007f90f7-3b9c-4235-80a6-4c511fe1b098": {
+    "verdict": "ok"
+  },
+  "4fad257e-2811-463d-82a5-3964fa1a58ca": {
+    "verdict": "ok"
+  },
+  "103ec69a-a205-4428-a517-b2fcf7647d31": {
+    "verdict": "ok"
+  },
+  "1fbbc671-9d53-487d-9487-2d346824f10d": {
+    "verdict": "ok"
+  },
+  "02793541-0eef-4f87-a516-81152d4ebd95": {
+    "verdict": "ok"
+  },
+  "24069ddb-3026-4deb-a2b7-196751d89640": {
+    "verdict": "ok"
+  },
+  "97150dc2-7e2c-4ff3-b716-92141696f3f8": {
+    "verdict": "ok"
+  },
+  "68c4f395-7a84-4abd-9120-4853005ebbcb": {
+    "verdict": "ok"
+  },
+  "aae338c1-9ba7-4d47-98ed-aca50d62e30d": {
+    "verdict": "ok"
+  },
+  "32acd912-e825-4141-8f86-b45df0086ae1": {
+    "verdict": "ok"
+  },
+  "8dd261f6-3bc8-4163-9f5b-527470ac2438": {
+    "verdict": "ok"
+  },
+  "5f1abcac-cc6f-4957-9087-90067c062f60": {
+    "verdict": "ok"
+  },
+  "e3d73320-4d2d-4630-b37f-71a35fa1c4c2": {
+    "verdict": "ok"
+  },
+  "b0141bf9-d9ae-4dbb-ae09-dc9472ccf4df": {
+    "verdict": "ok"
+  },
+  "529699d3-f61f-4462-b893-a1d47e92c0a1": {
+    "verdict": "ok"
+  },
+  "cfc15734-6d42-4e23-97c1-6e5a5c01130e": {
+    "verdict": "ok"
+  },
+  "e6995436-03c6-4efd-9d29-6168fb34f857": {
+    "verdict": "ok"
+  },
+  "cbc51e4d-3c52-4383-8ff4-7918c47e880d": {
+    "verdict": "ok"
+  },
+  "4a1ce60b-5ee0-40ca-83b9-008f8cdc0d53": {
+    "verdict": "ok"
+  },
+  "2f94d1f9-490b-4b5f-9f0b-4ef90daf4ed8": {
+    "verdict": "ok"
+  },
+  "7c55838b-1371-4e45-8af6-bd2ef44c7cae": {
+    "verdict": "ok"
+  },
+  "e19ccf6a-f1e9-4e84-8d17-74fcd0e72e2c": {
+    "verdict": "ok"
+  },
+  "ee288bef-d42c-41c6-9062-d998731d8e57": {
+    "verdict": "ok"
+  },
+  "79722316-8c05-4d2d-bb00-fa4430b61995": {
+    "verdict": "ok"
+  },
+  "ced4a888-2c38-4058-86e2-71f2387f19bd": {
+    "verdict": "ok"
+  },
+  "ad6d35c7-3d1b-4e45-9908-dfcce14e6857": {
+    "verdict": "ok"
+  },
+  "fa8082fb-9580-4272-950d-e6e781fbb6ae": {
+    "verdict": "ok"
+  },
+  "6ad0059f-2a61-4871-8d77-2cff19f53bd0": {
+    "verdict": "ok"
+  },
+  "49dcba3f-9f0e-4a5c-a183-b1ca67c4e1e3": {
+    "verdict": "ok"
+  },
+  "de2c21f3-33eb-47eb-9881-5f1585c01564": {
+    "verdict": "ok"
+  },
+  "678e3d17-7835-41c1-af2c-62983e1a7ffa": {
+    "verdict": "ok"
+  },
+  "68eb1133-0cbb-494f-9919-0afc2a77467f": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "53a4c609-dd8d-4b22-8d07-1af25dfb404f": {
+    "verdict": "ok"
+  },
+  "39b0804e-88df-4ca8-a5a4-e89fd6fab2cd": {
+    "verdict": "ok"
+  },
+  "3732a2f2-3e15-4684-9c99-617474a2d49d": {
+    "verdict": "ok"
+  },
+  "5216d932-59b1-43b9-92a9-f029edab2a22": {
+    "verdict": "ok"
+  },
+  "d785a92b-36de-4fc7-8ba4-80ab799f76dd": {
+    "verdict": "ok"
+  },
+  "26d82096-8ced-48ce-841e-f53d71740e81": {
+    "verdict": "ok"
+  },
+  "0d043e86-331f-40a6-8736-293ed58dc6db": {
+    "verdict": "ok"
+  },
+  "a4ce4e1c-ee56-441f-b6c0-c7eadafac0ff": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "881565e9-7aa8-4af7-b379-241917f51c74": {
+    "verdict": "ok"
+  },
+  "8785ffb8-54a7-44b8-9a30-b8b304ee8207": {
+    "verdict": "ok"
+  },
+  "4a3c2ead-76ce-4049-b69d-4e942f1734fc": {
+    "verdict": "ok"
+  },
+  "0660f596-08c0-44c1-a5dc-56db377002e1": {
+    "verdict": "ok"
+  },
+  "a93268fd-06ed-495a-b381-481474c75846": {
+    "verdict": "ok"
+  },
+  "70b51d85-7182-48af-bf4f-2496fe5dd9d6": {
+    "verdict": "ok"
+  },
+  "e9dd8025-2b6b-4ddc-9412-d8e5e6f78829": {
+    "verdict": "ok"
+  },
+  "0be16a4a-3d40-42e0-a98d-44ef44429e0e": {
+    "verdict": "ok"
+  },
+  "91661563-cf7b-49dd-9cf6-08508ac061dc": {
+    "verdict": "ok"
+  },
+  "ab70d430-4e5c-4da5-8c81-166e0948274d": {
+    "verdict": "ok"
+  },
+  "a055a638-3d69-477a-b3c1-ec07c5f9f88d": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "e1f715ef-7885-4d52-9d35-6096a6800ccc": {
+    "verdict": "ok"
+  },
+  "add3350c-fc1e-461e-b44b-eef06d12da56": {
+    "verdict": "ok"
+  },
+  "de9f1a86-4f24-4ca9-9c17-ab3a4b044a17": {
+    "verdict": "ok"
+  },
+  "bfe695c5-735a-4a15-b6aa-e8c7140a826c": {
+    "verdict": "ok"
+  },
+  "1adc6e92-b96d-45d7-a621-c27c00bb01e9": {
+    "verdict": "ok"
+  },
+  "374504b2-4d1a-4526-88b2-d46a6bc94378": {
+    "verdict": "ok"
+  },
+  "e386210a-ed8c-4d18-a71c-64c12156384e": {
+    "verdict": "ok"
+  },
+  "002afc56-aa1c-42c1-a557-8fd8acec8aa0": {
+    "verdict": "ok"
+  },
+  "ea183ca4-d546-4b59-8ce1-33284a2e5e80": {
+    "verdict": "ok"
+  },
+  "3b432420-65e4-409e-8076-995a9e4ca109": {
+    "verdict": "ok"
+  },
+  "52f7e9f2-7ba7-4d53-90aa-7a69e382f787": {
+    "verdict": "ok"
+  },
+  "061dd679-2ae1-43cd-b1f9-4cbcab886bcc": {
+    "verdict": "ok"
+  },
+  "5e9af379-81af-4677-9a10-6eae0c580e63": {
+    "verdict": "ok"
+  },
+  "1a3456e2-fd18-4ee8-860a-e92471f3dbd0": {
+    "verdict": "ok"
+  },
+  "5efb5ca1-198f-416c-93b0-c0df873292e3": {
+    "verdict": "ok"
+  },
+  "d8b35cb8-ec38-4f4b-96a0-856f9753636b": {
+    "verdict": "ok"
+  },
+  "3f0f4975-ff1c-4739-847c-d9ef59174a1c": {
+    "verdict": "ok"
+  },
+  "bb27f0d5-856f-48e2-be9f-e509b61c39f4": {
+    "verdict": "ok"
+  },
+  "cfe69046-1ae3-4ee9-8997-70ef54049570": {
+    "verdict": "ok"
+  },
+  "d76744af-1926-4ce3-875b-2ea21309146d": {
+    "verdict": "ok"
+  },
+  "e190b3db-a20b-47a0-b4ef-4df0d0a41d75": {
+    "verdict": "ok"
+  },
+  "c5262bad-5e94-46a2-a481-cdc9c53f5ba4": {
+    "verdict": "ok"
+  },
+  "fcfcde03-4b71-48d3-a378-6f5e85112a72": {
+    "verdict": "ok"
+  },
+  "11e6e450-9784-4475-8fde-74dece713231": {
+    "verdict": "ok"
+  },
+  "de468be7-7fe0-462a-8271-dbd31df6cec8": {
+    "verdict": "ok"
+  },
+  "2ec1e156-937c-4b83-a139-f8e269124b3f": {
+    "verdict": "ok"
+  },
+  "6c9e5510-30e2-4e7f-9b4c-e35544a57911": {
+    "verdict": "ok"
+  },
+  "71ed9f77-e680-48dd-83ed-a9307e92adcd": {
+    "verdict": "ok"
+  },
+  "2dbbf4ac-5186-4ab0-9960-a39166454805": {
+    "verdict": "ok"
+  },
+  "e645feac-ddce-4eca-bee2-7cacddf6b1c3": {
+    "verdict": "ok"
+  },
+  "4b928112-62d5-4430-a428-44ecd2a306e3": {
+    "verdict": "ok"
+  },
+  "714bfc63-8782-4128-8358-6e09a5e26817": {
+    "verdict": "ok"
+  },
+  "32cb16c4-810f-4de1-8a74-4fc1e93eb189": {
+    "verdict": "ok"
+  },
+  "138f43c4-f70f-477e-81ec-76783e9b1d12": {
+    "verdict": "ok"
+  },
+  "f2f54f54-b8db-4260-9a79-b26c60401378": {
+    "verdict": "ok"
+  },
+  "b86a775e-7eb5-4681-bbbc-f7de459dfda2": {
+    "verdict": "ok"
+  },
+  "0fab9bf4-b8bd-4089-8a42-7d71176a46a9": {
+    "verdict": "ok"
+  },
+  "214bb5a9-cb97-49d6-9486-21dd2f9f0450": {
+    "verdict": "ok"
+  },
+  "8f2e0ed9-a2ff-4a97-a60d-67463b39e44c": {
+    "verdict": "ok"
+  },
+  "a4416712-64f9-4afe-897b-9a875f6e96e4": {
+    "verdict": "ok"
+  },
+  "9f650eca-d411-4a4f-b1b2-129bff186ce9": {
+    "verdict": "ok"
+  },
+  "acbde765-9f79-4f0a-9719-31b77e79e29b": {
+    "verdict": "ok"
+  },
+  "ca42ad94-83a4-4f87-91c8-6aa82b15b640": {
+    "verdict": "ok"
+  },
+  "432c3bfb-5823-40a1-8f33-8988b52e18aa": {
+    "verdict": "ok"
+  },
+  "173d575f-a086-484b-a30d-daeb5d5eb836": {
+    "verdict": "ok"
+  },
+  "8d07a66b-216c-44f2-b1c1-f3bbbb25f953": {
+    "verdict": "ok"
+  },
+  "8ce252e4-99bd-4cc5-a5b1-af75a51b96a2": {
+    "verdict": "ok"
+  },
+  "423c55fe-5e52-424f-b435-465e15b5783c": {
+    "verdict": "ok"
+  },
+  "7d5780d6-f2ea-43d6-9de1-4b194ef58eab": {
+    "verdict": "ok"
+  },
+  "81217b8f-8210-4d27-a236-cc2db418e5c1": {
+    "verdict": "ok"
+  },
+  "18627196-e0c4-4f8b-a09c-40937b0d259d": {
+    "verdict": "ok"
+  },
+  "b77fd598-7257-48a2-adb8-2ede9eb68bd0": {
+    "verdict": "ok"
+  },
+  "fad52e16-39db-4468-8ea2-d00bbea7b34c": {
+    "verdict": "ok"
+  },
+  "b9e54bbd-f90f-44a8-9110-ccd4f7615911": {
+    "verdict": "ok"
+  },
+  "d130a59e-f518-4046-989f-7e8c8e1adc91": {
+    "verdict": "ok"
+  },
+  "041f024b-a157-4bc8-855f-467919366805": {
+    "verdict": "ok"
+  },
+  "c9456007-ba2a-4655-92cb-0130c62c0cce": {
+    "verdict": "ok"
+  },
+  "5a6c3fd5-003f-49c1-b0c6-3591e5638d00": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "c333ec55-e46d-4839-b660-6bafa2eff0fd": {
+    "verdict": "ok"
+  },
+  "c913889f-0012-4d99-8c62-143c5c43c951": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "7bd11d25-41dc-402e-a2fd-e45f9c7f8b05": {
+    "verdict": "ok"
+  },
+  "fe110e65-1d83-4156-9eed-62548b2e862c": {
+    "verdict": "ok"
+  },
+  "7b394ad1-70e4-418e-9de4-13937ed8dd2d": {
+    "verdict": "ok"
+  },
+  "94b43c0b-42cc-4acb-a337-ac67dc288c41": {
+    "verdict": "ok"
+  },
+  "14253924-89ab-493e-ae9d-ca78094aa55e": {
+    "verdict": "ok"
+  },
+  "fa7df75e-2562-43b0-afb1-47090dfe2b3d": {
+    "verdict": "ok"
+  },
+  "4cc6dc65-0f77-4911-9afe-c958f5c23209": {
+    "verdict": "ok"
+  },
+  "36c8ffe3-6ec1-4813-bc95-332f42ee32e4": {
+    "verdict": "ok"
+  },
+  "b4093e1c-f343-47e3-881a-d2d21644ba5e": {
+    "verdict": "ok"
+  },
+  "7595e7a2-0aae-4fd4-bbd9-91956e1b3e98": {
+    "verdict": "ok"
+  },
+  "df9ebcf1-ff06-4330-aa98-c4019a8f7335": {
+    "verdict": "ok"
+  },
+  "abc927ad-557b-46c5-9800-7a86ee8873fc": {
+    "verdict": "ok"
+  },
+  "a9e171a5-cacb-4f30-a686-2878b6101276": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "6aec3646-3ea1-4648-bc7e-430ac1f335de": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "868c0c58-6654-4263-bbbc-efaf5f1c034d": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "f76ed537-0264-4d6f-85f7-68b9f5732899": {
+    "verdict": "ok"
+  },
+  "423bca22-3440-4bcf-a2f9-08a2603ca298": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "e91b3f42-ce21-496d-a343-7c8b1f0364a1": {
+    "verdict": "ok"
+  },
+  "cac46b89-5263-4d40-b2d3-0075f06675c1": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "9990db5f-0a92-4f87-ae9a-959ddbcacc82": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "b63aceac-7142-4ccc-8e0e-5be2318dfc0d": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "386cf7d7-ad68-4efb-a8c4-26ee276d8c5f": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "a4a1c62f-8524-4a03-ab1a-9eb92ce32bf4": {
+    "verdict": "ok"
+  },
+  "a983c970-b516-4d55-a882-7f927fb7ff8a": {
+    "verdict": "ok"
+  },
+  "8a65718e-adc4-4374-bae0-3a57fd4ca0b8": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "9162a99f-69bf-4b50-b807-d44804fcac98": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "5bc8f4de-8ab9-4af9-9160-2f4e844adbe1": {
+    "verdict": "ok"
+  },
+  "2f9cdcd3-5f0f-4bdf-8318-8f36daf9667a": {
+    "verdict": "ok"
+  },
+  "edfedcae-555a-429c-a1dd-a453a3ceac5a": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "aae80dae-33d5-4506-acc0-88a855b82182": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "1680a0a1-fff5-4619-84bd-2f6818aa16d6": {
+    "verdict": "ok"
+  },
+  "588bb872-6c3e-479e-ad9f-17457e5b710e": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "ffab63cd-56df-473d-a380-9b30a799f6eb": {
+    "verdict": "ok"
+  },
+  "f6e6e1d3-8cab-46e9-a3a5-453373d5cf78": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "d50a980c-be10-4205-81e2-4f367c852ebc": {
+    "verdict": "ok"
+  },
+  "91891be7-e4cd-4660-b8d6-eb32bcb0b8c5": {
+    "verdict": "ok"
+  },
+  "b5c0bf2c-73ca-41df-aae5-553af201d404": {
+    "verdict": "ok"
+  },
+  "43f2e588-f43d-4016-a1e5-6c299c5421d9": {
+    "verdict": "ok"
+  },
+  "a4e50aef-defa-4c79-b7f5-f11ffd82b61e": {
+    "verdict": "ok"
+  },
+  "32e98845-0cea-496d-82ae-435aaaf7de46": {
+    "verdict": "ok"
+  },
+  "8a594329-d82d-457a-8bfe-e9b27ea1ac62": {
+    "verdict": "ok"
+  },
+  "7fc26c19-788e-488d-bb15-31273cca594c": {
+    "verdict": "ok"
+  },
+  "88052abc-5147-4d95-bdc2-946bf495c8f7": {
+    "verdict": "ok"
+  },
+  "8e91983e-6db7-449f-8118-5671b7554fb5": {
+    "verdict": "ok"
+  },
+  "aa84c26b-3531-411a-9a89-ad560754fd52": {
+    "verdict": "ok"
+  },
+  "e03efb0a-66f2-44a2-951e-c019681ceb7d": {
+    "verdict": "ok"
+  },
+  "10d85abd-3c62-41b0-9944-562dc98a23e7": {
+    "verdict": "ok"
+  },
+  "01f1ff6a-f9aa-495d-903c-8302b1d12070": {
+    "verdict": "ok"
+  },
+  "9ac0fce8-e5d1-45c1-93f7-621314ce816d": {
+    "verdict": "ok"
+  },
+  "e76704e7-4312-43c6-be82-fc700ae3dbaa": {
+    "verdict": "ok"
+  },
+  "f7f9a35a-737a-4eae-ae38-f77b1fe42925": {
+    "verdict": "ok"
+  },
+  "5c1fde97-0e88-41ba-b6e1-379a94b8563c": {
+    "verdict": "ok"
+  },
+  "92c68f60-3aa8-4423-9476-34e181adeb1c": {
+    "verdict": "ok"
+  },
+  "47bb82ee-3f45-47fa-ac3e-c365a67c55b5": {
+    "verdict": "ok"
+  },
+  "6cf8af58-865f-46c8-afd5-e31234aa39d8": {
+    "verdict": "ok"
+  },
+  "4d759259-c670-4a34-8d72-d913c459c96e": {
+    "verdict": "ok"
+  },
+  "75e5adce-3d05-4985-8bd9-fb5c003cc86c": {
+    "verdict": "ok"
+  },
+  "da6601bd-c588-4f6d-bfac-c9e72fe29777": {
+    "verdict": "ok"
+  },
+  "8a4fce42-d8fd-4568-b615-747c112d01ce": {
+    "verdict": "ok"
+  },
+  "47a6fcea-692b-4db9-9ee9-3fd828001e2f": {
+    "verdict": "ok"
+  },
+  "9fbcc289-6cff-4e44-ba06-6828f46f03e3": {
+    "verdict": "ok"
+  },
+  "fb3237a6-1aa5-47e7-8c23-e6552b1f38d5": {
+    "verdict": "ok"
+  },
+  "cacc5b76-8ca5-4574-9365-828a10ce85fb": {
+    "verdict": "ok"
+  },
+  "aa464610-ee4b-47d4-9060-d7ad9d1b7bef": {
+    "verdict": "ok"
+  },
+  "fad6cb33-75e0-4eb4-a170-8b23ef55567c": {
+    "verdict": "ok"
+  },
+  "6fb25d91-7e40-4218-932f-17fab974fdb7": {
+    "verdict": "ok"
+  },
+  "fe5f6acd-d25f-4d93-9c2f-b4cea0e7fc53": {
+    "verdict": "ok"
+  },
+  "66df6810-e731-4d9a-9dc3-abefc6b39d36": {
+    "verdict": "ok"
+  },
+  "5845e019-49d6-4bb0-9c6f-13ff3e6051bd": {
+    "verdict": "ok"
+  },
+  "926d776d-5b71-4fee-b373-063ba2d5edaf": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "28c5ee41-c8d2-4d41-89f0-abc89807d445": {
+    "verdict": "ok"
+  },
+  "fe2cbbaf-b30e-4691-b96c-3059b261414f": {
+    "verdict": "ok"
+  },
+  "471de9b0-67f1-410d-8a36-2e754cad53bc": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "7ad84a2c-943e-4fce-9461-8f7b7994126f": {
+    "verdict": "ok"
+  },
+  "be181448-22ff-434b-a952-b214d86556dc": {
+    "verdict": "ok"
+  },
+  "fb7ad600-e28b-4889-81e4-46b332dbabb5": {
+    "verdict": "ok"
+  },
+  "89eb3d8b-e411-44ad-85d4-a72a8edaa0bc": {
+    "verdict": "ok"
+  },
+  "178298d3-7cb1-4ba3-9f56-86c849067e3f": {
+    "verdict": "ok"
+  },
+  "da1f927a-3d08-4cd0-8e42-fc92a1f8b995": {
+    "verdict": "ok"
+  },
+  "5359dfeb-e472-46d0-a610-a84a51fa750b": {
+    "verdict": "ok"
+  },
+  "e5832971-1848-4dcd-bb96-8cba75f705d2": {
+    "verdict": "ok"
+  },
+  "f2c0e07b-d4cb-4192-9e0f-98d374f251f2": {
+    "verdict": "ok"
+  },
+  "4611d021-84d9-4c47-abf4-8fd42d21b587": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "f95d1a83-3f9a-410e-9b6b-1d69cf5e66c5": {
+    "verdict": "ok"
+  },
+  "85331827-0d53-4cc1-958d-d69cb41cecb7": {
+    "verdict": "ok"
+  },
+  "0b885075-4a3c-4a75-924c-2eec4a89989d": {
+    "verdict": "ok"
+  },
+  "ca09ac3c-3f1b-4a13-b7d1-01afd52a110f": {
+    "verdict": "ok"
+  },
+  "3b68746a-9f02-4390-b387-3fe09e2a8173": {
+    "verdict": "ok"
+  },
+  "83d4c152-ea51-40f0-a728-85a5c9d93a20": {
+    "verdict": "ok"
+  },
+  "45909358-5e19-4497-acda-402586f01190": {
+    "verdict": "ok"
+  },
+  "aa37c1c6-dcfb-4c3c-a4f8-ab7bf6cc877f": {
+    "verdict": "ok"
+  },
+  "c2122622-bd08-40e5-b41b-28c004ef82d5": {
+    "verdict": "ok"
+  },
+  "95a7e760-c74e-44f0-8a7f-405610e37de0": {
+    "verdict": "ok"
+  },
+  "5e97b84b-f699-41fd-98fc-c46c8ff52512": {
+    "verdict": "ok"
+  },
+  "d718a7d9-4033-4a11-95ec-2fb142a35b69": {
+    "verdict": "ok"
+  },
+  "eec540f1-e05d-4d8a-bb42-2efa7aa403fe": {
+    "verdict": "ok"
+  },
+  "75291ad9-e3fd-44bd-9459-f489d4867f9c": {
+    "verdict": "ok"
+  },
+  "42081621-e6e5-482f-8294-bf949f166fb2": {
+    "verdict": "ok"
+  },
+  "91e010b6-220c-49d5-8f23-7f4241b4b7a8": {
+    "verdict": "ok"
+  },
+  "af6fd383-fe4a-452b-9fbf-d5e14933380e": {
+    "verdict": "ok"
+  },
+  "55779fd6-9a12-477b-8699-7f6c81563de2": {
+    "verdict": "ok"
+  },
+  "00cc71c0-91d6-4a5b-9198-819ece9becc9": {
+    "verdict": "ok"
+  },
+  "d99867e4-d982-45e9-9109-6f3f62ac7310": {
+    "verdict": "ok"
+  },
+  "ff53327a-6915-4eb5-b0a3-a5666ff782a5": {
+    "verdict": "ok"
+  },
+  "2c219b46-ce52-42e1-a2c2-ca84e0f7c12a": {
+    "verdict": "ok"
+  },
+  "5b6ee9b0-db19-4f45-b460-7aeada480e68": {
+    "verdict": "ok"
+  },
+  "5419dac2-60a9-4141-83fe-5d3804bcfbb1": {
+    "verdict": "ok"
+  },
+  "06566991-733b-48ec-adc1-940775ce7dab": {
+    "verdict": "ok"
+  },
+  "5d6f6847-de16-4a39-a3b2-1d003b951e7e": {
+    "verdict": "ok"
+  },
+  "bf568cab-c718-4290-8302-8bf3b82d33a7": {
+    "verdict": "ok"
+  },
+  "864cc58f-ba20-49ff-92f7-d8503e5dbb0b": {
+    "verdict": "ok"
+  },
+  "ef98cc83-a647-4ca8-a721-f4f4ac1b2938": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "b9646849-d155-4557-b7c9-e37b88184fcf": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "4d48cbb4-5266-4277-ab41-3074400eb13c": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "58b5928d-e3eb-440e-94f4-f12196b245c3": {
+    "verdict": "ok"
+  },
+  "d8d4c068-da00-416f-b638-ddbcc665c5bf": {
+    "verdict": "ok"
+  },
+  "60d4eabe-7187-4a82-9e3d-b0c3d215a63b": {
+    "verdict": "ok"
+  },
+  "c7b27383-1795-4fb2-a306-58ec601b7080": {
+    "verdict": "ok"
+  },
+  "460172ad-4caa-4f9f-9026-1e5b1404e757": {
+    "verdict": "ok"
+  },
+  "ca229b16-28b7-4206-a051-f837eefa0aee": {
+    "verdict": "ok"
+  },
+  "24c06f20-546d-4b43-8dfa-b436617e02b2": {
+    "verdict": "ok"
+  },
+  "bda48f07-d079-42ca-9ee9-3dcc9d0d87fe": {
+    "verdict": "ok"
+  },
+  "a775df10-b6ea-4e87-82b7-7432aa5278a4": {
+    "verdict": "ok"
+  },
+  "830da3ce-a483-4976-ba09-0d8bb5be521a": {
+    "verdict": "ok"
+  },
+  "7eb84730-e4f7-4a16-af9e-0a132cf3f520": {
+    "verdict": "ok"
+  },
+  "a0adad94-0d03-415c-925c-86027500669b": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "2737bb24-e7b8-4a7e-872c-0bc12cf0dab9": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "aae32a5f-8e76-44d8-923a-70f1b312b2dc": {
+    "verdict": "ok"
+  },
+  "791f9963-4c67-4bd4-a21d-1033f3c7b0ff": {
+    "verdict": "ok"
+  },
+  "ea27cca5-a1be-4f3e-a084-82bb3af89534": {
+    "verdict": "ok"
+  },
+  "732c4a88-987d-4c7e-9388-9a82f05c86fc": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "235e76b8-85e7-4873-86bb-5f0c44648c72": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "6369152e-bc05-492c-bd55-8e1c0d1d2119": {
+    "verdict": "ok"
+  },
+  "f4d13758-1f44-43e8-89d3-d9e73831232c": {
+    "verdict": "ok"
+  },
+  "ac16ecd7-6e67-4010-98c9-82fe8841425a": {
+    "verdict": "ok"
+  },
+  "33cea703-2bb3-4945-8901-51e40716a90c": {
+    "verdict": "ok"
+  },
+  "4e6e7454-9347-4c16-9430-599ab563718e": {
+    "verdict": "ok"
+  },
+  "a400cd0e-f45d-4bff-be97-f4461777e7aa": {
+    "verdict": "ok"
+  },
+  "2a944dcd-e50f-48b1-832e-a9665588a385": {
+    "verdict": "ok"
+  },
+  "3b1c006d-7e1d-4138-8c3f-75ba4356cd7f": {
+    "verdict": "ok"
+  },
+  "275bad1b-e171-4a70-805d-f08174613722": {
+    "verdict": "ok"
+  },
+  "d8f0eb10-1438-4295-91f0-6afc9bfc4ff6": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "aac5f5c6-fb08-4094-b9d0-7075ca8e6fb7": {
+    "verdict": "ok"
+  },
+  "6dcf21d1-e584-4cca-b36a-703a2229dff6": {
+    "verdict": "ok"
+  },
+  "801a6eb2-a318-4fdb-adab-10f38539ef18": {
+    "verdict": "ok"
+  },
+  "751dc65b-65de-457b-8837-d308b2d578b8": {
+    "verdict": "ok"
+  },
+  "8c10dd32-a224-4a98-8796-7c02a408df34": {
+    "verdict": "ok"
+  },
+  "67403547-076c-48d7-82cf-c40152d4f068": {
+    "verdict": "ok"
+  },
+  "09685c1c-fbb1-4ac5-a1e7-659c82e82f1f": {
+    "verdict": "ok"
+  },
+  "f6dde784-6fb2-4f93-aa5a-09ac03467c99": {
+    "verdict": "ok"
+  },
+  "83d7b07d-1113-4ed3-9339-4fb53317545e": {
+    "verdict": "ok"
+  },
+  "70a04c9c-e92c-402b-9a8c-b0b6918f190e": {
+    "verdict": "ok"
+  },
+  "b73a52fb-6f72-4eb9-86b6-4a3941c0ccf0": {
+    "verdict": "ok"
+  },
+  "70cedcbc-228a-435a-b8ad-64b0310b6342": {
+    "verdict": "ok"
+  },
+  "b3f3756a-24ff-4ec3-baf8-c55506d3c766": {
+    "verdict": "ok"
+  },
+  "0877635a-be14-42d9-b796-00b772366303": {
+    "verdict": "ok"
+  },
+  "064bedfe-097a-40f1-b946-b1ec83738245": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "b21f9771-f496-4fdf-b3c3-944b39525754": {
+    "verdict": "ok"
+  },
+  "1a2052b2-e924-4bf8-96c8-1de1c9470693": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "93455baa-cd6b-43f7-85cf-75b8d11ebde5": {
+    "verdict": "ok"
+  },
+  "9ecf3fe7-a5a7-42ef-9a97-fc67f8be9598": {
+    "verdict": "ok"
+  },
+  "71a059ec-5610-4b66-af22-27b3a9b362d5": {
+    "verdict": "ok"
+  },
+  "5dfce0ac-2064-4560-9c4c-f7698e4b1841": {
+    "verdict": "ok"
+  },
+  "87b6279d-3780-40b2-aa33-5fdb8d67f38e": {
+    "verdict": "ok"
+  },
+  "2116115f-5db5-4341-a2af-988320bcd299": {
+    "verdict": "ok"
+  },
+  "b066ecc4-5152-46b2-92a1-39eb0a87f77e": {
+    "verdict": "ok"
+  },
+  "286fc89b-4a2d-462c-a9a3-81990087a037": {
+    "verdict": "ok"
+  },
+  "cfcb84b8-6701-49a5-8a9d-4782f804ba80": {
+    "verdict": "ok"
+  },
+  "95e7587f-67c1-4194-9054-7901fe0088a0": {
+    "verdict": "ok"
+  },
+  "2e8f3465-9712-49e4-bdf0-82fe4c9c9cd6": {
+    "verdict": "ok"
+  },
+  "2d0f0c93-0c69-487e-9a20-f8be1f9816eb": {
+    "verdict": "ok"
+  },
+  "43f21bc2-2e5b-4394-86ed-7a94c26400ae": {
+    "verdict": "ok"
+  },
+  "87bdeaea-e507-4694-a5b3-3aab05275db3": {
+    "verdict": "ok"
+  },
+  "9ca86faf-85a5-4c93-9d68-9bb94b61091e": {
+    "verdict": "ok"
+  },
+  "4b2097b9-0fcf-41bc-b662-76fc5f59e277": {
+    "verdict": "ok"
+  },
+  "7909bf21-a60d-4143-8365-e23fa6435c56": {
+    "verdict": "ok"
+  },
+  "e1eb7a87-7e3e-4a69-a0a3-f55a1ba025b6": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "6f63c0c2-0b15-4ebe-8dea-e69276a7245d": {
+    "verdict": "ok"
+  },
+  "b9ad5d31-86bd-4107-a40f-1d01252983bf": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "a4644f9c-4e53-43b9-9647-fbd55362baf8": {
+    "verdict": "ok"
+  },
+  "988bbd8f-09f9-456b-9b5d-1181c3ec6d1e": {
+    "verdict": "ok"
+  },
+  "23083e79-b2fa-4000-98e2-91c61caef545": {
+    "verdict": "ok"
+  },
+  "186c4a93-fec0-4feb-b193-91d48faf7897": {
+    "verdict": "ok"
+  },
+  "edc5159d-1c59-47a2-9615-2f3a093cd507": {
+    "verdict": "ok"
+  },
+  "72dc35f7-50e2-456c-84da-0df88ea0d196": {
+    "verdict": "ok"
+  },
+  "66541f68-c1e1-443a-b7f4-ed441f7812b0": {
+    "verdict": "ok"
+  },
+  "8866766f-20d2-4555-a11b-a25d27c438d1": {
+    "verdict": "ok"
+  },
+  "9cbde4dc-3616-42a7-9f51-d0a86773f213": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "bf233a17-680e-4a17-a22f-7e81d7641252": {
+    "verdict": "ok"
+  },
+  "305296d9-90aa-4459-b784-220db262a953": {
+    "verdict": "ok"
+  },
+  "c1244810-4f89-4d93-9694-5cad27ec4d65": {
+    "verdict": "ok"
+  },
+  "decba715-872a-4b78-88b7-5f0dda4585cd": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "21545cec-6052-43a2-87d9-9e0123beb207": {
+    "verdict": "ok"
+  },
+  "440fc84d-ea35-45b1-a175-8624ae8cb210": {
+    "verdict": "ok"
+  },
+  "1963d042-0ded-4aee-be7e-7b9001617049": {
+    "verdict": "ok"
+  },
+  "fddb5334-d1f0-4bbf-8e6d-1e1317eb670c": {
+    "verdict": "ok"
+  },
+  "d8faf22e-2889-4498-8c84-b0031dcf1812": {
+    "verdict": "ok"
+  },
+  "ddead179-ca91-4868-b4ce-c0640b1f31ab": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "eba3fade-3507-470e-94a9-90d761fa944a": {
+    "verdict": "ok"
+  },
+  "4e902bdc-2d5a-4cd7-bc06-248d1afe1e35": {
+    "verdict": "ok"
+  },
+  "99fb58c7-7c1c-4bef-8f16-7797d9a0d2d8": {
+    "verdict": "ok"
+  },
+  "708c45eb-83a4-42e2-aaac-3704f2d6195b": {
+    "verdict": "ok"
+  },
+  "77cbf39c-d3ed-433e-8aef-5ff7a0f3c8ea": {
+    "verdict": "ok"
+  },
+  "47bac015-79cd-4e85-9f37-6788325b653e": {
+    "verdict": "ok"
+  },
+  "8502f5c7-7523-49ea-bc00-1d2b0792d778": {
+    "verdict": "ok"
+  },
+  "f306c03e-80f7-4334-8156-3c571f68244b": {
+    "verdict": "ok"
+  },
+  "6f921882-8581-42e4-b456-4cf574757b72": {
+    "verdict": "ok"
+  },
+  "4c01a625-7f82-4c33-af61-0aa21a6be941": {
+    "verdict": "ok"
+  },
+  "91a1ebed-fab4-4d2b-8942-a178f8034c7d": {
+    "verdict": "ok"
+  },
+  "ab7ba3ff-fa96-450d-8d6c-9815c2f6f64b": {
+    "verdict": "ok"
+  },
+  "5df84c3b-eeff-418b-bd51-38033875f0f8": {
+    "verdict": "ok"
+  },
+  "7ea07d17-8f85-4fef-98cc-1f6ae317a828": {
+    "verdict": "ok"
+  },
+  "51b176f6-898b-491a-93f2-9daa4049882a": {
+    "verdict": "ok"
+  },
+  "6b673bfd-ea8b-4e15-99fe-5f3378f84366": {
+    "verdict": "ok"
+  },
+  "3153e7bb-1eaf-4dd9-927b-3346d068ad1d": {
+    "verdict": "ok"
+  },
+  "b706b678-ba52-4499-a9e3-a1cfee2bafc4": {
+    "verdict": "ok"
+  },
+  "18938e0e-03af-4100-8d42-5c1c907d2b2e": {
+    "verdict": "ok"
+  },
+  "c461b321-73c8-4252-b1a3-5b5e282a604c": {
+    "verdict": "ok"
+  },
+  "88265907-e311-462b-8f4e-229ac6ed65aa": {
+    "verdict": "ok"
+  },
+  "3f0fbbb6-39a1-48e8-b8de-e03424832bb5": {
+    "verdict": "ok"
+  },
+  "60359456-7696-4990-978a-190b2676caea": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "36a5f8fc-b2a7-4402-a822-7e942a497772": {
+    "verdict": "ok"
+  },
+  "37027ce2-17ba-4591-a1c3-c7da11784710": {
+    "verdict": "ok"
+  },
+  "291a1c53-ad5e-4d45-8254-e8313b4e9041": {
+    "verdict": "ok"
+  },
+  "9fc16cdc-c24b-465a-98f4-d4fa42fff169": {
+    "verdict": "ok"
+  },
+  "1a9e6875-97cb-4e23-880e-54f8919b9c12": {
+    "verdict": "ok"
+  },
+  "59eb0852-cd6c-4930-af13-7a7fa71ae159": {
+    "verdict": "ok"
+  },
+  "8de07ca7-2607-4026-9ab0-61302f060bf2": {
+    "verdict": "ok"
+  },
+  "54545cf6-41a4-45fd-8a10-f990036bb3c7": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "4d4d5aec-2edd-457d-b205-4b02a881f7fa": {
+    "verdict": "ok"
+  },
+  "9cacefcf-fb54-4557-97b7-b18d200595ff": {
+    "verdict": "ok"
+  },
+  "1cd9855f-9504-4061-a4a0-e009cdf32ce3": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "9da1a6b8-a2ef-46ea-9add-d773dbb3d491": {
+    "verdict": "ok"
+  },
+  "4c9aeb5a-196b-4edd-ab19-3ac699afef86": {
+    "verdict": "ok"
+  },
+  "32c180f4-b260-4544-94c1-3d9ff12c1402": {
+    "verdict": "ok"
+  },
+  "0887bb05-c0bf-4293-a3be-4c3bbfdf48b7": {
+    "verdict": "ok"
+  },
+  "65e8ef4c-a5db-470a-82be-641bdf690ea8": {
+    "verdict": "ok"
+  },
+  "2f5e8a28-027b-48da-85ec-3f85b310e652": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "f260e4b0-db8c-4b8f-bc73-00aed91c8810": {
+    "verdict": "ok"
+  },
+  "5518f0fd-61d6-40d2-b79a-f8d5879cdb6e": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "d8d4777e-ab48-41d5-9cf4-f885b7dcaf34": {
+    "verdict": "ok"
+  },
+  "fc17a0f2-4a63-40be-a306-a53c78121121": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "a6b928e1-85ca-405d-ba93-7687931cda85": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "9de95fd9-c8dd-42bd-9cf1-a93bd5784179": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "7146fbf5-fcdd-4448-9202-4cddb210653b": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "6dfe73be-855d-4ac9-a933-ef1c0bfffd34": {
+    "verdict": "ok"
+  },
+  "8ff22797-339d-4f04-a412-8d5932fa32d9": {
+    "verdict": "ok"
+  },
+  "12dc8a80-6b26-4f8e-9d12-50ed6e50bc5b": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "f41f3d6e-c78e-4d39-b79f-bc15b9e80c2b": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "f6ff1faf-5367-477d-82d3-13ebc263473e": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "b2b0917a-4d19-43a2-ae13-b6d845527fc0": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "ebea078d-ed8b-42f4-9577-507f5008458a": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "27e6c92a-62ca-4336-9bbd-1a0b79187544": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "b759d2a0-4652-409d-9714-f23a8e9cd8d5": {
+    "verdict": "ok"
+  },
+  "898aaa26-1920-40b0-863b-14eeb5b4f9cd": {
+    "verdict": "ok"
+  },
+  "47a9dc74-07bc-4761-8f95-474e897bb765": {
+    "verdict": "ok"
+  },
+  "c0231514-9ef0-4d1b-80ed-c7fa4dbe942d": {
+    "verdict": "ok"
+  },
+  "25b55b6c-1e99-4b11-b6a5-615716043caa": {
+    "verdict": "ok"
+  },
+  "cd485381-b8bb-411c-af15-7469f3fffbfb": {
+    "verdict": "ok"
+  },
+  "29c8c551-f2e5-4ff2-8fe8-265f8e77718a": {
+    "verdict": "ok"
+  },
+  "eb06efd7-f5ee-452f-9e74-3e465e405582": {
+    "verdict": "ok"
+  },
+  "322e087a-0ae5-4d39-a2ae-ba1a59fbd35a": {
+    "verdict": "ok"
+  },
+  "81f26b55-3e66-4413-a819-34e83833476a": {
+    "verdict": "ok"
+  },
+  "7569fe98-adb1-4dd4-964a-6c62f725e839": {
+    "verdict": "ok"
+  },
+  "0609a0c3-eb95-46b2-9f8c-856600dc485a": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "ae9488d9-a42d-4124-a7eb-7b6668749273": {
+    "verdict": "ok"
+  },
+  "cd27b60f-fb16-4908-a5d5-0029579693bc": {
+    "verdict": "ok"
+  },
+  "d375c4dc-cfc0-428f-a1f6-ce91c425ba10": {
+    "verdict": "ok"
+  },
+  "796f07ab-4ba9-4e2e-a660-7894e0669c2d": {
+    "verdict": "ok"
+  },
+  "652a27d0-055f-44cf-983f-b8cc08dbe504": {
+    "verdict": "ok"
+  },
+  "5c9ffffe-8cb1-44f2-b346-e821a602f77a": {
+    "verdict": "ok"
+  },
+  "02803ed0-d9a0-405e-98e9-a8afca0bf4e8": {
+    "verdict": "ok"
+  },
+  "7383a25f-98a0-49fb-a32b-e2f9ecc57c86": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "0d47e46a-33f4-4fe4-ad01-de4399b8b0cd": {
+    "verdict": "ok"
+  },
+  "344c58f5-ff23-4184-b2e9-1bbefdc45108": {
+    "verdict": "ok"
+  },
+  "9c64fc21-d148-4736-9d1e-7d8a340aeb6c": {
+    "verdict": "ok"
+  },
+  "5b851df2-3c93-47a6-989d-a790f960db06": {
+    "verdict": "ok"
+  },
+  "e606ed0a-4ed1-4f4b-afa7-4cd2a0a01af8": {
+    "verdict": "ok"
+  },
+  "4121b62e-99ca-4b3f-8897-082ac20e076f": {
+    "verdict": "ok"
+  },
+  "f8e22da3-8d13-416b-b69b-267caea1a346": {
+    "verdict": "ok"
+  },
+  "b47d2db6-9760-46b6-9da8-0ef250a10ab7": {
+    "verdict": "ok"
+  },
+  "5698ae52-12e0-41ea-bc09-1ea557f210a6": {
+    "verdict": "ok"
+  },
+  "93c992cb-8382-428e-b74e-5ab1aefc9f14": {
+    "verdict": "ok"
+  },
+  "0c7fb1ac-6c25-4e4b-a080-de0aafc15475": {
+    "verdict": "ok"
+  },
+  "5f078669-4057-46f5-b46e-893b64b3593d": {
+    "verdict": "ok"
+  },
+  "930e08c4-107a-4d3a-b97d-ceb0b01e0dbd": {
+    "verdict": "ok"
+  },
+  "90a7c0fd-8e12-4f8d-91a9-a39a2807cb0d": {
+    "verdict": "ok"
+  },
+  "7da4487c-e82f-4f0e-9ba0-4222a6b957f7": {
+    "verdict": "ok"
+  },
+  "ac9f05a1-e863-432d-abce-f682578821cb": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "caad520a-2a14-4ccf-bfb5-ec1da2824e9e": {
+    "verdict": "ok"
+  },
+  "fdccb9ff-fd2b-4acf-aae5-74702e257437": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "a853877a-045e-47fe-a4fd-455655c528af": {
+    "verdict": "ok"
+  },
+  "70309852-ae98-406d-b95e-534dd7dabd3e": {
+    "verdict": "ok"
+  },
+  "c7db72d8-a9d4-496e-9202-352a4f09b4c6": {
+    "verdict": "ok"
+  },
+  "c8fe8cb6-8ef1-48ca-a285-1fbc2d9d1466": {
+    "verdict": "ok"
+  },
+  "f267c3d2-fb9f-42ad-8062-68ed4ab26c75": {
+    "verdict": "ok"
+  },
+  "8d773772-98ce-414a-93b2-c26f29453dc2": {
+    "verdict": "ok"
+  },
+  "c51dfb61-0d8c-474d-b845-068c938d063e": {
+    "verdict": "ok"
+  },
+  "6547e3ed-7c5d-4ebf-a1bb-dcf7699cf52d": {
+    "verdict": "ok"
+  },
+  "e4c25668-bf54-4016-a476-b2b8b8361df8": {
+    "verdict": "ok"
+  },
+  "532e8b23-2580-45df-b447-6b2fc5d0ed0a": {
+    "verdict": "ok"
+  },
+  "9a213fe8-a69c-4e2e-bcf4-89bc3af2e21e": {
+    "verdict": "ok"
+  },
+  "2532a944-f4e3-4ea6-82db-3f2c1be98bc4": {
+    "verdict": "ok"
+  },
+  "b3c69f24-1f48-4e62-a33a-315e252edd47": {
+    "verdict": "ok"
+  },
+  "e171aa09-71a8-40cb-849b-7e613f609147": {
+    "verdict": "ok"
+  },
+  "1696e80c-7b2e-45fd-bf93-ff1fa5075b7b": {
+    "verdict": "ok"
+  },
+  "0fbf4d23-3945-4fc4-a11d-0b1d8edf9a14": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "37c1e5a9-66aa-4db3-b9e2-d7dab50431df": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "48fd87c8-772d-4319-8f54-fc9673abf24c": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "39e52fc9-cb6b-4833-b974-ec157a0d3d8c": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "f6638870-9aec-4def-89ab-98a90cd147b8": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "535e8a8c-f4d1-41dd-b6de-1a6f9343e320": {
+    "verdict": "ok"
+  },
+  "db8a7d07-9e7c-4f0f-b612-26c03b05a28e": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "92254c0b-e795-4e98-b0e9-4a8f4b545020": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "468be1d4-b7d8-4e95-a041-44ce6814234d": {
+    "verdict": "ok"
+  },
+  "459126ee-dc84-48d2-9071-b5688af17817": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "6ec4b0af-3087-4412-9a06-12321b26aed0": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "632b47d4-a35e-4f95-8e45-b7b34db42ce4": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "56914b6d-2e13-4854-b774-2a8500903b00": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "74a7cb5e-1670-4aae-bf9c-28a2bb98941a": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "32624e49-7b2e-4700-88c2-4fea163f91fc": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "90869990-45f8-419d-b1fd-3fd3106187da": {
+    "verdict": "ok"
+  },
+  "25c2ba08-e6ac-432d-ad44-faf79da7c6a5": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "1f04e0ae-f02a-4af7-97c1-15664900314e": {
+    "verdict": "ok"
+  },
+  "e2f7aabd-b610-4c4c-956a-df0fd0cbde71": {
+    "verdict": "ok"
+  },
+  "290c027b-8b1f-4840-b914-658cc7bcbe98": {
+    "verdict": "ok"
+  },
+  "6625a22c-828f-429c-88f4-0e0b9b005bb5": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "a037f8d2-dfb0-427f-8d9b-45d877afe7d1": {
+    "verdict": "ok"
+  },
+  "9b7cad05-7611-4ecb-8d29-d2b7031ae3fa": {
+    "verdict": "ok"
+  },
+  "543a2d12-5798-474e-9b1f-28325131e256": {
+    "verdict": "ok"
+  },
+  "4e7fe33a-98dc-447d-bc39-879ca8785f10": {
+    "verdict": "ok"
+  },
+  "be29a2fe-8d97-4c4e-b307-90862bb3b876": {
+    "verdict": "ok"
+  },
+  "7369ddac-3ba5-4aef-98b9-ae707387a6fa": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "5f9b1e4f-df1b-4a87-b0a3-b7ac92f1a901": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "9c934327-2500-4698-8e3c-ffa2c09178ef": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "73b264b1-43b3-41df-b19d-0f2c4ac55435": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "e9d6d88b-096e-4a17-b081-7a0e476b2079": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "738b6eb9-4671-4dfc-8912-666fe2e1bc88": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "4c31993c-f92f-402a-a8af-9a7f2204b676": {
+    "verdict": "ok"
+  },
+  "02f6367f-cafd-457d-ad0a-4047126e1598": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "7376bfad-dcfb-4f86-8095-89b9e8b3c05c": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "0d4fe378-1e85-4af9-b925-96ec46c5fa6d": {
+    "verdict": "ok"
+  },
+  "d473f09a-ec57-434e-a4a8-03c28ea4c135": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "033085b6-8834-472a-9ee1-4e810c6900ac": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "661a3cd0-188b-4d5d-b304-12c3bd76a642": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "077177fd-10e7-409b-809b-e973ca2bad58": {
+    "verdict": "ok"
+  },
+  "19afc8af-388c-4986-9e77-dcc5c5ce83be": {
+    "verdict": "ok"
+  },
+  "29011d3f-a7c9-4c66-9d95-4c6adb5ba242": {
+    "verdict": "ok"
+  },
+  "4fff8f54-822e-4136-8ce3-0dedb114560b": {
+    "verdict": "ok"
+  },
+  "af05e515-8a66-42d1-a551-3864e57c9f24": {
+    "verdict": "ok"
+  },
+  "05a341d7-48d3-4300-bbb2-1292be0033de": {
+    "verdict": "ok"
+  },
+  "d8628918-136d-4e66-9d60-9e6fb78ef5d1": {
+    "verdict": "ok"
+  },
+  "c7c5acf2-d1ca-4e08-88bc-424dfe4723bd": {
+    "verdict": "ok"
+  },
+  "5cc30e80-0361-48c9-91e7-2ab594a1188f": {
+    "verdict": "ok"
+  },
+  "fffbb5c4-bf86-4ec5-8104-5477a45f7e40": {
+    "verdict": "ok"
+  },
+  "c3c03ff9-82a2-43b9-85c0-57b6579e41c1": {
+    "verdict": "ok"
+  },
+  "1b9b2e44-381d-4ed5-adc7-72aa26681cf7": {
+    "verdict": "ok"
+  },
+  "0d5bee09-fbb1-43ce-93ec-e8bb7953fd92": {
+    "verdict": "ok"
+  },
+  "10d993b2-044c-4afb-8dc2-1787e53c5a11": {
+    "verdict": "ok"
+  },
+  "1879ecd0-308c-4fda-873c-de28d5105786": {
+    "verdict": "ok"
+  },
+  "b582914b-275d-4ece-bca5-8874e777131b": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "11cb9a64-cec2-4067-ad26-a1666acb9f5b": {
+    "verdict": "ok"
+  },
+  "fa77698e-bba9-47aa-a429-0ca2a9f41f01": {
+    "verdict": "ok"
+  },
+  "f355319b-02fd-4302-b988-ed87d1670c48": {
+    "verdict": "ok"
+  },
+  "d83be774-4df7-4f29-9173-2ee5f89ee8e8": {
+    "verdict": "ok"
+  },
+  "860c5644-6d5c-4c56-8b8a-4f53604a1437": {
+    "verdict": "ok"
+  },
+  "bf2f2da3-293b-440b-bcb8-24bf6d78ae9e": {
+    "verdict": "ok"
+  },
+  "d5e50fea-3c33-4783-b5a7-d6510213cbca": {
+    "verdict": "ok"
+  },
+  "27c82311-750b-4a1e-a0f6-ef4a90d4f726": {
+    "verdict": "ok"
+  },
+  "9e09514b-e754-4488-b0aa-b389a7356c89": {
+    "verdict": "ok"
+  },
+  "f7601054-e406-4ac0-b69a-8d2db2f75db1": {
+    "verdict": "ok"
+  },
+  "8f8bb689-881e-4d59-9861-b21158189b77": {
+    "verdict": "ok"
+  },
+  "db3cd101-ba5a-4e56-8ce0-3a138e2428d1": {
+    "verdict": "ok"
+  },
+  "31732afb-05b0-425b-97aa-568d76412444": {
+    "verdict": "ok"
+  },
+  "717032e5-e375-40a0-88cb-39f3e1747efc": {
+    "verdict": "ok"
+  },
+  "815b0adb-7b8c-4c54-b665-5bf37c0fddce": {
+    "verdict": "ok"
+  },
+  "c3ea6bd3-ccd7-4619-ae78-7cd1d6a63da1": {
+    "verdict": "ok"
+  },
+  "b276a1cf-f95d-4698-81b2-3d6f80e75c6e": {
+    "verdict": "ok"
+  },
+  "2cbe434e-3456-4349-a767-f3b3130b9e28": {
+    "verdict": "ok"
+  },
+  "809403b9-d8ac-4611-9dca-c16d901c48e2": {
+    "verdict": "ok"
+  },
+  "970e48e3-b0be-4cba-aa20-767b182f86b7": {
+    "verdict": "ok"
+  },
+  "477aabae-b74a-47bd-93e7-ad4afaa06acb": {
+    "verdict": "ok"
+  },
+  "17550cbd-cff2-4082-96d6-831718daf0ce": {
+    "verdict": "ok"
+  },
+  "5564ec13-7ca8-48eb-aab9-d6d98fa75375": {
+    "verdict": "ok"
+  },
+  "48fedf98-e228-4cc7-a18e-af752ab04400": {
+    "verdict": "ok"
+  },
+  "f671122b-e0b9-4d02-97c1-9bc7d5aa3898": {
+    "verdict": "ok"
+  },
+  "249c8273-38ff-41bd-a09a-8b1e1573c139": {
+    "verdict": "ok"
+  },
+  "f82a940a-e85e-4f0a-b8c3-c09860d9efcb": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "7c0b1101-46db-4dd8-a441-fbfc5b2c05da": {
+    "verdict": "ok"
+  },
+  "c7873bf8-01ed-4976-85ab-7eb55b35f636": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "40b6e4f4-88c0-40cd-a3f2-56323bd2b513": {
+    "verdict": "ok"
+  },
+  "851c93dd-560f-4ca0-8d2b-b1d8c2aaefec": {
+    "verdict": "ok"
+  },
+  "eaaf165d-b586-4b1b-ab73-262f5b4f5c31": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "f503871f-6a17-4d5c-985b-4db7fcd5e308": {
+    "verdict": "ok"
+  },
+  "6c872458-2677-4af9-8c48-7773bf42268c": {
+    "verdict": "ok"
+  },
+  "d438f106-b26b-4d80-9ee9-fe07d1902cb3": {
+    "verdict": "ok"
+  },
+  "dd385431-0aea-44e6-b8e0-989841c06f66": {
+    "verdict": "ok"
+  },
+  "a98dd8dd-9da4-453d-8e7e-d2a58a5272c9": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "52b559d9-1b9f-4469-9865-04d2524b342c": {
+    "verdict": "ok"
+  },
+  "f2c5f1df-6cbf-4bd1-84c8-271f65e37f2b": {
+    "verdict": "ok"
+  },
+  "d320f6ca-29e2-4edb-beae-7f41bfd38e77": {
+    "verdict": "ok"
+  },
+  "5f330fe3-cd0e-4cb8-a6f7-69d2e6a9f8ae": {
+    "verdict": "ok"
+  },
+  "7e49e6a7-580e-44f9-9a0b-8b37db349524": {
+    "verdict": "ok"
+  },
+  "67a8b03a-6c85-422c-ab97-658840c206f4": {
+    "verdict": "ok"
+  },
+  "b09102a9-d1ec-4776-8a61-bbf032b1b1c7": {
+    "verdict": "ok"
+  },
+  "001f10a8-ea92-4325-9daf-ebdf515bc2c6": {
+    "verdict": "ok"
+  },
+  "c16f451b-02af-4a17-aaf7-298f8ce0d7a9": {
+    "verdict": "ok"
+  },
+  "878bb7ab-311b-4a5b-88c0-7586644b7017": {
+    "verdict": "ok"
+  },
+  "24f76a86-737b-4219-bbd1-8290aa1db82c": {
+    "verdict": "ok"
+  },
+  "f2a1fa03-2fb0-4e6c-a3d4-17941065dcd5": {
+    "verdict": "ok"
+  },
+  "61abc084-f408-4c00-8dcc-0539948d27a3": {
+    "verdict": "ok"
+  },
+  "4e201c31-03c8-4787-a020-83c9ac2dba91": {
+    "verdict": "ok"
+  },
+  "74ab141e-ef8a-443a-9b8d-c5b644093c91": {
+    "verdict": "ok"
+  },
+  "30bed7e6-2c25-4493-8652-22e5530708cf": {
+    "verdict": "ok"
+  },
+  "364231ac-32c0-4a2e-87d5-45ad6ab63c69": {
+    "verdict": "ok"
+  },
+  "14a31738-19bc-4d64-ab4d-94b3b4c7c964": {
+    "verdict": "ok"
+  },
+  "3e4e63d4-2f16-46cb-8d78-f56aa17bb246": {
+    "verdict": "ok"
+  },
+  "6463a20d-4a2c-4334-9384-cdf17ccac3de": {
+    "verdict": "ok"
+  },
+  "c52f68a0-cfb6-4d41-860a-55060ec2949b": {
+    "verdict": "ok"
+  },
+  "702b6c2f-c49c-40d0-950a-3bd82b98c85c": {
+    "verdict": "ok"
+  },
+  "221be693-f536-4d31-8136-2dc82d916446": {
+    "verdict": "ok"
+  },
+  "2f7c8f26-2312-47a8-abfd-1a1390f55dbf": {
+    "verdict": "ok"
+  },
+  "427e3f1a-1fcd-48be-902c-dfbf366e67e9": {
+    "verdict": "ok"
+  },
+  "ce2ee76c-4950-49b8-8d2f-a62fd53d7bc0": {
+    "verdict": "ok"
+  },
+  "0e0777e3-5317-4e82-bf32-47bcd3f18ca7": {
+    "verdict": "ok"
+  },
+  "e0954c91-ffa9-46ad-b8c3-b3dfbe66290f": {
+    "verdict": "ok"
+  },
+  "d178071b-1fb4-4530-9bfa-d39f1f5cd2b9": {
+    "verdict": "ok"
+  },
+  "4f9d5965-0d0e-478b-a56c-4cd00315a71f": {
+    "verdict": "ok"
+  },
+  "ccb87175-e49c-4170-b80c-016cda7863a7": {
+    "verdict": "ok"
+  },
+  "247acd51-34e6-4093-a8e4-ecc839bc8676": {
+    "verdict": "ok"
+  },
+  "ecd520f4-075b-4ea9-9160-496a9acdc871": {
+    "verdict": "ok"
+  },
+  "8f0c7e7b-4e2c-497d-bba8-d6331ad321f3": {
+    "verdict": "ok"
+  },
+  "01261faf-b53c-4a13-94a9-fb3815bc9ca4": {
+    "verdict": "ok"
+  },
+  "244122c8-3033-408e-bc1b-84fe35d835e6": {
+    "verdict": "ok"
+  },
+  "5663dae7-48b2-44ef-895a-07d2c295250f": {
+    "verdict": "ok"
+  },
+  "6b1a70a1-918c-4bd8-b3dc-445248dce738": {
+    "verdict": "ok"
+  },
+  "d3a9dd79-da28-40cb-8008-8f5488ef6161": {
+    "verdict": "ok"
+  },
+  "342fb017-6365-4cdf-aba2-e23e543b2e6b": {
+    "verdict": "ok"
+  },
+  "be64e7b7-df7c-49f4-b033-5d19c6312eb8": {
+    "verdict": "ok"
+  },
+  "60f5dbbb-4049-49b8-9aa1-6fa1d78692e2": {
+    "verdict": "ok"
+  },
+  "6c3b2e18-2ff2-4240-b143-8765e72cfdc6": {
+    "verdict": "ok"
+  },
+  "9fab6f9c-4f4d-4733-9dc5-a550b1bff60c": {
+    "verdict": "ok"
+  },
+  "f267952e-8970-4cdd-bcf4-11534d0aa358": {
+    "verdict": "ok"
+  },
+  "5ed1fcd3-d140-48dc-bda8-3565a7e785ac": {
+    "verdict": "ok"
+  },
+  "667262ad-e04b-4461-bc99-b0cafeb0ab40": {
+    "verdict": "ok"
+  },
+  "79fe437a-df4b-49ce-b98f-9a86a7560314": {
+    "verdict": "ok"
+  },
+  "f13cb572-0f13-4923-bc33-24fbab9e5143": {
+    "verdict": "ok"
+  },
+  "fc318669-98ce-45b8-a8db-7b5159d78751": {
+    "verdict": "ok"
+  },
+  "3c7a80d1-0581-44be-8417-2c4ba0a6233a": {
+    "verdict": "ok"
+  },
+  "95a865e2-806f-4422-bd4f-7c77054842de": {
+    "verdict": "ok"
+  },
+  "60461a74-21ec-4709-b673-c316cfa23945": {
+    "verdict": "ok"
+  },
+  "2490d312-8475-4023-b3da-8142d5ee110f": {
+    "verdict": "ok"
+  },
+  "22b87fb1-3be9-405c-a50f-f8ce3da30a63": {
+    "verdict": "ok"
+  },
+  "519012c1-4fcc-4b16-abfd-6d35f91a42f5": {
+    "verdict": "ok"
+  },
+  "2bd334be-4492-4181-bf06-929ec03e9970": {
+    "verdict": "ok"
+  },
+  "606def7e-f272-460d-8b2a-6902940082a8": {
+    "verdict": "ok"
+  },
+  "15e3af9a-0ecc-44bd-ac19-5c8dc625e23c": {
+    "verdict": "ok"
+  },
+  "312df25d-cca6-4782-9c71-7c8915f6d7ad": {
+    "verdict": "ok"
+  },
+  "7a9af152-749b-4d20-bbf7-f96e07848d2d": {
+    "verdict": "ok"
+  },
+  "49cd2406-d050-4db1-b12a-11d6f3350a67": {
+    "verdict": "ok"
+  },
+  "d7175a8e-bf24-4bcc-8fbd-c479459391ab": {
+    "verdict": "ok"
+  },
+  "20c94166-c240-4ef6-8e9c-025b363f3bd4": {
+    "verdict": "ok"
+  },
+  "1b26d083-497b-4762-a9ee-9cd9a45a2e6c": {
+    "verdict": "ok"
+  },
+  "6197d854-6e9c-455a-a510-4f8ea8525dd8": {
+    "verdict": "ok"
+  },
+  "df2132d7-80c4-41ce-b647-181326799d05": {
+    "verdict": "ok"
+  },
+  "c9db3809-2521-417d-8549-22814136a432": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "362947b9-ec56-4851-ae27-041c8a0dda47": {
+    "verdict": "ok"
+  },
+  "d9c7a973-f405-4ea6-a47c-aa40bf823656": {
+    "verdict": "ok"
+  },
+  "3495c641-48de-4009-bc09-d0cf9e8d0e33": {
+    "verdict": "ok"
+  },
+  "afd5aba0-829b-4b49-92a6-eb5d5d37b704": {
+    "verdict": "ok"
+  },
+  "c9870697-c35c-4998-9ef7-3775238a525a": {
+    "verdict": "ok"
+  },
+  "6c83a057-b062-4feb-9ffc-0a8fff8a5468": {
+    "verdict": "ok"
+  },
+  "aa3bc822-ebae-408f-a5ad-36e025dbc25a": {
+    "verdict": "ok"
+  },
+  "559cc0e8-ad58-447e-9062-196a4470bccd": {
+    "verdict": "ok"
+  },
+  "b09591d1-74e1-4f1d-a0fb-41e45b14f23f": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "d0a6598f-a658-4266-98c8-4f9cddcadd46": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "f104d3e3-2262-4cc2-8cdd-12c398824f40": {
+    "verdict": "ok"
+  },
+  "abfebff6-66ae-4c2d-8fd1-9405aa345749": {
+    "verdict": "ok"
+  },
+  "bcdcdee6-f4f4-461f-bbc2-334651988c69": {
+    "verdict": "ok"
+  },
+  "0763ca3f-d9ff-437e-bad7-e97994f5f21b": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "18bd4fef-8eef-4d08-a636-4a3e1aa2d396": {
+    "verdict": "ok"
+  },
+  "7810a17e-2b9d-4a97-aa0a-d232f630c768": {
+    "verdict": "ok"
+  },
+  "61e7d179-3f2a-469b-8ed9-cd1c2a9e6a0a": {
+    "verdict": "ok"
+  },
+  "be5f3f40-0cf7-4422-9f79-ccdc94660a83": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "ef7f57d4-f1c9-4e82-adfd-211ec17a43db": {
+    "verdict": "ok"
+  },
+  "79048a50-ab1a-47ca-94e3-081d2a10a9ce": {
+    "verdict": "ok"
+  },
+  "b5cf7b4d-8ad5-442a-b54b-1e00fc91edc8": {
+    "verdict": "ok"
+  },
+  "667ef155-6456-4616-b3c6-914438c57702": {
+    "verdict": "ok"
+  },
+  "24fa33e1-59f7-4d1d-997f-17faa518378a": {
+    "verdict": "ok"
+  },
+  "8ce5ea50-2985-4448-a6a9-c2b15bc43e7f": {
+    "verdict": "ok"
+  },
+  "c1849fd0-5575-491a-af50-3fd301861198": {
+    "verdict": "ok"
+  },
+  "cfbf7dfe-783f-43db-ab21-cc51d7a77c23": {
+    "verdict": "ok"
+  },
+  "db6e1082-8afa-4120-a625-658e7ba9225c": {
+    "verdict": "ok"
+  },
+  "cd8e0d93-51e8-47df-bb93-88195aa4bb09": {
+    "verdict": "ok"
+  },
+  "c091b245-db05-4394-8c99-b8dbc4dcde20": {
+    "verdict": "ok"
+  },
+  "2b91af2f-db92-4190-9858-0dd2bba92f1d": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "64eaaf5a-950f-4452-8eda-5fe41fa303cb": {
+    "verdict": "ok"
+  },
+  "04d55000-0a71-4c64-afa4-627ddb340889": {
+    "verdict": "ok"
+  },
+  "bf91489b-cbc6-4b77-8dbe-44cc5fd16294": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "3f2836bd-4e90-46d2-a522-3b8d47a7de66": {
+    "verdict": "ok"
+  },
+  "1dd107a1-9644-4769-9227-a408fec97c91": {
+    "verdict": "ok"
+  },
+  "96738d77-1173-400b-9dc6-eba5fff0e586": {
+    "verdict": "ok"
+  },
+  "47b5fd0d-4350-4f42-b89c-033b9cec1689": {
+    "verdict": "ok"
+  },
+  "27671bad-76d9-4aa3-a2e5-e619733e6055": {
+    "verdict": "ok"
+  },
+  "38233094-f429-4fc3-a400-ca4541f0cb3f": {
+    "verdict": "ok"
+  },
+  "8ef9588e-6a79-44c9-a816-53103cfce02a": {
+    "verdict": "ok"
+  },
+  "a04e1f2a-39c0-493b-af90-b5ec394c6316": {
+    "verdict": "ok"
+  },
+  "bae26934-b86e-4e4c-8b3f-ca06331b30a5": {
+    "verdict": "ok"
+  },
+  "88eb4e95-81ac-4cc8-b4d1-423b26dc8ab0": {
+    "verdict": "ok"
+  },
+  "90ec5052-fd85-491a-aa4b-5a47603aeee6": {
+    "verdict": "ok"
+  },
+  "38c4bc68-938b-4e15-9ea4-f871ea5e3011": {
+    "verdict": "ok"
+  },
+  "a683df18-992e-424c-845a-765cc73b5e7c": {
+    "verdict": "ok"
+  },
+  "94a313a8-e810-44f6-b44b-707b932da154": {
+    "verdict": "ok"
+  },
+  "dcf2f398-4c15-4472-9a0b-28939a3fc60c": {
+    "verdict": "ok"
+  },
+  "94c5e06c-6ab3-4f6f-b9c8-4c1a293920eb": {
+    "verdict": "ok"
+  },
+  "d4c996b1-0a74-49b3-8793-644e14a220b9": {
+    "verdict": "ok"
+  },
+  "c2328107-371a-440b-9429-64e577e9846b": {
+    "verdict": "ok"
+  },
+  "8f0647cb-506d-40a2-8542-138dc6133703": {
+    "verdict": "ok"
+  },
+  "107bb6e6-6220-4b4a-bc2a-e6a8318918c4": {
+    "verdict": "ok"
+  },
+  "47f65473-8fb6-4126-86b5-c33611a01393": {
+    "verdict": "ok"
+  },
+  "958dfc44-22b7-4a5d-a09a-5349557a0cf8": {
+    "verdict": "ok"
+  },
+  "c6c620b5-136a-49fc-9d65-1963b53ac153": {
+    "verdict": "ok"
+  },
+  "5acc5a2a-aea7-4cb7-940f-31d41979d01b": {
+    "verdict": "ok"
+  },
+  "3eced57f-acaa-4b3c-bfc7-a3b6d82009cc": {
+    "verdict": "ok"
+  },
+  "3566f647-8793-41e1-8f11-fbc5873fb2cc": {
+    "verdict": "ok"
+  },
+  "dea65c13-e3e5-40fb-8362-e426518dd9f4": {
+    "verdict": "ok"
+  },
+  "4cad98f2-70d2-4952-ad33-13064cbed272": {
+    "verdict": "ok"
+  },
+  "c09f1e4a-b52e-49c7-a995-f136ad7a0c7a": {
+    "verdict": "ok"
+  },
+  "2d2dc242-79b3-4c64-a109-d4c94e2ba044": {
+    "verdict": "ok"
+  },
+  "2bbbc1ba-8f12-4e69-a0da-5c99d7def2b9": {
+    "verdict": "ok"
+  },
+  "e820202f-a422-4bf7-b3c5-022125279e50": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "c626dd90-66ce-4d82-b342-3bf25b35b603": {
+    "verdict": "ok"
+  },
+  "f4c9cc3b-be71-4580-91c3-f8903ceba070": {
+    "verdict": "ok"
+  },
+  "7d473c1e-6bd7-41ff-a9f9-a3e7875aa9cc": {
+    "verdict": "ok"
+  },
+  "0de75b9b-6611-49d0-a0cc-efeb50932fac": {
+    "verdict": "ok"
+  },
+  "0790b9ec-6baa-43ea-a91e-4df62ba08cf2": {
+    "verdict": "ok"
+  },
+  "0339c9b2-a373-44b2-8035-313162ae297a": {
+    "verdict": "ok"
+  },
+  "0f4cc082-0691-4cf5-8602-91b9819dc1bc": {
+    "verdict": "ok"
+  },
+  "2cb3d66c-1191-4261-974e-c0f8396646de": {
+    "verdict": "ok"
+  },
+  "4662237e-3258-4e0a-ac9f-535fd78a14e3": {
+    "verdict": "ok"
+  },
+  "7fb7f6e1-6b43-41f3-891a-d095ed5e51b6": {
+    "verdict": "ok"
+  },
+  "9730f7db-fea8-45c2-9873-8d1a0b9d84e4": {
+    "verdict": "ok"
+  },
+  "068cc1cf-4f49-4a1b-866c-7935bb290e9a": {
+    "verdict": "ok"
+  },
+  "5d07e7e1-f06d-4381-b6b0-90a884d71083": {
+    "verdict": "ok"
+  },
+  "7b14ec88-84fd-4ad1-9a7a-1d336e0de4bb": {
+    "verdict": "ok"
+  },
+  "95856ac6-e0ea-4d7a-8302-25ca8f933f2e": {
+    "verdict": "ok"
+  },
+  "a4d84f05-ee53-49e5-88e7-5582f5c37278": {
+    "verdict": "flagged",
+    "reason": "too obscure"
+  },
+  "b8d0102f-1356-4a80-8dec-7ebc917f4000": {
+    "verdict": "ok"
+  },
+  "ed5e70ab-2a60-4b92-8327-e0ecfc5cf96f": {
+    "verdict": "ok"
+  },
+  "6bf35b0d-f658-43c5-b63d-93e05c4a090a": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "61c92811-ace9-4d83-81d1-be3978cc0c99": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "8d35469a-2028-4fca-9f3a-2257f96bd1ae": {
+    "verdict": "ok"
+  },
+  "2cab02b8-550f-4c6d-aafc-636b652db17b": {
+    "verdict": "ok"
+  },
+  "d1f3e9f5-3547-4374-be98-ca5a29b19f17": {
+    "verdict": "ok"
+  },
+  "ac6d2a34-fed3-42d7-87cc-691a9800c853": {
+    "verdict": "ok"
+  },
+  "70f242d5-9fc6-474f-82fa-7d2a982a8f24": {
+    "verdict": "ok"
+  },
+  "0744ebbd-aad6-4fc5-837a-7906f347033a": {
+    "verdict": "ok"
+  },
+  "40479d47-195e-48ec-bcd3-64fd8820215f": {
+    "verdict": "ok"
+  },
+  "ee8d1f2c-05d6-4c63-b9c2-38cb2ee26659": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "77d9361f-b06a-4b64-9d59-044249acfef6": {
+    "verdict": "ok"
+  },
+  "7bb2a099-0542-42d9-90e7-ac890e25c5ca": {
+    "verdict": "ok"
+  },
+  "28a7faf9-27f5-4a9b-b969-a6146c21ce8b": {
+    "verdict": "ok"
+  },
+  "4cc44461-2af6-43b4-a3f5-00fb3aadb3be": {
+    "verdict": "ok"
+  },
+  "ff259be8-860a-4b62-809f-c6363aae1ab8": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "5c058078-28ee-402a-b83e-a8b54b70974b": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "5147b3ed-9b6e-4cfb-85d4-0e69886d85d4": {
+    "verdict": "ok"
+  },
+  "17fafe38-da40-4c47-bb46-09faa9144d00": {
+    "verdict": "ok"
+  },
+  "fab80335-2b7d-4070-84d1-0c58bcfd67a1": {
+    "verdict": "ok"
+  },
+  "553c1841-f6f4-481b-993d-1a600561bb21": {
+    "verdict": "ok"
+  },
+  "aa30210c-4c2e-44e7-a4d5-3994032048e0": {
+    "verdict": "ok"
+  },
+  "c445e826-9353-40ce-ad5a-7666534dc410": {
+    "verdict": "ok"
+  },
+  "12dd43be-facf-4e9b-9a47-3d9877f5e8bb": {
+    "verdict": "flagged",
+    "reason": "ambiguous wordToGuess"
+  },
+  "7b5a58c3-3f52-4221-93e0-20037820ff15": {
+    "verdict": "ok"
+  },
+  "76f276bc-bb3e-4a6a-b6d6-47631be8ecaf": {
+    "verdict": "ok"
+  },
+  "172fe073-d79a-4e5e-b13c-fd0e20892440": {
+    "verdict": "ok"
+  },
+  "4fd9bf33-2115-477f-b4f4-352d9c4da5bd": {
+    "verdict": "ok"
+  },
+  "966acabd-06c3-4d49-a054-211cc0efc326": {
+    "verdict": "ok"
+  },
+  "e74a07ee-0ec6-48a1-a7f5-0fe071ef94e5": {
+    "verdict": "ok"
+  },
+  "2d481efb-3ed6-45f5-b6f6-b08c0ec21655": {
+    "verdict": "ok"
+  },
+  "acb0edad-350a-475e-9e48-b56c9c237432": {
+    "verdict": "ok"
+  },
+  "ca068d40-ca6d-426c-bca7-a0398ba149f8": {
+    "verdict": "ok"
+  },
+  "bba5e63c-6440-4caa-9273-0de667038619": {
+    "verdict": "ok"
+  },
+  "74bc1e75-a4b0-42d3-94f2-53e71498e3f6": {
+    "verdict": "ok"
+  },
+  "3a9a19b7-8e26-4b83-96e2-f72f818935c0": {
+    "verdict": "ok"
+  },
+  "f8f1b37a-3485-4734-ad5a-49fd2f126097": {
+    "verdict": "ok"
+  },
+  "25d919d5-e99b-47c1-aaa1-c51e31329d31": {
+    "verdict": "ok"
+  },
+  "fc726fb5-56ab-4d37-ad71-18f3628f9137": {
+    "verdict": "ok"
+  },
+  "e2289d12-5ff6-4cad-82d6-d67afb1bf51c": {
+    "verdict": "ok"
+  },
+  "7cb71ec6-a619-4422-be71-9b0bd2fb13cd": {
+    "verdict": "ok"
+  },
+  "fd9263f4-1838-4da6-8add-6fe2c7a0d1ab": {
+    "verdict": "ok"
+  },
+  "9194478e-c8a3-46e9-aedc-39c36bd0ae62": {
+    "verdict": "ok"
+  },
+  "7a6d5496-3e63-4176-acea-2d6546f9bdf4": {
+    "verdict": "ok"
+  },
+  "2441543d-c901-467c-908c-5dfac49844ed": {
+    "verdict": "ok"
+  },
+  "bab8d9f9-4cbb-4258-a62f-5d652cbf9bf6": {
+    "verdict": "ok"
+  },
+  "8b72bbb3-c118-4bbb-8c7c-15b3dd8fc350": {
+    "verdict": "ok"
+  },
+  "081119f9-fce0-46b8-8611-06e54f060b27": {
+    "verdict": "ok"
+  },
+  "0aad5a4c-c732-4477-bce6-f90782dd1705": {
+    "verdict": "ok"
+  }
+}
