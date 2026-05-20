@@ -7,7 +7,7 @@
  * Select the next card based on language mode and seen cards
  * @param {Array} cards - Array of available cards
  * @param {Array<string>} seenIds - Array of seen card IDs
- * @param {string} language - Current language ('en', 'pt', or '50/50')
+ * @param {string} language - Current language ('en', 'pt', or 'both')
  * @param {boolean} isAlternating - Whether to alternate languages in 50/50 mode
  * @returns {Object|null} Selected card or null if no cards available
  */
@@ -42,12 +42,12 @@ export function shouldReshuffle(totalCards, seenCount) {
 /**
  * Get the next language for 50/50 mode (alternates between 'en' and 'pt')
  * @param {string} currentLang - Current language ('en' or 'pt')
- * @param {string} mode - Language mode ('en', 'pt', or '50/50')
+ * @param {string} mode - Language mode ('en', 'pt', or 'both')
  * @returns {string} Next language to use
  */
 export function getNextLanguage(currentLang, mode) {
   // If not 50/50 mode, always return the same language
-  if (mode !== '50/50') {
+  if (mode !== 'both') {
     return mode;
   }
 
@@ -119,7 +119,7 @@ export function validateSettings(settings) {
   }
 
   // Language should be one of the valid options
-  const validLanguages = ['en', 'pt', '50/50'];
+  const validLanguages = ['en', 'pt', 'both'];
   if (!validLanguages.includes(language)) {
     return false;
   }

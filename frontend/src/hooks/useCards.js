@@ -14,7 +14,7 @@ import { selectNextCard, shouldReshuffle, getNextLanguage } from '../utils/gameL
 export function useCards(settings) {
   const [currentCard, setCurrentCard] = useState(null);
   const [currentLanguage, setCurrentLanguage] = useState(
-    settings.language === '50/50' ? 'en' : settings.language
+    settings.language === 'both' ? 'en' : settings.language
   );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -59,7 +59,7 @@ export function useCards(settings) {
 
       try {
         // Determine which languages to load
-        const languagesToLoad = settings.language === '50/50'
+        const languagesToLoad = settings.language === 'both'
           ? ['en', 'pt']
           : [settings.language];
 
@@ -104,7 +104,7 @@ export function useCards(settings) {
       cards,
       seenCardsRef.current[currentLanguage],
       currentLanguage,
-      settings.language === '50/50'
+      settings.language === 'both'
     );
 
     if (card) {
@@ -122,7 +122,7 @@ export function useCards(settings) {
       });
 
       // Handle language alternation for 50/50 mode
-      if (settings.language === '50/50') {
+      if (settings.language === 'both') {
         const nextLang = getNextLanguage(currentLanguage, settings.language);
         setCurrentLanguage(nextLang);
       }
@@ -143,7 +143,7 @@ export function useCards(settings) {
       pt: []
     };
     setCurrentCard(null);
-    setCurrentLanguage(settings.language === '50/50' ? 'en' : settings.language);
+    setCurrentLanguage(settings.language === 'both' ? 'en' : settings.language);
   }, [settings.language]);
 
   /**

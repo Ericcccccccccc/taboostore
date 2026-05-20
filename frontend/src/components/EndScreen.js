@@ -6,160 +6,315 @@ import './styles.css';
 
 /**
  * EndScreen - Results display screen
- * Shows final score, card list with statuses, and navigation options
+ * Shows the just-finished round's score, team-by-team round history,
+ * action buttons, and the cards-played list with an inline "Change Result" editor.
  */
-function EndScreen({ results, onPlayAgain, onReturnToMenu }) {
-  const { score, cards, settings } = results;
-  const [selectedCard, setSelectedCard] = useState(null);
+function EndScreen({
+  rounds,
+  teamNames,
+  settings,
+  onPlayAgain,
+  onReturnToMenu,
+  onChangeCardStatus
+}) {
+  const uiLang = getUILanguage(settings?.language || 'en');
+  const [selectedKey, setSelectedKey] = useState(null);     // `${roundIdx}:${cardIdx}` of expanded row
+  const [changingKey, setChangingKey] = useState(null);     // same key, but with picker visible
   const [reportedCards, setReportedCards] = useState(new Set());
 
-  // Get the UI language based on selected language mode
-  const uiLang = getUILanguage(settings?.language || 'en');
-  const totalCards = score.correct + score.missed + score.passed;
-  const totalScore = score.correct - score.missed; // +1 for correct, -1 for missed
+  if (!rounds || rounds.length === 0) {
+    return (
+      <div className="end-screen">
+        <h1 className="game-over-title">{t('timesUp', uiLang)}</h1>
+        <div className="end-buttons">
+          <button className="return-menu-button" onClick={onReturnToMenu}>
+            {t('returnToMenu', uiLang)}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const lastRoundIdx = rounds.length - 1;
+  const lastRound = rounds[lastRoundIdx];
+  const lastScore = lastRound.score;
+  const lastTotalCards = lastScore.correct + lastScore.missed + lastScore.passed;
+  const lastNetScore = lastScore.correct - lastScore.missed;
 
   const getStatusIcon = (status) => {
     switch (status) {
-      case 'correct':
-        return '✓';
-      case 'missed':
-        return '✗';
-      case 'passed':
-        return '↻';
-      default:
-        return '';
+      case 'correct': return '✓';
+      case 'missed':  return '✗';
+      case 'passed':  return '↻';
+      default:        return '';
     }
   };
 
   const getStatusClass = (status) => {
     switch (status) {
-      case 'correct':
-        return 'card-correct';
-      case 'missed':
-        return 'card-missed';
-      case 'passed':
-        return 'card-passed';
-      default:
-        return '';
+      case 'correct': return 'card-correct';
+      case 'missed':  return 'card-missed';
+      case 'passed':  return 'card-passed';
+      default:        return '';
     }
   };
 
-  const handleCardClick = (card) => {
-    setSelectedCard(selectedCard === card ? null : card);
+  const getStatusLabel = (status) => {
+    switch (status) {
+      case 'correct': return t('correct', uiLang);
+      case 'missed':  return t('missed', uiLang);
+      case 'passed':  return t('pass', uiLang);
+      default:        return '';
+    }
+  };
+
+  const keyFor = (roundIdx, cardIdx) => `${roundIdx}:${cardIdx}`;
+
+  const handleCardClick = (roundIdx, cardIdx) => {
+    const k = keyFor(roundIdx, cardIdx);
+    if (selectedKey === k) {
+      setSelectedKey(null);
+      setChangingKey(null);
+    } else {
+      setSelectedKey(k);
+      setChangingKey(null);
+    }
   };
 
   const handleReportProblem = async (card) => {
     try {
-      // Call API to report the problem
       await api.reportProblemCard(card.wordToGuess);
       setReportedCards(new Set([...reportedCards, card.wordToGuess]));
-    } catch (error) {
-      console.error('Failed to report problem:', error);
+    } catch (err) {
+      console.error('Failed to report problem:', err);
     }
   };
 
+  const handleChangeResult = (roundIdx, cardIdx, newStatus) => {
+    onChangeCardStatus(roundIdx, cardIdx, newStatus);
+    setChangingKey(null);
+  };
+
+  // Build per-team round listing
+  const teamBlocks = [0, 1].map(teamIdx => {
+    const teamRounds = rounds
+      .map((r, idx) => ({ round: r, idx }))
+      .filter(({ round }) => round.team === teamIdx);
+
+    const totals = teamRounds.reduce(
+      (acc, { round }) => {
+        acc.correct += round.score.correct;
+        acc.missed  += round.score.missed;
+        acc.passed  += round.score.passed;
+        return acc;
+      },
+      { correct: 0, missed: 0, passed: 0 }
+    );
+    const net = totals.correct - totals.missed;
+
+    return { teamIdx, teamRounds, totals, net };
+  });
+
   return (
     <div className="end-screen">
-      <h1 className="game-over-title">{t('gameOver', uiLang)}</h1>
+      <h1 className="game-over-title">{t('timesUp', uiLang)}</h1>
 
       <div className="final-score">
         <h2>{t('finalScore', uiLang)}</h2>
         <div className="total-score">
           <span className="total-score-label">{t('totalScore', uiLang)}:</span>
-          <span className={`total-score-value ${totalScore > 0 ? 'positive' : totalScore < 0 ? 'negative' : 'neutral'}`}>
-            {totalScore > 0 ? '+' : ''}{totalScore}
+          <span className={`total-score-value ${lastNetScore > 0 ? 'positive' : lastNetScore < 0 ? 'negative' : 'neutral'}`}>
+            {lastNetScore > 0 ? '+' : ''}{lastNetScore}
           </span>
         </div>
         <div className="score-summary">
           <div className="score-stat correct-stat">
-            <span className="score-number">{score.correct}</span>
+            <span className="score-number">{lastScore.correct}</span>
             <span className="score-label">{t('correct', uiLang)}</span>
           </div>
           <div className="score-stat missed-stat">
-            <span className="score-number">{score.missed}</span>
+            <span className="score-number">{lastScore.missed}</span>
             <span className="score-label">{t('missed', uiLang)}</span>
           </div>
           <div className="score-stat passed-stat">
-            <span className="score-number">{score.passed}</span>
+            <span className="score-number">{lastScore.passed}</span>
             <span className="score-label">{t('pass', uiLang)}</span>
           </div>
         </div>
       </div>
 
-      <div className="cards-list-container">
-        <h3>{t('cardsPlayed', uiLang)} ({totalCards})</h3>
-        <ul className="cards-list">
-          {cards.map((card, index) => (
-            <li
-              key={index}
-              className={`card-item ${getStatusClass(card.status)} ${selectedCard === card ? 'selected' : ''}`}
-              onClick={() => handleCardClick(card)}
-            >
-              <div className="card-item-header">
-                <span className="card-status-icon">{getStatusIcon(card.status)}</span>
-                <span className="card-word-text">{card.wordToGuess || card.word}</span>
-              </div>
-              {selectedCard === card && card.forbiddenWords && (
-                <div className="card-details">
-                  <div className="forbidden-words-list">
-                    {card.forbiddenWords.map((word, idx) => (
-                      <span key={idx} className="forbidden-word-item">{word}</span>
-                    ))}
-                  </div>
-                  {!reportedCards.has(card.wordToGuess) ? (
-                    <button
-                      className="report-problem-btn"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleReportProblem(card);
-                      }}
-                    >
-                      🚩 {t('reportProblem', uiLang)}
-                    </button>
-                  ) : (
-                    <span className="problem-reported">✓ {t('problemReported', uiLang)}</span>
-                  )}
+      {teamBlocks.map(({ teamIdx, teamRounds, totals, net }) => (
+        <div key={teamIdx} className="team-history">
+          <h3>{teamNames[teamIdx]}</h3>
+          {teamRounds.length === 0 ? (
+            <div className="round-row">
+              <span className="round-row-label">—</span>
+            </div>
+          ) : (
+            teamRounds.map(({ round, idx }, displayIdx) => {
+              const roundNet = round.score.correct - round.score.missed;
+              const netClass = roundNet > 0 ? 'positive' : roundNet < 0 ? 'negative' : 'neutral';
+              return (
+                <div key={idx} className="round-row">
+                  <span className="round-row-label">
+                    {t('round', uiLang)} {displayIdx + 1}
+                  </span>
+                  <span className="round-row-stats">
+                    <span className="stat-correct">✓ {round.score.correct}</span>
+                    <span className="stat-missed">✗ {round.score.missed}</span>
+                    <span className="stat-passed">↻ {round.score.passed}</span>
+                  </span>
+                  <span className={`round-row-net ${netClass}`}>
+                    {roundNet > 0 ? '+' : ''}{roundNet}
+                  </span>
                 </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+              );
+            })
+          )}
+          <div className="round-row team-total-row">
+            <span className="round-row-label">{t('teamTotal', uiLang)}</span>
+            <span className="round-row-stats">
+              <span className="stat-correct">✓ {totals.correct}</span>
+              <span className="stat-missed">✗ {totals.missed}</span>
+              <span className="stat-passed">↻ {totals.passed}</span>
+            </span>
+            <span className={`round-row-net ${net > 0 ? 'positive' : net < 0 ? 'negative' : 'neutral'}`}>
+              {net > 0 ? '+' : ''}{net}
+            </span>
+          </div>
+        </div>
+      ))}
 
       <div className="end-buttons">
-        <button
-          className="play-again-button"
-          onClick={onPlayAgain}
-        >
+        <button className="play-again-button" onClick={onPlayAgain}>
           {t('playAgain', uiLang)}
         </button>
-        <button
-          className="return-menu-button"
-          onClick={onReturnToMenu}
-        >
+        <button className="return-menu-button" onClick={onReturnToMenu}>
           {t('returnToMenu', uiLang)}
         </button>
+      </div>
+
+      <div className="cards-list-container">
+        <h3>{t('cardsPlayed', uiLang)} ({lastTotalCards})</h3>
+        <ul className="cards-list">
+          {lastRound.cards.map((card, cardIdx) => {
+            const k = keyFor(lastRoundIdx, cardIdx);
+            const isSelected = selectedKey === k;
+            const isChanging = changingKey === k;
+            const originalStatus = card.originalStatus || card.status;
+
+            return (
+              <li
+                key={cardIdx}
+                className={`card-item ${getStatusClass(card.status)} ${isSelected ? 'selected' : ''}`}
+                onClick={() => handleCardClick(lastRoundIdx, cardIdx)}
+              >
+                <div className="card-item-header">
+                  <span className="card-status-icon">{getStatusIcon(card.status)}</span>
+                  <span className="card-word-text">{card.wordToGuess || card.word}</span>
+                </div>
+                {isSelected && (
+                  <div className="card-details">
+                    {card.forbiddenWords && (
+                      <div className="forbidden-words-list">
+                        {card.forbiddenWords.map((word, idx) => (
+                          <span key={idx} className="forbidden-word-item">{word}</span>
+                        ))}
+                      </div>
+                    )}
+
+                    {!isChanging ? (
+                      <div>
+                        {!reportedCards.has(card.wordToGuess) ? (
+                          <button
+                            className="report-problem-btn"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleReportProblem(card);
+                            }}
+                          >
+                            🚩 {t('reportProblem', uiLang)}
+                          </button>
+                        ) : (
+                          <span className="problem-reported">
+                            ✓ {t('problemReported', uiLang)}
+                          </span>
+                        )}
+                        <button
+                          className="change-result-trigger"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setChangingKey(k);
+                          }}
+                        >
+                          {t('changeResult', uiLang)}
+                        </button>
+                      </div>
+                    ) : (
+                      <div
+                        className="change-result-picker"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <span className="change-result-original">
+                          {t('originally', uiLang)}: {getStatusLabel(originalStatus)}
+                        </span>
+                        <button
+                          className="change-correct"
+                          onClick={() => handleChangeResult(lastRoundIdx, cardIdx, 'correct')}
+                          title={t('correct', uiLang)}
+                        >
+                          ✓
+                        </button>
+                        <button
+                          className="change-missed"
+                          onClick={() => handleChangeResult(lastRoundIdx, cardIdx, 'missed')}
+                          title={t('missed', uiLang)}
+                        >
+                          ✗
+                        </button>
+                        <button
+                          className="change-passed"
+                          onClick={() => handleChangeResult(lastRoundIdx, cardIdx, 'passed')}
+                          title={t('pass', uiLang)}
+                        >
+                          ↻
+                        </button>
+                        <button
+                          className="change-cancel"
+                          onClick={() => setChangingKey(null)}
+                        >
+                          {t('cancel', uiLang)}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
 }
 
 EndScreen.propTypes = {
-  results: PropTypes.shape({
-    score: PropTypes.shape({
-      correct: PropTypes.number.isRequired,
-      missed: PropTypes.number.isRequired,
-      passed: PropTypes.number.isRequired
-    }).isRequired,
-    cards: PropTypes.arrayOf(
-      PropTypes.shape({
-        word: PropTypes.string.isRequired,
-        status: PropTypes.oneOf(['correct', 'missed', 'passed']).isRequired
-      })
-    ).isRequired
-  }).isRequired,
+  rounds: PropTypes.arrayOf(
+    PropTypes.shape({
+      team: PropTypes.number.isRequired,
+      score: PropTypes.shape({
+        correct: PropTypes.number.isRequired,
+        missed: PropTypes.number.isRequired,
+        passed: PropTypes.number.isRequired
+      }).isRequired,
+      cards: PropTypes.array.isRequired
+    })
+  ).isRequired,
+  teamNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  settings: PropTypes.object,
   onPlayAgain: PropTypes.func.isRequired,
-  onReturnToMenu: PropTypes.func.isRequired
+  onReturnToMenu: PropTypes.func.isRequired,
+  onChangeCardStatus: PropTypes.func.isRequired
 };
 
 export default EndScreen;

@@ -6,7 +6,7 @@ const translations = {
   en: {
     // Start Screen
     gameTitle: 'Taboo',
-    gameSubtitle: 'Guess the word without saying the forbidden words!',
+    gameSubtitle: "The Americas' favorite party game",
     timerDuration: 'Timer Duration',
     passLimit: 'Pass Limit',
     languageMode: 'Language Mode',
@@ -15,6 +15,15 @@ const translations = {
     both: '50/50',
     startGame: 'Start Game',
     seconds: 's',
+    unlimited: '∞',
+    teamNames: 'Team Names',
+    teamDefaultName: 'Team',
+
+    // Ready Screen
+    ready: 'Ready',
+    go: 'Go',
+    switchTeam: 'Switch Team',
+    back: 'Back',
 
     // Game Screen
     time: 'Time:',
@@ -33,6 +42,7 @@ const translations = {
 
     // End Screen
     gameOver: 'Game Over!',
+    timesUp: 'Times Up!',
     finalScore: 'Final Score',
     totalScore: 'Total Score',
     cardsPlayed: 'Cards Played',
@@ -41,12 +51,16 @@ const translations = {
     reportProblem: 'Report Problem',
     undo: 'Undo',
     problemReported: 'Problem reported for this card',
+    round: 'Round',
+    teamTotal: 'Total',
+    changeResult: 'Change Result',
+    originally: 'Originally',
   },
 
   pt: {
     // Start Screen
     gameTitle: 'Tabu',
-    gameSubtitle: 'Adivinhe a palavra sem dizer as palavras proibidas!',
+    gameSubtitle: 'O jogo de festa favorito das Américas',
     timerDuration: 'Duração do Cronômetro',
     passLimit: 'Limite de Passes',
     languageMode: 'Modo de Idioma',
@@ -55,6 +69,15 @@ const translations = {
     both: '50/50',
     startGame: 'Iniciar Jogo',
     seconds: 's',
+    unlimited: '∞',
+    teamNames: 'Nomes dos Times',
+    teamDefaultName: 'Time',
+
+    // Ready Screen
+    ready: 'Pronto',
+    go: 'Vai',
+    switchTeam: 'Trocar Time',
+    back: 'Voltar',
 
     // Game Screen
     time: 'Tempo:',
@@ -73,6 +96,7 @@ const translations = {
 
     // End Screen
     gameOver: 'Fim de Jogo!',
+    timesUp: 'Acabou o Tempo!',
     finalScore: 'Pontuação Final',
     totalScore: 'Pontuação Total',
     cardsPlayed: 'Cartas Jogadas',
@@ -81,6 +105,10 @@ const translations = {
     reportProblem: 'Reportar Problema',
     undo: 'Desfazer',
     problemReported: 'Problema reportado para esta carta',
+    round: 'Rodada',
+    teamTotal: 'Total',
+    changeResult: 'Mudar Resultado',
+    originally: 'Originalmente',
   }
 };
 

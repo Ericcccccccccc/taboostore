@@ -13,7 +13,7 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Set API URL for production (empty means use same domain with /api path)
+# Empty -> frontend uses same-origin requests; Caddy on the VM proxies /api/* to taboo-backend.
 ENV VITE_API_URL=""
 
 # Build the application

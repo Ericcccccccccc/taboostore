@@ -4,17 +4,31 @@
 # This script builds, compresses, transfers, and deploys Docker containers to the VM
 
 # Configuration
-SSH_KEY="$HOME/Documents/tech/notatherapist/oracle-ssh.key"
-VM_USER="ubuntu"
-VM_IP="170.9.233.1"
-SSH_CMD="ssh -i $SSH_KEY $VM_USER@$VM_IP"
-SCP_CMD="scp -i $SSH_KEY"
+SSH_KEY="$HOME/Documents/tech/HostingerE/HostingerE_key"
+VM_USER="eric"
+VM_HOST="72.61.37.157"
 
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
+
+# Function to execute commands on remote VM.
+# -n redirects ssh's stdin from /dev/null so it doesn't swallow the caller's
+# stdin (matters when this script is piped non-interactively).
+remote_exec() {
+    ssh -n -i "$SSH_KEY" \
+        -o ServerAliveInterval=60 \
+        -o ServerAliveCountMax=3 \
+        "$VM_USER@$VM_HOST" "$@"
+}
+
+# Function to copy files to remote VM
+remote_copy() {
+    scp -i "$SSH_KEY" \
+        "$@" "$VM_USER@$VM_HOST:~/"
+}
 
 # Function to print colored output
 print_success() {
@@ -41,13 +55,14 @@ check_ssh_key() {
 # Function to test VM connection
 test_vm_connection() {
     print_info "Testing connection to VM..."
-    if $SSH_CMD "echo 'Connection successful'" > /dev/null 2>&1; then
+    if remote_exec "echo 'Connection successful'" > /dev/null 2>&1; then
         print_success "VM connection successful"
     else
         print_error "Cannot connect to VM. Please check:"
         echo "  - VM is running"
-        echo "  - IP address is correct: $VM_IP"
+        echo "  - VM IP is correct: $VM_HOST"
         echo "  - SSH key is correct: $SSH_KEY"
+        echo "  - SSH user is correct: $VM_USER"
         exit 1
     fi
 }
@@ -108,7 +123,7 @@ transfer_images() {
 
     print_info "Transferring images to VM..."
     for image in "${images[@]}"; do
-        if $SCP_CMD "${image}.tar.gz" "$VM_USER@$VM_IP:~/"; then
+        if remote_copy "${image}.tar.gz"; then
             print_success "${image}.tar.gz transferred"
             # Clean up local compressed file
             rm "${image}.tar.gz"
@@ -249,10 +264,10 @@ STATUS_SCRIPT
 
     # Copy and execute deployment script on VM
     print_info "Copying deployment script to VM..."
-    $SCP_CMD /tmp/deploy_on_vm.sh "$VM_USER@$VM_IP:~/"
+    remote_copy /tmp/deploy_on_vm.sh
 
     print_info "Executing deployment on VM..."
-    $SSH_CMD "chmod +x ~/deploy_on_vm.sh && ~/deploy_on_vm.sh && rm ~/deploy_on_vm.sh"
+    remote_exec "chmod +x ~/deploy_on_vm.sh && ~/deploy_on_vm.sh && rm ~/deploy_on_vm.sh"
 
     # Clean up local temp script
     rm /tmp/deploy_on_vm.sh
@@ -350,11 +365,11 @@ main() {
     echo "  Backend API: http://taboo-backend:8000"
     echo
     echo "To check container status on VM:"
-    echo "  $SSH_CMD 'docker ps'"
+    echo "  ssh -i $SSH_KEY $VM_USER@$VM_HOST 'docker ps'"
     echo
     echo "To view logs:"
-    echo "  Frontend: $SSH_CMD 'docker logs taboo-frontend'"
-    echo "  Backend: $SSH_CMD 'docker logs taboo-backend'"
+    echo "  Frontend: ssh -i $SSH_KEY $VM_USER@$VM_HOST 'docker logs taboo-frontend'"
+    echo "  Backend: ssh -i $SSH_KEY $VM_USER@$VM_HOST 'docker logs taboo-backend'"
     echo
 }
 

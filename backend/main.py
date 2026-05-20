@@ -15,6 +15,9 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",  # Vite dev server
         "http://localhost:3000",  # Alternative frontend port
+        "https://bpjmaqhstn.us-east-2.awsapprunner.com",  # App Runner frontend
+        "https://*.awsapprunner.com",  # Allow any App Runner domain
+        "*"  # Allow all origins for production flexibility
     ],
     allow_credentials=True,
     allow_methods=["*"],

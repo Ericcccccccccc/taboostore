@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useTimer } from '../hooks/useTimer';
 import { useCards } from '../hooks/useCards';
@@ -45,9 +45,14 @@ function GameScreen({ settings, onEndGame }) {
     onEndGame(results);
   }
 
-  // Load first card and start timer on mount
+  // Load first card and start timer once cards finish loading.
+  // hasStartedRef guards against the effect re-firing when nextCard's
+  // useCallback identity changes (it changes every card in 'both' mode
+  // because nextCard internally calls setCurrentLanguage).
+  const hasStartedRef = useRef(false);
   useEffect(() => {
-    if (!loading && !error) {
+    if (!loading && !error && !hasStartedRef.current) {
+      hasStartedRef.current = true;
       nextCard();
       startTimer();
     }
@@ -102,7 +107,8 @@ function GameScreen({ settings, onEndGame }) {
       // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         ...displayCard,
-        status: 'correct'
+        status: 'correct',
+        originalStatus: 'correct'
       }]);
 
       // Load next card
@@ -121,7 +127,8 @@ function GameScreen({ settings, onEndGame }) {
       // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         ...displayCard,
-        status: 'missed'
+        status: 'missed',
+        originalStatus: 'missed'
       }]);
 
       // Load next card
@@ -141,7 +148,8 @@ function GameScreen({ settings, onEndGame }) {
       // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         ...displayCard,
-        status: 'passed'
+        status: 'passed',
+        originalStatus: 'passed'
       }]);
 
       // Load next card
@@ -235,7 +243,19 @@ function GameScreen({ settings, onEndGame }) {
 
       <div className="game-content">
         <div className="card-display">
-          <h2 className="card-word">{displayCard.wordToGuess}</h2>
+          <div className="card-word-row">
+            {settings.language === 'both' && (
+              <span className="card-flag" aria-hidden="true">
+                {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}
+              </span>
+            )}
+            <h2 className="card-word">{displayCard.wordToGuess}</h2>
+            {settings.language === 'both' && (
+              <span className="card-flag" aria-hidden="true">
+                {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}
+              </span>
+            )}
+          </div>
           <div className="card-divider"></div>
           <ul className="forbidden-words">
             {displayCard.forbiddenWords && displayCard.forbiddenWords.map((word, index) => (

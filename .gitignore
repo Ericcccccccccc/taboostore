@@ -69,4 +69,5 @@ caddy_config/
 
 # Logs
 logs/
-*.log
+*.log.postgres_credentials
+.postgres_credentials

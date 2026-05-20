@@ -1,30 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getUILanguage, t } from '../utils/localization';
 import './styles.css';
 
 /**
  * StartScreen - Game configuration screen
- * Allows players to set timer duration, pass limit, and language mode
+ * Allows players to set timer duration, pass limit, language mode, and team names
  */
-function StartScreen({ onStartGame }) {
+function StartScreen({ onStartGame, initialTeamNames }) {
   const [settings, setSettings] = useState({
     timerDuration: 60,
     passLimit: 1,
     language: 'both'
   });
 
-  // Get the UI language based on selected language mode
   const uiLang = getUILanguage(settings.language);
+  const defaultTeamLabel = t('teamDefaultName', uiLang);
 
-  const timerOptions = [60, 75, 90, 105, 120];
+  // Team names with per-input dirty flags so UI-language changes don't overwrite custom names
+  const [teamNames, setTeamNames] = useState(() => {
+    if (initialTeamNames && initialTeamNames.length === 2) {
+      return [...initialTeamNames];
+    }
+    return [`${defaultTeamLabel} 1`, `${defaultTeamLabel} 2`];
+  });
+  const [teamNameDirty, setTeamNameDirty] = useState([
+    Boolean(initialTeamNames && initialTeamNames[0]),
+    Boolean(initialTeamNames && initialTeamNames[1])
+  ]);
+
+  // Re-prefill default team names when language flips, but only for untouched inputs
+  useEffect(() => {
+    setTeamNames(prev => prev.map((name, i) =>
+      teamNameDirty[i] ? name : `${defaultTeamLabel} ${i + 1}`
+    ));
+  }, [defaultTeamLabel, teamNameDirty]);
+
+  const timerOptions = [60, 75, 90, 120];
   const passOptions = [
-    { value: 0, label: '0' },
     { value: 1, label: '1' },
-    { value: 2, label: '2' },
     { value: 3, label: '3' },
     { value: 5, label: '5' },
-    { value: -1, label: '∞' }
+    { value: -1, label: t('unlimited', uiLang) }
   ];
   const languageOptions = [
     { value: 'en', label: t('english', uiLang) },
@@ -39,11 +56,18 @@ function StartScreen({ onStartGame }) {
     }));
   };
 
+  const handleTeamNameChange = (idx, value) => {
+    setTeamNames(prev => prev.map((n, i) => (i === idx ? value : n)));
+    setTeamNameDirty(prev => prev.map((d, i) => (i === idx ? true : d)));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate settings before submitting
     if (settings.timerDuration > 0) {
-      onStartGame(settings);
+      const finalNames = teamNames.map((n, i) =>
+        (n && n.trim().length > 0) ? n.trim() : `${defaultTeamLabel} ${i + 1}`
+      );
+      onStartGame({ ...settings, teamNames: finalNames });
     }
   };
 
@@ -55,7 +79,7 @@ function StartScreen({ onStartGame }) {
       <form className="settings-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="timer">{t('timerDuration', uiLang)}</label>
-          <div className="option-buttons">
+          <div className="option-buttons no-wrap">
             {timerOptions.map(option => (
               <button
                 key={option}
@@ -71,7 +95,7 @@ function StartScreen({ onStartGame }) {
 
         <div className="form-group">
           <label htmlFor="passes">{t('passLimit', uiLang)}</label>
-          <div className="option-buttons">
+          <div className="option-buttons no-wrap">
             {passOptions.map(option => (
               <button
                 key={option.value}
@@ -101,6 +125,22 @@ function StartScreen({ onStartGame }) {
           </div>
         </div>
 
+        <div className="form-group">
+          <label>{t('teamNames', uiLang)}</label>
+          <div className="team-names-row">
+            {[0, 1].map(i => (
+              <input
+                key={i}
+                type="text"
+                className="team-name-input"
+                maxLength={20}
+                value={teamNames[i]}
+                onChange={(e) => handleTeamNameChange(i, e.target.value)}
+              />
+            ))}
+          </div>
+        </div>
+
         <button type="submit" className="start-button">
           {t('startGame', uiLang)}
         </button>
@@ -110,7 +150,8 @@ function StartScreen({ onStartGame }) {
 }
 
 StartScreen.propTypes = {
-  onStartGame: PropTypes.func.isRequired
+  onStartGame: PropTypes.func.isRequired,
+  initialTeamNames: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default StartScreen;

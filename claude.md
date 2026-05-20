@@ -8,6 +8,25 @@ Taboo Store is a minimal, production-ready web implementation of the classic Tab
 **Repository**: Main branch only, no feature branches for MVP
 **Status**: MVP Development
 
+## TODO.md
+
+`TODO.md` at the repo root holds forward-looking items worth remembering across
+sessions — lingering workarounds with deletion recipes, deferred optimizations,
+verification steps not yet run. Read it at the start of relevant work. Add
+entries when you notice something that should outlive the current session; tick
+off or delete entries that no longer apply rather than letting them rot. Not a
+changelog.
+
+## Verification
+
+After any fix or adjustment that touches UI or the deployed app, use the
+`playwright` MCP server (`browser_navigate`, `browser_snapshot`,
+`browser_console_messages`, `browser_network_requests`) to verify the change
+actually works against the running app — locally (`http://localhost:5173`) or in
+prod (`https://itaboo.store`). Type-checking and unit tests confirm code
+correctness; Playwright confirms feature correctness. Do not report a fix as
+complete based on a clean build alone.
+
 ## Core Features
 
 - **Anonymous Play**: No authentication required
