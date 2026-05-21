@@ -264,18 +264,18 @@ function GameScreen({ settings, onEndGame }) {
 
       <div className="game-content">
         <div className={`card-display ${isHeaderTall ? 'card-display--header-tall' : ''}`}>
+          {settings.language === 'both' && (
+            <>
+              <span className="card-flag card-flag--left" aria-hidden="true">
+                {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}
+              </span>
+              <span className="card-flag card-flag--right" aria-hidden="true">
+                {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}
+              </span>
+            </>
+          )}
           <div className="card-word-row" ref={wordRowRef}>
-            {settings.language === 'both' && (
-              <span className="card-flag" aria-hidden="true">
-                {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}
-              </span>
-            )}
             <h2 className="card-word">{displayCard.wordToGuess}</h2>
-            {settings.language === 'both' && (
-              <span className="card-flag" aria-hidden="true">
-                {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}
-              </span>
-            )}
           </div>
           <div className="card-divider"></div>
           <ul className="forbidden-words">

@@ -207,16 +207,18 @@ function EndScreen({
                   <span className={`round-row-net ${netClass}`}>
                     {roundNet > 0 ? '+' : ''}{roundNet}
                   </span>
-                  {idx === rounds.length - 1 && (
-                    <button
-                      className="switch-round-team-btn"
-                      onClick={() => setSwitchConfirmIdx(idx)}
-                      title={t('switchTeamForRound', uiLang)}
-                      aria-label={t('switchTeamForRound', uiLang)}
-                    >
-                      ⇄
-                    </button>
-                  )}
+                  <div className="round-row-actions">
+                    {idx === rounds.length - 1 && (
+                      <button
+                        className="switch-round-team-btn"
+                        onClick={() => setSwitchConfirmIdx(idx)}
+                        title={t('switchTeamForRound', uiLang)}
+                        aria-label={t('switchTeamForRound', uiLang)}
+                      >
+                        ⇄
+                      </button>
+                    )}
+                  </div>
                 </div>
               );
             })
@@ -354,13 +356,13 @@ function EndScreen({
                 {t('cancel', uiLang)}
               </button>
               <button
-                className="confirm-button confirm-end-button"
+                className="confirm-button confirm-switch-button"
                 onClick={() => {
                   onSwitchRoundTeam(switchConfirmIdx);
                   setSwitchConfirmIdx(null);
                 }}
               >
-                {t('switchTeam', uiLang)}
+                {t('switchScore', uiLang)}
               </button>
             </div>
           </div>
