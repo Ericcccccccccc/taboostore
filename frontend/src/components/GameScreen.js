@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTimer } from '../hooks/useTimer';
 import { useCards } from '../hooks/useCards';
@@ -23,6 +23,8 @@ function GameScreen({ settings, onEndGame }) {
   const [undoCard, setUndoCard] = useState(null);
   const [pendingNext, setPendingNext] = useState(null);
   const [displayCard, setDisplayCard] = useState(null);
+  const wordRowRef = useRef(null);
+  const [isHeaderTall, setIsHeaderTall] = useState(false);
 
   // Get the UI language based on selected language mode
   const uiLang = getUILanguage(settings.language);
@@ -65,6 +67,35 @@ function GameScreen({ settings, onEndGame }) {
       setDisplayCard(currentCard);
     }
   }, [currentCard]);
+
+  // Detect when the top header row (word + flags) wraps to more than one line.
+  // Triggers a CSS modifier that squishes only the top half — the
+  // forbidden-words section stays at its generous spacing.
+  useLayoutEffect(() => {
+    const el = wordRowRef.current;
+    if (!el || !displayCard) {
+      setIsHeaderTall(false);
+      return undefined;
+    }
+    const measure = () => {
+      const word = el.querySelector('.card-word');
+      if (!word) return;
+      const fontSize = parseFloat(getComputedStyle(word).fontSize);
+      const lineHeight = parseFloat(getComputedStyle(word).lineHeight) || fontSize * 1.15;
+      setIsHeaderTall(el.offsetHeight > lineHeight * 1.4);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    let cancelled = false;
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => { if (!cancelled) measure(); });
+    }
+    return () => {
+      cancelled = true;
+      ro.disconnect();
+    };
+  }, [displayCard?.wordToGuess, settings.language]);
 
   const handlePause = () => {
     if (isPaused) {
@@ -232,8 +263,8 @@ function GameScreen({ settings, onEndGame }) {
       </div>
 
       <div className="game-content">
-        <div className="card-display">
-          <div className="card-word-row">
+        <div className={`card-display ${isHeaderTall ? 'card-display--header-tall' : ''}`}>
+          <div className="card-word-row" ref={wordRowRef}>
             {settings.language === 'both' && (
               <span className="card-flag" aria-hidden="true">
                 {displayCard.language === 'en' ? '🇺🇸' : '🇧🇷'}

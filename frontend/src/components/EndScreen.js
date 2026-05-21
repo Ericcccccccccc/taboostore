@@ -30,6 +30,7 @@ function EndScreen({
   const [reportedCards, setReportedCards] = useState(new Set());
   const [showSettings, setShowSettings] = useState(false);
   const [showReturnDialog, setShowReturnDialog] = useState(false);
+  const [switchConfirmIdx, setSwitchConfirmIdx] = useState(null);
 
   // Poll handoff status while modal is open
   useEffect(() => {
@@ -206,14 +207,16 @@ function EndScreen({
                   <span className={`round-row-net ${netClass}`}>
                     {roundNet > 0 ? '+' : ''}{roundNet}
                   </span>
-                  <button
-                    className="switch-round-team-btn"
-                    onClick={() => onSwitchRoundTeam(idx)}
-                    title={t('switchTeamForRound', uiLang)}
-                    aria-label={t('switchTeamForRound', uiLang)}
-                  >
-                    ⇄
-                  </button>
+                  {idx === rounds.length - 1 && (
+                    <button
+                      className="switch-round-team-btn"
+                      onClick={() => setSwitchConfirmIdx(idx)}
+                      title={t('switchTeamForRound', uiLang)}
+                      aria-label={t('switchTeamForRound', uiLang)}
+                    >
+                      ⇄
+                    </button>
+                  )}
                 </div>
               );
             })
@@ -333,6 +336,31 @@ function EndScreen({
                 onClick={() => setShowReturnDialog(false)}
               >
                 {t('cancel', uiLang)}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {switchConfirmIdx !== null && (
+        <div className="confirm-dialog-overlay" onClick={() => setSwitchConfirmIdx(null)}>
+          <div className="confirm-dialog" onClick={(e) => e.stopPropagation()}>
+            <p className="confirm-message">{t('switchScoreConfirm', uiLang)}</p>
+            <div className="confirm-buttons">
+              <button
+                className="confirm-button cancel-button"
+                onClick={() => setSwitchConfirmIdx(null)}
+              >
+                {t('cancel', uiLang)}
+              </button>
+              <button
+                className="confirm-button confirm-end-button"
+                onClick={() => {
+                  onSwitchRoundTeam(switchConfirmIdx);
+                  setSwitchConfirmIdx(null);
+                }}
+              >
+                {t('switchTeam', uiLang)}
               </button>
             </div>
           </div>
