@@ -444,20 +444,23 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   text-align: center;
-  min-height: 200px; /* Reduced from 300px */
+  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* Word extra large per PR-006 */
 .card-word {
-  font-size: 1.75rem; /* Slightly smaller on mobile */
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text-primary);
-  margin: 0 0 var(--spacing-sm) 0; /* Reduced bottom margin */
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .card-word-row {
@@ -465,6 +468,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-md);
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .card-word-row .card-word {
@@ -472,7 +477,7 @@
 }
 
 .card-flag {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
@@ -480,8 +485,8 @@
 .card-divider {
   height: 3px;
   background: linear-gradient(to right, var(--color-danger), var(--color-warning), var(--color-warning));
-  margin: var(--spacing-sm) auto; /* Reduced vertical margin */
-  width: 90%; /* Increased width to reduce side whitespace */
+  margin: var(--spacing-xs) auto;
+  width: 90%;
   border-radius: var(--radius-sm);
 }
 
@@ -489,14 +494,16 @@
 .forbidden-words {
   list-style: none;
   padding: 0;
-  margin: var(--spacing-sm) 0 0 0; /* Reduced top margin */
+  margin: var(--spacing-xs) 0 0 0;
 }
 
 .forbidden-words li {
   font-size: var(--font-size-md);
   color: var(--color-danger);
-  margin: var(--spacing-xs) 0;
+  margin: 0;
   font-weight: 600;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .forbidden-words li::before {
@@ -1078,12 +1085,12 @@
   }
 
   .card-word {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .card-display {
     padding: var(--spacing-xl);
-    min-height: 300px;
+    height: 320px;
   }
 
   .forbidden-words li {
@@ -1100,7 +1107,7 @@
   }
 
   .card-flag {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .final-score {
@@ -1167,7 +1174,7 @@
   }
 
   .card-display {
-    min-height: 150px;
+    height: 180px;
   }
 
   .game-screen,
@@ -1278,19 +1285,9 @@
   font-size: 1.4rem;
 }
 
-.ready-go-button:hover {
-  background: #15803d;
-  transform: translateY(-2px);
-}
-
 .ready-switch-button {
   background: var(--color-warning);
   color: var(--color-text-primary);
-}
-
-.ready-switch-button:hover {
-  background: #ca8a04;
-  transform: translateY(-2px);
 }
 
 .ready-back-button {
@@ -1298,9 +1295,19 @@
   color: var(--color-text-light);
 }
 
-.ready-back-button:hover {
-  background: #4b5563;
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .ready-go-button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+  }
+  .ready-switch-button:hover {
+    background: #ca8a04;
+    transform: translateY(-2px);
+  }
+  .ready-back-button:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+  }
 }
 
 /* ===================================

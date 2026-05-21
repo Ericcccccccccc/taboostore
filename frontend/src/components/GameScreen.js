@@ -21,6 +21,7 @@ function GameScreen({ settings, onEndGame }) {
   const [isPaused, setIsPaused] = useState(false);
   const [showEndConfirm, setShowEndConfirm] = useState(false);
   const [undoCard, setUndoCard] = useState(null);
+  const [pendingNext, setPendingNext] = useState(null);
   const [displayCard, setDisplayCard] = useState(null);
 
   // Get the UI language based on selected language mode
@@ -96,80 +97,69 @@ function GameScreen({ settings, onEndGame }) {
     }
   };
 
+  // If undo stashed a pendingNext card (the one the user already saw before
+  // pressing undo), restore it instead of pulling a fresh random card.
+  const advanceCard = () => {
+    if (pendingNext) {
+      setDisplayCard(pendingNext);
+      setPendingNext(null);
+    } else {
+      nextCard();
+    }
+  };
+
   const handleCorrect = () => {
     if (displayCard && !isPaused && !showEndConfirm) {
-      // Save current card for undo
       setUndoCard(displayCard);
-
-      // Update score
       setScore(prev => ({ ...prev, correct: prev.correct + 1 }));
-
-      // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         ...displayCard,
         status: 'correct',
         originalStatus: 'correct'
       }]);
-
-      // Load next card
-      nextCard();
+      advanceCard();
     }
   };
 
   const handleMissed = () => {
     if (displayCard && !isPaused && !showEndConfirm) {
-      // Save current card for undo
       setUndoCard(displayCard);
-
-      // Update score
       setScore(prev => ({ ...prev, missed: prev.missed + 1 }));
-
-      // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         ...displayCard,
         status: 'missed',
         originalStatus: 'missed'
       }]);
-
-      // Load next card
-      nextCard();
+      advanceCard();
     }
   };
 
   const handlePass = () => {
     if (displayCard && canUsePass(settings, passesUsed) && !isPaused && !showEndConfirm) {
-      // Save current card for undo
       setUndoCard(displayCard);
-
-      // Update score
       setScore(prev => ({ ...prev, passed: prev.passed + 1 }));
       setPassesUsed(prev => prev + 1);
-
-      // Add to history with wordToGuess and forbiddenWords
       setCardHistory(prev => [...prev, {
         ...displayCard,
         status: 'passed',
         originalStatus: 'passed'
       }]);
-
-      // Load next card
-      nextCard();
+      advanceCard();
     }
   };
 
   const handleUndo = () => {
     if (cardHistory.length > 0 && undoCard && !isPaused && !showEndConfirm) {
-      // Get the last card from history
       const lastCard = cardHistory[cardHistory.length - 1];
 
-      // Restore the previous card
+      // Stash the card the user was about to see again, so re-deciding the
+      // restored card brings it back instead of picking a fresh random card.
+      setPendingNext(currentCard);
+
       setDisplayCard(undoCard);
       setUndoCard(null);
-
-      // Remove it from history
       setCardHistory(prev => prev.slice(0, -1));
 
-      // Undo score changes based on the status
       if (lastCard.status === 'correct') {
         setScore(prev => ({ ...prev, correct: prev.correct - 1 }));
       } else if (lastCard.status === 'missed') {

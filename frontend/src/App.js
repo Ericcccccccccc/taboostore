@@ -51,8 +51,14 @@ function App() {
   };
 
   const handleReadyBack = () => {
-    setRounds([]);
-    setCurrentScreen('start');
+    if (rounds.length > 0) {
+      // Came from End (via Play Again or Continue-preserved-game). Back to End
+      // keeps team names, rounds, settings, and currentTeamIdx intact.
+      setCurrentScreen('end');
+    } else {
+      // First-ever Ready (entered from Start). No game data to preserve.
+      setCurrentScreen('start');
+    }
   };
 
   const handleEndGame = (results) => {
@@ -124,7 +130,8 @@ function App() {
     setRounds(resp.rounds);
     setCurrentTeamIdx(resp.currentTeamIdx);
     setGameSettings(resp.gameSettings);
-    setCurrentScreen('ready');
+    // Land on End screen so the claimer sees the team history they took over.
+    setCurrentScreen('end');
   };
 
   const handleUpdateSettings = (patch) => {
