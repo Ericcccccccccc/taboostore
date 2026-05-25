@@ -7,8 +7,7 @@ import './styles.css';
  * StartScreen - Game configuration screen
  * Allows players to set timer duration, pass limit, language mode, and team names
  */
-function StartScreen({ onStartGame, initialTeamNames, preservedRounds, onContinueGame, onDiscardScores, onClaim }) {
-  const hasPreservedScores = preservedRounds && preservedRounds.length > 0;
+function StartScreen({ onStartGame, initialTeamNames, onClaim }) {
   const [settings, setSettings] = useState({
     timerDuration: 60,
     passLimit: 1,
@@ -97,22 +96,6 @@ function StartScreen({ onStartGame, initialTeamNames, preservedRounds, onContinu
     <div className="start-screen">
       <h1 className="game-title">{t('gameTitle', uiLang)}</h1>
       <p className="game-subtitle">{t('gameSubtitle', uiLang)}</p>
-
-      {hasPreservedScores && (
-        <div className="continue-game-banner">
-          <p className="continue-game-text">
-            {t('continueGameBanner', uiLang).replace('{n}', preservedRounds.length)}
-          </p>
-          <div className="continue-game-actions">
-            <button type="button" className="continue-game-button" onClick={onContinueGame}>
-              ▶ {t('continueGame', uiLang)}
-            </button>
-            <button type="button" className="discard-scores-link" onClick={onDiscardScores}>
-              {t('discardScores', uiLang)}
-            </button>
-          </div>
-        </div>
-      )}
 
       <form className="settings-form" onSubmit={handleSubmit}>
         <div className="form-group">
@@ -218,9 +201,6 @@ function StartScreen({ onStartGame, initialTeamNames, preservedRounds, onContinu
 StartScreen.propTypes = {
   onStartGame: PropTypes.func.isRequired,
   initialTeamNames: PropTypes.arrayOf(PropTypes.string),
-  preservedRounds: PropTypes.array,
-  onContinueGame: PropTypes.func,
-  onDiscardScores: PropTypes.func,
   onClaim: PropTypes.func
 };
 

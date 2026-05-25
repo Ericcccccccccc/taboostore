@@ -78,25 +78,12 @@ function App() {
     setCurrentScreen('ready');
   };
 
-  const handleReturnToMenu = (preserveScores = false) => {
-    if (!preserveScores) {
-      setRounds([]);
-      setGameSettings(null);
-      setTeamNames(['Team 1', 'Team 2']);
-      setCurrentTeamIdx(0);
-    }
-    setCurrentScreen('start');
-  };
-
-  const handleDiscardPreservedScores = () => {
+  const handleReturnToMenu = () => {
     setRounds([]);
     setGameSettings(null);
     setTeamNames(['Team 1', 'Team 2']);
     setCurrentTeamIdx(0);
-  };
-
-  const handleContinueGame = () => {
-    setCurrentScreen('ready');
+    setCurrentScreen('start');
   };
 
   const handleCreateHandoff = async () => {
@@ -167,9 +154,6 @@ function App() {
           <StartScreen
             onStartGame={handleStartGame}
             initialTeamNames={teamNames}
-            preservedRounds={rounds}
-            onContinueGame={handleContinueGame}
-            onDiscardScores={handleDiscardPreservedScores}
             onClaim={handleClaim}
           />
         );

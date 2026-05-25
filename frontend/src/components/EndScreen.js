@@ -160,7 +160,6 @@ function EndScreen({
       <h1 className="game-over-title">{t('timesUp', uiLang)}</h1>
 
       <div className="final-score">
-        <h2>{t('finalScore', uiLang)}</h2>
         <div className="total-score">
           <span className="total-score-label">{t('totalScore', uiLang)}:</span>
           <span className={`total-score-value ${lastNetScore > 0 ? 'positive' : lastNetScore < 0 ? 'negative' : 'neutral'}`}>
@@ -237,80 +236,13 @@ function EndScreen({
         </div>
       ))}
 
-      <div className="end-secondary-buttons">
-        <button
-          className="change-settings-toggle"
-          onClick={() => setShowSettings(s => !s)}
-          disabled={handoffClaimed}
-        >
-          ⚙ {t('changeSettings', uiLang)}
-        </button>
-        <button
-          className="handoff-toggle"
-          onClick={onCreateHandoff}
-          disabled={handoffClaimed}
-        >
-          📲 {t('handoff', uiLang)}
-        </button>
-      </div>
-
-      {showSettings && settings && (
-        <div className="settings-panel">
-          <div className="form-group">
-            <label>{t('timerDuration', uiLang)}</label>
-            <div className="option-buttons no-wrap">
-              {timerOptions.map(opt => (
-                <button
-                  key={opt}
-                  type="button"
-                  className={`option-button ${settings.timerDuration === opt ? 'active' : ''}`}
-                  onClick={() => onUpdateSettings({ timerDuration: opt })}
-                >
-                  {opt}{t('seconds', uiLang)}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="form-group">
-            <label>{t('passLimit', uiLang)}</label>
-            <div className="option-buttons no-wrap">
-              {passOptions.map(opt => (
-                <button
-                  key={opt.value}
-                  type="button"
-                  className={`option-button ${settings.passLimit === opt.value ? 'active' : ''}`}
-                  onClick={() => onUpdateSettings({ passLimit: opt.value })}
-                >
-                  {opt.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="form-group">
-            <label>{t('languageMode', uiLang)}</label>
-            <div className="option-buttons">
-              {languageOptions.map(opt => (
-                <button
-                  key={opt.value}
-                  type="button"
-                  className={`option-button ${settings.language === opt.value ? 'active' : ''}`}
-                  onClick={() => onUpdateSettings({ language: opt.value })}
-                >
-                  {opt.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="end-buttons">
         <button className="play-again-button" onClick={onPlayAgain} disabled={handoffClaimed}>
           {t('playAgain', uiLang)}
         </button>
         <button
           className="return-menu-button"
-          onClick={() => handoffClaimed ? onReturnToMenu(false) : setShowReturnDialog(true)}
+          onClick={() => handoffClaimed ? onReturnToMenu() : setShowReturnDialog(true)}
         >
           {t('returnToMenu', uiLang)}
         </button>
@@ -319,25 +251,19 @@ function EndScreen({
       {showReturnDialog && (
         <div className="confirm-dialog-overlay" onClick={() => setShowReturnDialog(false)}>
           <div className="confirm-dialog" onClick={(e) => e.stopPropagation()}>
-            <p className="confirm-message">{t('saveScoresPrompt', uiLang)}</p>
-            <div className="confirm-buttons confirm-buttons-stack">
-              <button
-                className="confirm-button play-again-button"
-                onClick={() => { setShowReturnDialog(false); onReturnToMenu(true); }}
-              >
-                {t('saveScores', uiLang)}
-              </button>
-              <button
-                className="confirm-button confirm-end-button"
-                onClick={() => { setShowReturnDialog(false); onReturnToMenu(false); }}
-              >
-                {t('discardScores', uiLang)}
-              </button>
+            <p className="confirm-message">{t('returnConfirmPrompt', uiLang)}</p>
+            <div className="confirm-buttons">
               <button
                 className="confirm-button cancel-button"
                 onClick={() => setShowReturnDialog(false)}
               >
                 {t('cancel', uiLang)}
+              </button>
+              <button
+                className="confirm-button confirm-end-button"
+                onClick={() => { setShowReturnDialog(false); onReturnToMenu(); }}
+              >
+                {t('returnConfirmDiscard', uiLang)}
               </button>
             </div>
           </div>
@@ -391,7 +317,7 @@ function EndScreen({
                 <p className="handoff-prompt">{t('handoffClaimed', uiLang)}</p>
                 <button
                   className="confirm-button return-menu-button"
-                  onClick={() => { onCloseHandoffModal(); onReturnToMenu(false); }}
+                  onClick={() => { onCloseHandoffModal(); onReturnToMenu(); }}
                 >
                   {t('returnToMenu', uiLang)}
                 </button>
@@ -501,6 +427,73 @@ function EndScreen({
           })}
         </ul>
       </div>
+
+      <div className="end-secondary-buttons">
+        <button
+          className="change-settings-toggle"
+          onClick={() => setShowSettings(s => !s)}
+          disabled={handoffClaimed}
+        >
+          ⚙ {t('changeSettings', uiLang)}
+        </button>
+        <button
+          className="handoff-toggle"
+          onClick={onCreateHandoff}
+          disabled={handoffClaimed}
+        >
+          📲 {t('handoff', uiLang)}
+        </button>
+      </div>
+
+      {showSettings && settings && (
+        <div className="settings-panel">
+          <div className="form-group">
+            <label>{t('timerDuration', uiLang)}</label>
+            <div className="option-buttons no-wrap">
+              {timerOptions.map(opt => (
+                <button
+                  key={opt}
+                  type="button"
+                  className={`option-button ${settings.timerDuration === opt ? 'active' : ''}`}
+                  onClick={() => onUpdateSettings({ timerDuration: opt })}
+                >
+                  {opt}{t('seconds', uiLang)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="form-group">
+            <label>{t('passLimit', uiLang)}</label>
+            <div className="option-buttons no-wrap">
+              {passOptions.map(opt => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  className={`option-button ${settings.passLimit === opt.value ? 'active' : ''}`}
+                  onClick={() => onUpdateSettings({ passLimit: opt.value })}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="form-group">
+            <label>{t('languageMode', uiLang)}</label>
+            <div className="option-buttons">
+              {languageOptions.map(opt => (
+                <button
+                  key={opt.value}
+                  type="button"
+                  className={`option-button ${settings.language === opt.value ? 'active' : ''}`}
+                  onClick={() => onUpdateSettings({ language: opt.value })}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
